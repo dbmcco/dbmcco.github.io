@@ -7,10 +7,18 @@ layout: default
 
   <h2>Recent Posts</h2>
   
-  {% if site.posts.size > 0 %}
+  {% assign recent_posts = "" | split: "" %}
+  {% assign cutoff_date = "2025-02-28" %}
+  
+  {% for post in site.posts %}
+    {% if post.date >= cutoff_date and post.title and post.title != "" %}
+      {% assign recent_posts = recent_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if recent_posts.size > 0 %}
     <ul class="post-list">
-      {% for post in site.posts limit: 5 %}
-        {% if post.title and post.title != "" %}
+      {% for post in recent_posts limit: 10 %}
         <li>
           <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
           <h3>
@@ -22,19 +30,21 @@ layout: default
             <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
           {% endif %}
         </li>
-        {% endif %}
       {% endfor %}
     </ul>
     
-    {% if site.posts.size > 5 %}
-      <div class="older-posts">
-        <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
-          → View all posts ({{ site.posts.size }} total)
-        </a></p>
-      </div>
-    {% endif %}
+    <div class="older-posts">
+      <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
+        → View all posts ({{ site.posts.size }} total from 2007-2025)
+      </a></p>
+    </div>
   {% else %}
-    <p>No posts yet.</p>
+    <div class="no-recent-posts">
+      <p>No posts in the last 3 months.</p>
+      <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
+        → View all {{ site.posts.size }} posts from 2007-2025
+      </a></p>
+    </div>
   {% endif %}
 </div>
 

@@ -33,19 +33,11 @@ layout: default
       {% endfor %}
     </ul>
     
-    <div class="older-posts">
-      <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
-        → View all posts ({{ site.posts.size }} total from 2007-2025)
-      </a></p>
-    </div>
-  {% else %}
-    <div class="no-recent-posts">
-      <p>No posts in the last 3 months.</p>
-      <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
-        → View all {{ site.posts.size }} posts from 2007-2025
-      </a></p>
-    </div>
   {% endif %}
+  
+  <div class="archive-link">
+    <p><a href="{{ '/archive' | relative_url }}">→ View all posts</a></p>
+  </div>
 </div>
 
 <style>
@@ -78,20 +70,20 @@ layout: default
   text-decoration: underline;
 }
 
-.older-posts {
+.archive-link {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #eee;
   text-align: center;
 }
 
-.older-posts-link {
+.archive-link a {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 
-.older-posts-link:hover {
+.archive-link a:hover {
   color: #2a7ae4;
   text-decoration: underline;
 }

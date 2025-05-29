@@ -4,18 +4,9 @@ title: Archive
 permalink: /archive/
 ---
 
-# Complete Post Archive
+# Archive
 
 *{{ site.posts.size }} posts spanning 2007-2025*
-
-<div class="archive-summary">
-  <p>This archive contains my complete blog history from startup journey to AI insights:</p>
-  <ul>
-    <li><strong>2007-2009:</strong> rVibe startup journey, music industry insights, VC funding</li>
-    <li><strong>2023:</strong> AI in Life Sciences, medical communications, compliance</li>
-    <li><strong>2025:</strong> Modern development workflows and technical innovation</li>
-  </ul>
-</div>
 
 <div class="archive">
   {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
@@ -40,17 +31,6 @@ permalink: /archive/
 </div>
 
 <style>
-.archive-summary {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.archive-summary ul {
-  margin: 1rem 0 0 0;
-}
-
 .year-count {
   color: #666;
   font-size: 0.8rem;

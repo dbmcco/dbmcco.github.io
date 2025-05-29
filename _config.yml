@@ -1,11 +1,25 @@
 # Site settings
 title: Braydon McCormick
-email: your.email@example.com
-description: Personal blog and thoughts
+email: braydon@example.com
+description: Personal blog covering technology, business, and life insights
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dbmcco.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username: dbmcco
+
+# Navigation
+header_pages:
+  - about.md
+  - archive.md
+
+# Minima theme settings
+minima:
+  skin: auto
+  social_links:
+    github: dbmcco
+
+# Show excerpts on homepage
+show_excerpts: true
 
 # Build settings
 markdown: kramdown

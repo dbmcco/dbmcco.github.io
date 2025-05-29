@@ -1,0 +1,153 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom Retro Styling -->
+  <style>
+    :root {
+      --primary-text: #2c2c2c;
+      --secondary-text: #666666;
+      --accent-color: #d4773d;
+      --light-gray: #f8f8f8;
+      --border-color: #e0e0e0;
+      --background: #ffffff;
+    }
+
+    body {
+      font-family: 'Crimson Text', Georgia, serif !important;
+      font-size: 18px !important;
+      line-height: 1.6 !important;
+      color: var(--primary-text) !important;
+      background-color: var(--background) !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Crimson Text', Georgia, serif !important;
+      font-weight: 600 !important;
+      color: var(--primary-text) !important;
+    }
+
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2rem !important; }
+    h3 { font-size: 1.5rem !important; }
+
+    .site-header, .site-nav, .post-meta, .archive-link {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    }
+
+    .site-header {
+      background-color: var(--background) !important;
+      border-bottom: 1px solid var(--border-color) !important;
+      padding: 1.5rem 0 !important;
+    }
+
+    .site-title {
+      font-size: 1.8rem !important;
+      font-weight: 600 !important;
+      color: var(--primary-text) !important;
+      text-decoration: none !important;
+    }
+
+    .site-title:hover {
+      color: var(--accent-color) !important;
+      text-decoration: none !important;
+    }
+
+    .page-link {
+      color: var(--secondary-text) !important;
+      margin-left: 2rem !important;
+      text-decoration: none !important;
+    }
+
+    .page-link:hover {
+      color: var(--accent-color) !important;
+    }
+
+    .wrapper {
+      max-width: 700px !important;
+      margin: 0 auto !important;
+      padding: 0 2rem !important;
+    }
+
+    .home .intro {
+      margin-bottom: 3rem !important;
+      padding: 2rem 0 !important;
+      border-bottom: 2px solid var(--border-color) !important;
+    }
+
+    .home .intro p {
+      font-size: 1.2rem !important;
+      color: var(--secondary-text) !important;
+      margin: 0 !important;
+      font-style: italic !important;
+      line-height: 1.5 !important;
+    }
+
+    .home h2 {
+      font-size: 1.8rem !important;
+      margin-top: 3rem !important;
+      margin-bottom: 2rem !important;
+      border-bottom: 2px solid var(--border-color) !important;
+      padding-bottom: 0.5rem !important;
+    }
+
+    .post-list {
+      list-style: none !important;
+      padding: 0 !important;
+    }
+
+    .post-list li {
+      margin-bottom: 3rem !important;
+      padding-bottom: 2rem !important;
+      border-bottom: 1px solid var(--border-color) !important;
+    }
+
+    .post-meta {
+      font-size: 0.9rem !important;
+      color: var(--secondary-text) !important;
+      margin-bottom: 0.5rem !important;
+      display: block !important;
+    }
+
+    .post-link {
+      color: var(--primary-text) !important;
+      text-decoration: none !important;
+      font-size: 1.4rem !important;
+      font-weight: 600 !important;
+    }
+
+    .post-link:hover {
+      color: var(--accent-color) !important;
+      text-decoration: none !important;
+    }
+
+    .archive-link {
+      margin-top: 3rem !important;
+      padding-top: 2rem !important;
+      border-top: 2px solid var(--border-color) !important;
+      text-align: center !important;
+    }
+
+    .archive-link a {
+      color: var(--secondary-text) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+    }
+
+    .archive-link a:hover {
+      color: var(--accent-color) !important;
+    }
+  </style>
+</head>

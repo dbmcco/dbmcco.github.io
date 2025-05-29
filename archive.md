@@ -14,6 +14,7 @@ permalink: /archive/
     <h2>{{ year.name }} <span class="year-count">({{ year.items.size }} posts)</span></h2>
     <ul>
       {% for post in year.items %}
+        {% if post.title and post.title != "" %}
         <li>
           <span class="post-date">{{ post.date | date: "%b %-d" }}</span>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -25,6 +26,7 @@ permalink: /archive/
             </span>
           {% endif %}
         </li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endfor %}

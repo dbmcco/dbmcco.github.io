@@ -1,0 +1,33 @@
+# Site settings
+title: Braydon McCormick
+email: your.email@example.com
+description: Personal blog and thoughts
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dbmcco.github.io" # the base hostname & protocol for your site
+twitter_username: 
+github_username: dbmcco
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Theme
+theme: minima
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

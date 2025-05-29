@@ -7,39 +7,67 @@ layout: default
 
   <h2>Recent Posts</h2>
   
-  {% assign three_months_ago = 'now' | date: '%s' | minus: 7776000 %}
-  {% assign recent_posts = site.posts | where_exp: "post", "post.date | date: '%s' >= three_months_ago" %}
-  
-  {% if recent_posts.size > 0 %}
+  {% if site.posts.size > 0 %}
     <ul class="post-list">
-      {% for post in recent_posts limit: 10 %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {% if post.excerpt %}
-          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% for post in site.posts limit: 5 %}
+        {% if post.title and post.title != "" %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {% if post.excerpt %}
+            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+        </li>
         {% endif %}
-      </li>
       {% endfor %}
     </ul>
     
-    {% if site.posts.size > recent_posts.size %}
+    {% if site.posts.size > 5 %}
       <div class="older-posts">
         <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
-          → View older posts ({{ site.posts.size | minus: recent_posts.size }} more)
+          → View all posts ({{ site.posts.size }} total)
         </a></p>
       </div>
     {% endif %}
   {% else %}
-    <p>No recent posts. <a href="{{ '/archive' | relative_url }}">View all posts →</a></p>
+    <p>No posts yet.</p>
   {% endif %}
 </div>
 
 <style>
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-list li {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.post-link {
+  text-decoration: none;
+  color: #2a7ae4;
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}
+
 .older-posts {
   margin-top: 2rem;
   padding-top: 1rem;

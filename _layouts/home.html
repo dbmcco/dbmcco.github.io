@@ -7,14 +7,7 @@ layout: default
 
   <h2>Recent Posts</h2>
   
-  {% assign recent_posts = "" | split: "" %}
-  {% assign cutoff_date = "2025-02-28" %}
-  
-  {% for post in site.posts %}
-    {% if post.date >= cutoff_date and post.title and post.title != "" %}
-      {% assign recent_posts = recent_posts | push: post %}
-    {% endif %}
-  {% endfor %}
+  {% assign recent_posts = site.posts | where_exp: "post", "post.title != ''" %}
   
   {% if recent_posts.size > 0 %}
     <ul class="post-list">

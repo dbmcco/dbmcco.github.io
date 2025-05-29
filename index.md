@@ -3,6 +3,6 @@ layout: home
 title: "Home"
 ---
 
-Welcome to my blog! I share thoughts on technology, business, and life.
-
-Recent posts should appear below:
+<div class="intro">
+  <p>Welcome to my corner of the internet. I write about building technology companies, exploring AI applications in healthcare, and discovering connections between creativity and systematic thinking.</p>
+</div>

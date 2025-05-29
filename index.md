@@ -1,7 +1,8 @@
 ---
 layout: home
+title: "Home"
 ---
 
-Welcome to my blog! This is where I share my thoughts on technology, business, and life.
+Welcome to my blog! I share thoughts on technology, business, and life.
 
-Check out my latest posts below.
+Recent posts should appear below:

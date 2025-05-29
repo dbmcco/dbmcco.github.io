@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Book review: Cicero: Life and times of Rome's greatest Politician"
+date: 2007-10-08 21:21:37 -0500
+categories: Books Recommended
+tags: ['wordpress-import']
+---
+
+I really never knew much about Roman history; just never did, wasn't terribly interested in it. Then I read somewhere (I can't remember where) that sometimes we in western civilization are not able to see past our Greek and Roman influenced thinking and come to any real new understanding or paradigm. The idea being that the foundation of western thought is so grounded in Geek and Roman thinking and our framework for operating is so deeply constructed from the structures put together in those civilizations, that we have not flexed much from that time (yes, lots has changed, but I am talking about fundamental perspectives on the world - like oligarchy, or bivalent logic). So I became more interested. Not so interested that I want to read a ton of Greek and Roman history, but curious in general - I am particularly interested in limitation of thought due to embedded assumptions. So I picked up Anthony Everitt's [Cicero: Life and Times of Rome's Greatest Politician](http://www.amazon.com/Cicero-Times-Romes-Greatest-Politician/dp/037575895X). Everitt provides a great and searing view of Rome's heyday with Cicero at the center. It's an engaging read with tons of thoughts on the political machinations of the time. The book is almost a better Roman political evaluation that a biography, but Cicero is clearly at the center. Here's a politician who had no army (you really had to have an army to be someone in those days), yet took on Caesar and nearly won. His oratorical skills were unbelievable and his political strategy, ruthless. If you want to understand what divide and conquer means, look to Cicero. If you want to know how to play two ends against the middle, look at Cicero. He could and did it all. Now, I am not saying I like the guy, but he sure could politic like no body else. And this is where that assertion of more things change the more they stay the same comes in: We are doing the exact same stuff today in our politics they were doing back then. Scandal, intrigue, tear down people reputations, picket them, etc. We just don't have stabbings in the senate or have our senators' throats slit. I really enjoyed Everitt's book - it was well thought out, well presented and engaging. It gave me insight into Rome's politics as well as modern day politics and our own framework for operating - and to me that is a great combination to have. Now, if I can get the same type of thing for Asia, that would be great.
+
+---
+
+*Originally published on WordPress on October 08, 2007. Migrated to this blog on May 29, 2025.*

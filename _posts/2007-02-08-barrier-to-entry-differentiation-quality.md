@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Barrier to entry - differentiation &amp; quality"
+date: 2007-02-08 16:43:20 -0500
+categories: Competition Market rVibe
+tags: ['wordpress-import']
+---
+
+As we talk to more and more investors, I am asked more and more often: what are the barriers to entry? This question is of course standard practice when you are not comfortable in the space. So here is the thing: in the Internet space, there are few barriers to entry now. Capital is not even really one with development and infrastructure turning into a commodity. So how do you compete? We could consider supplier agreements (licensing music with the labels) as a barrier, but not that high of a barrier. We could consider our functionality or business model a barrier - but that is not truly sustainable. In the consumer space, there is something that investors don't really tend to think of as a barrier. And it's very hard to quantify as well (as opposed to how many patents you have). That thing is the _relative_  _quality_ of your product. In this case quality means ease of use, speed, offering, customer focus and engagement. Consumers notice it and buy accordingly. It's a major differentiator in a wildly growing market. I think of it as a "quality elastic demand curve". Kind of like price elastic demand curve except somewhat in reverse. For the digital music market, the end sale is the same: digital download of a music file. The price is generally the same (and it appears that the consumer is fairly price insensitive anyway), so the differentiator is in the service offering. And I think most importantly in the perceived quality of the service offering. So what about the quality elasticity? In this exploding market we are starting to see a glut of "me-too" products and services that apparently exist to take advantage of the market growth. In my version of the curve, as demand increases, the quality of the offering decreases (in this case with the increase in numbers of available services). But there is a negative effect to quality elasticity within the overall competitive offering: users turn away in general. So - what happens to quality when you start to see a decline in demand? You see quality increase. That said, a smart company invests in quality upfront so that when the demand eases, the quality component takes over and your service lands on top. That's why building a high quality service is a differentiator. And why I feel design is a major key to our success in a competitive landscape.
+
+---
+
+*Originally published on WordPress on February 08, 2007. Migrated to this blog on May 29, 2025.*

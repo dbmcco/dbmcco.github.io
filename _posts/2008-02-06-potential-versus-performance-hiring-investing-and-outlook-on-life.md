@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Potential versus performance, hiring, investing and outlook on life"
+date: 2008-02-06 00:45:06 -0500
+categories: Life in a startup Management
+tags: ['wordpress-import']
+---
+
+So - I am one of those people who likes to enumerate things and attempt to fit life into bivalent categories. Most of the time I fail miserably (when will I learn), and my company's product woefully defies simple categorization, and life is far richer than that, but I attempt to anyway. And here, as I look out in the word, while I think there are clearly far more than two types of people, I think that people tend to look a the world in one of two ways and therefore, since people run companies, and companies have a culture created by people, companies tend to look at the world in one of two ways: They either see (and act on) the potential in things, or they see (and act on) the performance of things. In the former - where people see the potential in things - they (and the companies run by these kinds of people) tend to look at "a something" and ask "what will it do?", where in the latter group, people tend to ask "what has it done?" And they act accordingly. And I also believe that these two groups have risk profiles. Meaning, the first group - the "potential" group tends to have a higher risk tolerance and the second group, the "performance" group, tends to have a lower risk tolerance. So - in this bivalent view of the world, the result is this: group one tends to look at the startup space and is enthused by it. They tend to look at cool products and want to use them - and then extend them. And engage in it all. The other group looks at the startup space and tends to shy away, it's just not as engaging for them. In terms of company hiring and promotion, I think this is true as well. The first group, the potential group, the higher risk tolerance group, tends to hire based on where the person will go (with some experience of course) and tends to promote into a position above where the person is today. The second group tends to hire based on past experience and promotes after a new role has been accomplished. Both have their pros and cons. And I believe that venture and angel investment takes this view as well. If you are an investor who looks at the potential in things, then you are more likely to invest in the potential and be willing to absorb the risk of performance. If you are an investor who looks at the performance, you are looking at the track record above other criteria. I tend to look at the potential. I like to see experience, but I like to see the enthusiasm of engagement and potential more than experience.
+
+---
+
+*Originally published on WordPress on February 06, 2008. Migrated to this blog on May 29, 2025.*

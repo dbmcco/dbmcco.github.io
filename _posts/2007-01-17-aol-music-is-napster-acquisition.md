@@ -1,0 +1,13 @@
+---
+layout: post
+title: "AOL Music is Napster = acquisition?"
+date: 2007-01-17 02:43:45 -0500
+categories: Competition Market Technology
+tags: ['wordpress-import']
+---
+
+Napster has a new [partner agreement](http://arstechnica.com/news.ars/post/20070114-8610.html) in place with AOL to help build revenue. The two companies signed a deal where Napster will take over AOL Music's (previously a MusicNet company) subscriber base. Add to the mix that Napster put it self on the [auction block recently](http://arstechnica.com/news.ars/post/20060919-7779.html) and this has very interesting implications for the new relationship. Now, common thinking in online music is that subscription services are better than a la cart. Meaning, they tend to have a higher profit margin - implying a lower cost of goods on a per track sales basis. Margins piece might be right, but I am not so sure it's really makes sense - since this is a business of high-volume, very low per sale margin, I believe that thinking is suspect. Consider this: AOL's music service hasn't been doing great, and neither has Napster's. Napster has a subscription model, AOL is moving away from subscriptionto an ad supported model. Everything makes sense so far. In AOL's view, remove a business unit that is costly and not aligned with the new ad model. In Napster's view, add subscribers to increase revenue and volume. But in essence, you have two businesses with floundering revenue models and revenue seeking new ways to acquire business who have decided to partner to add value. Of course, that's what the thinking often is in a M&A as well. Once AOL off loads its Music business onto Napster they now have room to do one of two things: 1. develop an ad supported music distribution model on their own 2. develop same, incorporate it into Napster and buy Napster. Strategic partners are most often the best acquisition partners. I am betting we start to see a shift in the Napster model that begins to align with AOL's new model. One such scenario is that in lieu of a subscription fee that gets divvied up for the content owners, users get free music and AOL does a revenue share on advertising dollars (almost like a media tax) based on usage. Just don't tell SpiralFrog though, they would probably have wanted that deal. Of course, they could get snatched up as a means to that end. But since [82% of consumers prefer a la carte](http://www.marketwatch.com/news/story/new-akamai-index-measures-real-time/story.aspx?guid=%7BA4130F78-298C-4168-8AC5-DA43B62F5D37%7D&sid=157330&symb=), none of it might work.
+
+---
+
+*Originally published on WordPress on January 17, 2007. Migrated to this blog on May 29, 2025.*

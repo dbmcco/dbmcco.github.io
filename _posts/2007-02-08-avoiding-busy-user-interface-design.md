@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Avoiding busy user interface design"
+date: 2007-02-08 14:43:18 -0500
+categories: rVibe Technology
+tags: ['wordpress-import']
+---
+
+I have seen so many [websites](http://music.yahoo.com/) and [applications](http://office.microsoft.com/en-us/default.aspx) that are [cluttered](http://www.msn.com/)with stuff or excess content that they become virtually unusable. Application clutter is one of my big pet peeves in UI design. It's easy to see how that happens. When you have so much content you want the user to see and easily get at, it's tempting to throw it all in. Or when you want users to click on ads, it's tempting to [embed](http://www.artistdirect.com/) lots and lots of ads. However I think adding lots of content and ad actually detracts from the user experience - and loyalty. It's more important to show relevant content in an easy to use/access format and make it easy to find more. So you have to make decisions around what you limit. It is really tough to do that of course. In the online music space, there is LOTs of content. For legal download sites, there are at least 2 million tracks, and for social networking there are potentially millions of people (or 100 million in the case of MySpace). And in desiging an application it's critical to not make all that information overwhelming. We decided to limit our presentation of materials to two views: list and item - ie: a song. And then, within that, start with a primary "header" piece of information (ie: title and artist) with no more than 5 available actions (ie: buy, hold, recommend, burn). Then under that you can click on tabs for more information. From an ad standpoint, we've take the Google approach - relegate them to the right side and make them simple and clear. They have nailed is and become known for simple and effective. We like that solution as well. Then you also have to design a UI that _feels_ uncluttered. To me, that one is easier than figuring out how to limit content (although our designer might disagree). More white space (or whatever color you choose), and no flashing stuff, no moving images, not tons of "album art" all over, etc. More links, and means to get at _additional (read: not critical) information_ as opposed to showing the additional information. And in limiting the available functionality to what you want the user to do (and what the user comes to your application for), you have to clearly mark those items to draw the user to them. The advertisers have figured that out - how to capture "eyeballs" but if the sites out there are an indication, UI designers have not figured it out.
+
+---
+
+*Originally published on WordPress on February 08, 2007. Migrated to this blog on May 29, 2025.*

@@ -7,11 +7,10 @@ layout: default
 
   <h2>Recent Posts</h2>
   
-  {% assign recent_posts = site.posts | where_exp: "post", "post.date >= '2023-01-01 00:00:00'" | where_exp: "post", "post.title != ''" %}
-  
-  {% if recent_posts.size > 0 %}
-    <ul class="post-list">
-      {% for post in recent_posts limit: 10 %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% assign post_year = post.date | date: "%Y" | plus: 0 %}
+      {% if post_year >= 2023 %}
         <li>
           <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
           <h3>
@@ -23,10 +22,9 @@ layout: default
             <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
           {% endif %}
         </li>
-      {% endfor %}
-    </ul>
-    
-  {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
   
   <div class="archive-link">
     <p><a href="{{ '/archive' | relative_url }}">→ View all posts</a></p>

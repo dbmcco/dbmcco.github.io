@@ -7,7 +7,7 @@ layout: default
 
   <h2>Recent Posts</h2>
   
-  {% assign recent_posts = site.posts | where_exp: "post", "post.title != ''" %}
+  {% assign recent_posts = site.posts | where_exp: "post", "post.date >= '2023-01-01 00:00:00'" | where_exp: "post", "post.title != ''" %}
   
   {% if recent_posts.size > 0 %}
     <ul class="post-list">

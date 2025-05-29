@@ -6,7 +6,7 @@ categories: Competition Market
 tags: ['wordpress-import']
 ---
 
-![Amazon.com](http://meansofproduction.wordpress.com/wp-content/uploads/2007/09/images.thumbnail.jpg)Amazon.com [launched it's MP3 store today](http://www.amazon.com/gp/blog/post/PLNK1GR94T4PJ38D6/104-8606382-7463951?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-7&pf_rd_r=1B1485KJ1WHJWC29VYD4&pf_rd_t=101&pf_rd_p=249703901&pf_rd_i=5174)... This is a pretty big deal for a number of reasons and has meaning for rVibe as well. The reason it's a big deal is: 
+Amazon.com [launched it's MP3 store today](http://www.amazon.com/gp/blog/post/PLNK1GR94T4PJ38D6/104-8606382-7463951?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-7&pf_rd_r=1B1485KJ1WHJWC29VYD4&pf_rd_t=101&pf_rd_p=249703901&pf_rd_i=5174)... This is a pretty big deal for a number of reasons and has meaning for rVibe as well. The reason it's a big deal is: 
 
   1. **They only sell MP3 files:** That means no DRM, and means total interoperability for all the tracks it sells. With Amazon.com's clout, that is a HUGE advancement for the on-line music industry. It put tremendous pressure on the rest of the labels out there to allow DRM free tracks, and on the rest of the labels out there to get it together and start offering digital music. They don't have the 5 million tracks that iTunes, does, but I am sure they will soon.
   2. **Fantastic branding and awareness:** Amazon is launching into a rapidly expanding market with an already enormous brand presence. That dramatically reduces barrier to adoption for new users. And more specifically, Amazon has a reputation for being easy to use. Not customer service oriented, but definitely easy to use.

@@ -6,7 +6,7 @@ categories: Management rVibe Technology
 tags: ['wordpress-import']
 ---
 
-[![rVibe Logo](http://meansofproduction.wordpress.com/wp-content/uploads/2007/02/rvibelogo.thumbnail.jpeg)](http://meansofproduction.wordpress.com/wp-content/uploads/2007/02/rvibelogo.jpeg "rVibe Logo")So - we're down to the wire on the Beta release. Meaning - we're finishing up the production environment build, testing the various connections and getting ready to load the server up. We're also finishing up the brochure ware website which will get loaded into our web server in the next week. And finally, the client Beta is just about ready - final elements coming together. And we've also just decided to put in (not for beta, but in a couple releases), a place-shift stream for listening to your own music for free. No need to upload - just install the software, register and logon to rVibe.com to listen to your own music anywhere. Not bad.
+So - we're down to the wire on the Beta release. Meaning - we're finishing up the production environment build, testing the various connections and getting ready to load the server up. We're also finishing up the brochure ware website which will get loaded into our web server in the next week. And finally, the client Beta is just about ready - final elements coming together. And we've also just decided to put in (not for beta, but in a couple releases), a place-shift stream for listening to your own music for free. No need to upload - just install the software, register and logon to rVibe.com to listen to your own music anywhere. Not bad.
 
 ---
 

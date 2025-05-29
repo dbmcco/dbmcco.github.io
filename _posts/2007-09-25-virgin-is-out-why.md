@@ -6,7 +6,7 @@ categories: Competition Market
 tags: ['wordpress-import']
 ---
 
-![Virgin Digital](http://meansofproduction.wordpress.com/wp-content/uploads/2007/09/virgindigital.thumbnail.jpg)Well - [Virgin Digital is done selling music online](http://news.digitaltrends.com/news/story/14266/virgin_digital_exits_music_business). They have transferred all their customer stuff to Napster. When a customer focused, value add focused, cash flush company exits a market so quickly and quietly, it makes you wonder why. There are not that many reasons: 
+Well - [Virgin Digital is done selling music online](http://news.digitaltrends.com/news/story/14266/virgin_digital_exits_music_business). They have transferred all their customer stuff to Napster. When a customer focused, value add focused, cash flush company exits a market so quickly and quietly, it makes you wonder why. There are not that many reasons: 
 
   1. **It was hemorrhaging money:** But I think not enough of a reason in this case.
   2. **Outside core value offering:** Definitely think this is a good reason for Virgin Digital to exit this market.

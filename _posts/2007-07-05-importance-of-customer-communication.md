@@ -6,7 +6,7 @@ categories: Management Market rVibe
 tags: ['wordpress-import']
 ---
 
-![rVibe Logo](http://meansofproduction.wordpress.com/wp-content/uploads/2007/02/rvibelogo.thumbnail.jpeg)I just re-signed up for XM radio, despite thinking the audio quality is terrible. Why? For the following reasons: 
+I just re-signed up for XM radio, despite thinking the audio quality is terrible. Why? For the following reasons: 
 
   1. They called me and asked to bring me back 
   2. They offered me 1/2 price for a year

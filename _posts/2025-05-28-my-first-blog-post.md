@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My First Blog Post"
-date: 2025-05-29 09:00:00 -0500
+date: 2025-05-28 12:00:00 -0500
 categories: personal thoughts
 tags: [blogging, obsidian, jekyll]
 ---

@@ -21,6 +21,10 @@ minima:
 # Show excerpts on homepage
 show_excerpts: true
 
+# Jekyll build settings
+future: false
+unpublished: false
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

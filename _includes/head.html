@@ -19,10 +19,13 @@
     :root {
       --primary-text: #2c2c2c;
       --secondary-text: #666666;
-      --accent-color: #d4773d;
+      --accent-color: #4a7c7e;
       --light-gray: #f8f8f8;
-      --border-color: #e0e0e0;
+      --border-color: #c8d6d7;
       --background: #ffffff;
+      --header-bg: linear-gradient(135deg, #4a7c7e 0%, #6ba6a9 50%, #8cc8cb 100%);
+      --nav-bg: #9bb58a;
+      --nav-hover: #7a9669;
     }
 
     body {
@@ -48,31 +51,51 @@
     }
 
     .site-header {
-      background-color: var(--background) !important;
-      border-bottom: 1px solid var(--border-color) !important;
-      padding: 1.5rem 0 !important;
+      background: var(--header-bg) !important;
+      border-bottom: none !important;
+      padding: 2rem 0 !important;
+      margin-bottom: 2rem !important;
     }
 
     .site-title {
-      font-size: 1.8rem !important;
-      font-weight: 600 !important;
-      color: var(--primary-text) !important;
+      font-size: 2.5rem !important;
+      font-weight: 700 !important;
+      color: white !important;
       text-decoration: none !important;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
     }
 
     .site-title:hover {
-      color: var(--accent-color) !important;
+      color: #f0f8ff !important;
       text-decoration: none !important;
+    }
+
+    .site-nav {
+      background: var(--nav-bg) !important;
+      padding: 0.5rem 1rem !important;
+      border-radius: 8px !important;
+      margin-top: 1rem !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
     }
 
     .page-link {
-      color: var(--secondary-text) !important;
-      margin-left: 2rem !important;
+      background: rgba(255,255,255,0.9) !important;
+      color: var(--primary-text) !important;
+      margin: 0 0.5rem !important;
+      padding: 0.5rem 1rem !important;
       text-decoration: none !important;
+      border-radius: 5px !important;
+      font-weight: 500 !important;
+      display: inline-block !important;
+      transition: all 0.3s ease !important;
     }
 
     .page-link:hover {
-      color: var(--accent-color) !important;
+      background: var(--nav-hover) !important;
+      color: white !important;
+      transform: translateY(-1px) !important;
     }
 
     .wrapper {
@@ -83,16 +106,20 @@
 
     .home .intro {
       margin-bottom: 3rem !important;
-      padding: 2rem 0 !important;
-      border-bottom: 2px solid var(--border-color) !important;
+      padding: 2rem !important;
+      border: 2px solid var(--border-color) !important;
+      border-radius: 8px !important;
+      background: linear-gradient(135deg, #f9fafb 0%, #f0f4f5 100%) !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
     }
 
     .home .intro p {
-      font-size: 1.2rem !important;
-      color: var(--secondary-text) !important;
+      font-size: 1.3rem !important;
+      color: var(--primary-text) !important;
       margin: 0 !important;
       font-style: italic !important;
-      line-height: 1.5 !important;
+      line-height: 1.6 !important;
+      text-align: center !important;
     }
 
     .home h2 {
@@ -122,15 +149,16 @@
     }
 
     .post-link {
-      color: var(--primary-text) !important;
+      color: var(--accent-color) !important;
       text-decoration: none !important;
-      font-size: 1.4rem !important;
-      font-weight: 600 !important;
+      font-size: 1.6rem !important;
+      font-weight: 700 !important;
+      line-height: 1.2 !important;
     }
 
     .post-link:hover {
-      color: var(--accent-color) !important;
-      text-decoration: none !important;
+      color: #2a5f61 !important;
+      text-decoration: underline !important;
     }
 
     .archive-link {

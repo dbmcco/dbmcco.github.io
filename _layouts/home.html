@@ -7,9 +7,12 @@ layout: default
 
   <h2>Recent Posts</h2>
   
-  {% if site.posts.size > 0 %}
+  {% assign three_months_ago = 'now' | date: '%s' | minus: 7776000 %}
+  {% assign recent_posts = site.posts | where_exp: "post", "post.date | date: '%s' >= three_months_ago" %}
+  
+  {% if recent_posts.size > 0 %}
     <ul class="post-list">
-      {% for post in site.posts %}
+      {% for post in recent_posts limit: 10 %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h3>
@@ -23,7 +26,35 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    
+    {% if site.posts.size > recent_posts.size %}
+      <div class="older-posts">
+        <p><a href="{{ '/archive' | relative_url }}" class="older-posts-link">
+          → View older posts ({{ site.posts.size | minus: recent_posts.size }} more)
+        </a></p>
+      </div>
+    {% endif %}
   {% else %}
-    <p>No posts yet.</p>
+    <p>No recent posts. <a href="{{ '/archive' | relative_url }}">View all posts →</a></p>
   {% endif %}
 </div>
+
+<style>
+.older-posts {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.older-posts-link {
+  color: #666;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.older-posts-link:hover {
+  color: #2a7ae4;
+  text-decoration: underline;
+}
+</style>

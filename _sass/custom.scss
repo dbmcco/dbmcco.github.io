@@ -78,23 +78,38 @@ h3 { font-size: 1.25rem !important; }
   }
 }
 
-// Force override any minima theme button styling
+// Nuclear option: Override all possible navigation styling with maximum specificity
+.site-header .site-nav .trigger .page-link,
 .site-header .site-nav .page-link,
+.site-nav .trigger .page-link,
 .site-nav .page-link,
-a.page-link {
+a.page-link,
+.trigger .page-link {
   background: none !important;
   background-color: transparent !important;
+  background-image: none !important;
   border: none !important;
   border-radius: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 2rem !important;
   box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
   
-  &:hover, &:focus, &:active, &:visited {
+  &:hover, &:focus, &:active, &:visited, &:link {
     background: none !important;
     background-color: transparent !important;
+    background-image: none !important;
     border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
   }
 }
 

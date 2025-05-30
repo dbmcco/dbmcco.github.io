@@ -2,4 +2,68 @@
 ---
 
 @import "minima";
+
+// Override minima navigation styles completely
+.site-nav {
+  background: none !important;
+  
+  .trigger {
+    display: flex !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    background: none !important;
+  }
+  
+  .page-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s ease !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    position: relative !important;
+    
+    // Nuclear override of all button styling
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-right: 2rem !important;
+    box-shadow: none !important;
+    
+    &:hover {
+      color: #ffffff !important;
+      text-decoration: none !important;
+      background: none !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      transform: none !important;
+    }
+    
+    &:after {
+      content: '' !important;
+      position: absolute !important;
+      width: 0 !important;
+      height: 2px !important;
+      bottom: -5px !important;
+      left: 50% !important;
+      background-color: rgba(255, 255, 255, 0.8) !important;
+      transition: all 0.2s ease !important;
+      transform: translateX(-50%) !important;
+    }
+    
+    &:hover:after {
+      width: 100% !important;
+    }
+  }
+  
+  .nav-trigger, .menu-icon {
+    display: none !important;
+  }
+}
+
 @import "custom";

@@ -6,7 +6,7 @@ categories: Competition Market
 tags: ['wordpress-import']
 ---
 
-Amazon.com's launch is ALL OVER the news and blogosphere. It would have been a disaster to launch rVibe in the middle of that. We're going to have to wait until at least next week to launch. And all I can say is that thank goodness the Apple backlash is starting to gain some momentum - this really really bodes well for loosening up and growing the market.
+![Amazon.com](http://meansofproduction.wordpress.com/wp-content/uploads/2007/09/images.thumbnail.jpg)Amazon.com's launch is ALL OVER the news and blogosphere. It would have been a disaster to launch rVibe in the middle of that. We're going to have to wait until at least next week to launch. And all I can say is that thank goodness the Apple backlash is starting to gain some momentum - this really really bodes well for loosening up and growing the market.
 
 ---
 

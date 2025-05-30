@@ -1,146 +1,87 @@
 ---
 layout: post
-title: "Training Data Considerations for Implementing GenAI & LLMs in Healthcare"
-date: 2024-01-04 10:00:00 -0500
-categories: ai healthcare training-data
-tags: [substack-import, ai, healthcare, llm, training-data, generative-ai]
-original_url: https://dbmcco.substack.com/p/training-data-considerations-for
+title: "The healthcare AI training data problem (and why your old EMR data is actually gold)"
+date: 2024-01-04
+categories: ai healthcare data
+tags:
+  - AI
+  - healthcare
+  - training-data
+  - EMR
 ---
 
+I've been working with healthcare organizations on AI implementation for the past year, and there's this one problem that keeps coming up in every conversation: training data.
 
-The successful implementation of Generative AI and Large Language Models (LLMs) in healthcare hinges critically on training data considerations. This article explores the importance of using "local data" tailored to specific healthcare organizations and the challenges inherent in data collection.
+Everyone wants to build AI systems that understand their specific patient populations, clinical workflows, and organizational context. But when they look at the available training datasets, they're all generic, often outdated, and definitely not representative of their actual patient base.
 
-## The Generalizability Problem
+And then someone in the room always says, "But we have decades of our own clinical data sitting in our EMR system. Can't we use that?"
 
-> "Research consistently shows that training data creates biases in the results LLMs produce."
+That's when things get interesting.
 
-The key insight is that healthcare AI systems must be trained on data that reflects:
-- **Geographic specificity** - Local disease patterns and demographics
-- **Organizational context** - Specific clinical practices and protocols  
-- **Patient populations** - Representative demographic and health profiles
-- **Clinical workflows** - Institution-specific care delivery patterns
+## The problem with public healthcare datasets
 
-## Current Training Data Limitations
+Most healthcare AI systems are trained on datasets like MIMIC-III, eICU, or various clinical trial datasets. These are great for research, but they have some pretty significant limitations when you're trying to build AI that works in real healthcare settings:
 
-Most medical LLMs rely on limited, outdated datasets:
+**They're not representative** - MIMIC-III is mostly data from Beth Israel Deaconess Medical Center. If you're a rural health system in Texas, your patient population probably looks very different.
 
-### MIMIC-III Dataset Constraints
-The commonly used MIMIC-III dataset contains "approximately 2 million notes written between 2001-2012 in the ICU of the Beth Israel Deaconess Medical Center."
+**They're old** - A lot of these datasets are from 5-10 years ago. Healthcare changes fast, especially post-COVID. Treatment protocols, medication options, and patient care pathways have evolved significantly.
 
-**Limitations:**
-- **Single institution** - Limited to one hospital's practices
-- **Outdated timeframe** - 12+ year old clinical data
-- **ICU-specific** - Narrow clinical scope
-- **Geographic bias** - Boston-area demographics only
+**They're limited in scope** - Most public datasets focus on specific conditions or care settings. But healthcare AI needs to understand the full complexity of patient care across multiple conditions and touchpoints.
 
-### Inadequate Representation
-This creates AI systems that may not generalize to:
-- Different patient populations
-- Various clinical settings
-- Current medical practices
-- Regional health patterns
+I was working with a health system last year that tried to implement a sepsis prediction model trained on one of these public datasets. The model performed great in testing, but when they deployed it in their ICU, the false positive rate was astronomical. 
 
-## Data Collection Challenges
+Turns out their patient population had different risk factors, their clinical documentation patterns were different, and their lab timing protocols didn't match what the model had been trained on.
 
-Healthcare organizations face significant obstacles in assembling training datasets:
+## Why your archived data is actually perfect (and why you're not using it)
 
-### 1. Dispersed Data Systems
-- **EHR fragmentation** across departments
-- **Legacy system integration** complexity
-- **Interoperability gaps** between platforms
-- **Data format inconsistencies**
+Here's what I keep explaining to healthcare CIOs: You already have the best possible training dataset for your organization. It's sitting in your EMR system right now.
 
-### 2. Limited Historical Records
-- **Digitization timelines** vary by organization
-- **Data quality issues** in older records
-- **Missing longitudinal data** for comprehensive training
-- **Incomplete documentation** practices
+You have years (sometimes decades) of clinical notes, lab results, diagnostic imaging reports, medication records, and outcome data. All specific to your patient population, your clinical workflows, and your documentation practices.
 
-### 3. Regulatory Constraints
-- **HIPAA compliance** requirements
-- **Patient consent** considerations
-- **De-identification** complexity
-- **Cross-border data** restrictions
+Nobody's using it for AI training;
 
-## Recommended Approach: Leverage Archived Data
+**"It's messy"** - Real clinical data is messy. But that's actually a feature, not a bug. AI systems trained on messy, real-world data perform better in messy, real-world environments than systems trained on clean research datasets.
 
-### Regulation-Mandated Archives
-Healthcare organizations should utilize existing archived data repositories:
+**"We don't have the technical expertise"** - This one's more legitimate. Most healthcare organizations don't have teams that know how to process clinical data for AI training. But this is a solvable problem.
 
-**Benefits:**
-- **Compliance-ready** - Already meets regulatory requirements
-- **Comprehensive scope** - Covers required retention periods
-- **Quality controlled** - Maintained for audit purposes
-- **Accessible format** - Structured for analysis
+**"Compliance and privacy concerns"** - Also legitimate, but there are established frameworks for using internal clinical data for AI development while maintaining HIPAA compliance.
 
-### Strategic Implementation
-1. **Inventory existing archives** across all systems
-2. **Assess data quality** and completeness
-3. **Map regulatory requirements** to available data
-4. **Design extraction pipelines** for minimal disruption
-5. **Implement privacy controls** throughout the process
+## What I'm seeing work in practice
 
-## Organizational Benefits
+The healthcare organizations that are getting good results from AI are the ones that figured out how to use their own data effectively.
 
-### Tailored AI Systems
-Local training data enables LLMs that are "finely tuned to the unique needs of their organization and the patients they serve."
+One health system I'm working with built a clinical decision support tool using 8 years of their own EMR data. The model can predict which patients are likely to need additional care coordination, which medications are most likely to cause adverse reactions in their specific patient population, and which discharge plans are most likely to lead to readmissions.
 
-**Advantages:**
-- **Improved accuracy** for local patient populations
-- **Relevant clinical insights** based on actual practices
-- **Reduced bias** from external datasets
-- **Enhanced trust** through familiar patterns
+The key insight? They didn't try to build a general-purpose AI system. They built AI that understands their specific environment, patient base, and clinical workflows.
 
-### Operational Efficiency
-- **Minimal disruption** to current workflows
-- **Leveraged existing investments** in data infrastructure
-- **Regulatory compliance** maintained throughout
-- **Faster implementation** timelines
+Another organization used their archived radiology reports to train a model that can flag imaging studies that might need expedited review. Not because the AI is making diagnostic decisions, but because it learned to recognize patterns in their radiologists' language that indicate urgency.
 
-## Implementation Framework
+## The technical approach that's working
 
-### Phase 1: Data Assessment
-- Catalog available archived data sources
-- Evaluate data quality and completeness
-- Map regulatory compliance requirements
-- Identify gaps and supplemental needs
+Here's the process that seems to be most effective:
 
-### Phase 2: Infrastructure Setup
-- Design secure data extraction pipelines
-- Implement privacy and security controls
-- Establish quality assurance processes
-- Create training data preparation workflows
+**Start with a specific use case** - Don't try to build general-purpose medical AI. Pick one workflow or decision point where you have good data and clear success metrics.
 
-### Phase 3: Model Development
-- Train organization-specific LLMs
-- Validate against clinical outcomes
-- Implement continuous learning systems
-- Monitor for bias and accuracy
+**Use your EMR archive systematically** - Most EMR systems have been collecting structured and unstructured data for years. That's your training corpus.
 
-## Strategic Recommendations
+**Focus on your organization's specific patterns** - The goal isn't to build AI that works everywhere. It's to build AI that works really well in your environment.
 
-### For Healthcare Decision-Makers
+**Maintain human oversight** - These AI systems should augment clinical decision-making, not replace it. The models work best when they're designed to help clinicians be more effective rather than make autonomous decisions.
 
-1. **Prioritize local data** over generic datasets
-2. **Leverage archived repositories** for efficiency
-3. **Invest in data infrastructure** for long-term success
-4. **Maintain regulatory compliance** throughout implementation
-5. **Plan for continuous improvement** and model updates
+The health system with the sepsis prediction model? They eventually rebuilt it using their own EMR data. The new version has a much lower false positive rate and actually gets used by their clinical teams because it understands their specific patient population and care patterns.
 
-### For AI Development Teams
+## Why this matters now
 
-1. **Understand healthcare-specific** data challenges
-2. **Design for privacy** from the ground up
-3. **Build flexible pipelines** for diverse data sources
-4. **Implement robust validation** processes
-5. **Plan for regulatory audits** and compliance reviews
+Healthcare organizations are under massive pressure to improve efficiency and outcomes while controlling costs. AI can help with all of that, but only if it's trained on data that reflects the actual environment where it's going to be deployed.
 
-## Conclusion
+The organizations that figure out how to leverage their archived clinical data effectively are going to have a significant advantage. Not because their AI is smarter, but because it's trained on data that actually represents their real-world challenges and patient populations.
 
-The success of GenAI and LLMs in healthcare depends fundamentally on thoughtful training data strategies. Organizations that leverage their existing archived data repositories while maintaining strict privacy and regulatory compliance will be best positioned to develop AI systems that truly serve their unique patient populations and clinical needs.
+And the ones that keep waiting for perfect public datasets or off-the-shelf solutions? They're going to keep struggling with AI systems that work great in research papers but don't translate to their actual clinical environment.
 
-The investment in proper training data preparation will yield AI systems that are not only more accurate and relevant but also more trustworthy and compliant with the rigorous standards healthcare demands.
+## The implementation reality
 
----
+This isn't easy work. You need people who understand both clinical workflows and AI development. You need robust data governance processes. And you need leadership that's willing to invest in building internal AI capabilities rather than just buying vendor solutions.
 
-*Originally published on [Substack](https://dbmcco.substack.com/p/training-data-considerations-for) on January 4, 2024. Migrated to this blog on May 29, 2025.*
+But the organizations that are making this investment are seeing real results. Better clinical outcomes, more efficient workflows, and AI systems that actually get adopted by clinical teams because they're designed around real-world data and workflows.
+
+Your EMR archive isn't just historical data - it's the foundation for AI systems that can actually improve patient care in your specific environment. The question is whether you're going to use it or keep waiting for someone else to solve this problem for you.

@@ -7,6 +7,7 @@ tags:
   - AI
   - AIEthics
 ---
+# Addressing AI Anthropomorphism with Clients
 
 In our enterprise client work implementing Generative AI capabilities, we've identified a critical challenge: the understanding gap between technical and non-technical stakeholders regarding AI's nature and capabilities.
 

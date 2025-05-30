@@ -1,124 +1,55 @@
 ---
 layout: post
-title: "Is LifeScience Compliance Ready for ChatGPT?"
-date: 2023-06-12 10:00:00 -0500
-categories: ai compliance life-sciences
-tags: [substack-import, ai, life-sciences, compliance, chatgpt]
-original_url: https://dbmcco.substack.com/p/is-lifescience-compliance-ready-for-chatgpt
+title: "Actually using ChatGPT in life science work (and the compliance headaches)"
+date: 2023-06-12
+categories: ai healthcare life-sciences
+tags:
+  - AI
+  - compliance
+  - healthcare
 ---
 
+I've been working with a few of life science companies over the past few months, and ChatGPT keeps coming up in every conversation. But here's the thing - everyone's asking if they can use it, and the compliance teams are basically having panic attacks.
 
-## Introduction
+I get it. When you're dealing with regulations and patient data, "move fast and break things" isn't servicable.
 
-The rapid adoption of generative AI tools like ChatGPT has created both unprecedented opportunities and significant compliance challenges for Life Science companies. As these powerful language models become increasingly integrated into business processes, the question of regulatory readiness becomes critical.
+## What's happening on the ground
 
-## The Compliance Challenge
+Here's what I'm seeing in real client work: The business teams are already using ChatGPT. Marketing people are drafting content, medical affairs teams are brainstorming educational materials, and project managers are using it to write better meeting summaries.
 
-Life Science companies operate under some of the most stringent regulatory frameworks in the world, including:
+And compliance? They're finding out after the fact and scrambling to figure out what the hell to do about it.
 
-- **FDA regulations** for drug development and marketing
-- **GxP (Good Practice) guidelines** for manufacturing and clinical trials
-- **Data privacy regulations** like HIPAA and GDPR
-- **Medical device regulations** for AI-enabled products
-- **Clinical trial compliance** requirements
+I was in a meeting last week where the head of regulatory said "We need to ban all AI tools" and the CMO laughed out loud. Because her team had been using ChatGPT for and getting better faster (and in some cases better) results than they'd ever gotten from their agency partners.
 
-## Key Compliance Considerations
+## The real compliance issues (and the fake ones)
 
-### Data Security and Privacy
+Let's talk about what actually matters here:
 
-**Challenge**: ChatGPT and similar models may process sensitive information in ways that violate privacy regulations.
+**The real stuff:**
+- Nobody's putting patient data into ChatGPT (well, they better not be)
+- Most of the content being generated is internal brainstorming or early-stage drafts
+- The outputs still go through the same review processes they always have
 
-**Considerations**:
-- Patient data protection
-- Proprietary research information
-- Regulatory submission materials
-- Clinical trial data
+**The panic stuff that doesn't actually matter:**
+- "What if ChatGPT makes up fake clinical data?" - Okay, but your medical writers aren't using it to write clinical study reports. They're using it to draft a outline for a conference presentation.
+- "What if the FDA finds out we used AI?" - The FDA cares about your data integrity and your clinical evidence. They don't care if you used spell-check or ChatGPT to help write your submission documents.
 
-### Regulatory Validation
+## What I'm actually recommending
 
-**Challenge**: AI-generated content must meet the same accuracy and reliability standards as human-generated content.
+Instead of trying to ban these tools, here's what seems to be working for the companies that are handling this well:
 
-**Requirements**:
-- Validation of AI outputs
-- Audit trails for AI-assisted decisions
-- Documentation of AI model versions and training data
-- Quality assurance processes
+**Set some basic guardrails** - No patient data, no proprietary research data, no competitive intelligence. Pretty straightforward. 
 
-### Responsibility and Accountability
+**Document your processes** - If you're using AI tools in your workflow, just write down what you're doing. Your SOPs probably already cover "content review and approval" - this just adds one step to that process.
 
-**Critical Question**: Who is responsible when AI makes errors in compliance-critical contexts?
+**Train people on what not to do** - Most compliance issues happen because people don't know where the line is. Make the line clear.
 
-**Key Issues**:
-- Legal liability for AI-generated content
-- Regulatory accountability for AI decisions
-- Professional responsibility in AI-assisted work
-- Risk management frameworks
+## The thing nobody wants to say out loud
 
-## Current Regulatory Landscape
+These tools will become standard practice whether compliance teams like it or not. The companies that figure out how to use them safely and effectively are going to have a massive advantage.
 
-### FDA Perspective
+And the ones that don't? They're going to be stuck paying agencies $50k to produce content that their competitors are creating in-house for basically nothing.
 
-The FDA has begun addressing AI in medical devices and drug development, but guidance for generative AI in general business processes remains limited.
+So maybe instead of asking "Can we use ChatGPT?" the better question is "How do we use these tools without screwing up our compliance obligations?"
 
-### European Approach
-
-The EU's AI Act and GDPR create additional layers of complexity for Life Science companies operating globally.
-
-### Industry Standards
-
-Professional organizations are developing guidelines, but adoption varies significantly across companies and therapeutic areas.
-
-## Risk Mitigation Strategies
-
-### Technical Controls
-
-- **Dedicated instances** of AI models with enhanced security
-- **Data segregation** to prevent sensitive information exposure
-- **Output validation** systems to verify AI-generated content
-- **Version control** and audit logging
-
-### Process Controls
-
-- **Human oversight** requirements for AI-generated content
-- **Review protocols** for compliance-critical materials
-- **Training programs** for staff using AI tools
-- **Clear policies** on acceptable AI use
-
-### Governance Framework
-
-- **AI oversight committees** with compliance representation
-- **Risk assessment** procedures for new AI implementations
-- **Regular audits** of AI usage and outputs
-- **Vendor management** for AI service providers
-
-## The Path Forward
-
-### Short-term Recommendations
-
-1. **Develop AI governance policies** specific to Life Science compliance requirements
-2. **Conduct risk assessments** for current and planned AI implementations
-3. **Establish validation protocols** for AI-generated content
-4. **Train staff** on compliant AI usage
-
-### Long-term Strategy
-
-1. **Engage with regulators** to shape emerging guidance
-2. **Collaborate with industry** on best practices and standards
-3. **Invest in compliance-ready AI infrastructure**
-4. **Build internal AI expertise** with compliance focus
-
-## Conclusion
-
-While Life Science companies are not yet fully ready for ChatGPT from a compliance perspective, the potential benefits are too significant to ignore. The key is developing a thoughtful, risk-based approach that balances innovation with regulatory requirements.
-
-Success will require:
-- **Proactive compliance planning**
-- **Robust risk management**
-- **Ongoing regulatory engagement**
-- **Investment in appropriate infrastructure and processes**
-
-The companies that get this balance right will gain significant competitive advantages while maintaining the trust and confidence of regulators, patients, and stakeholders.
-
----
-
-*Originally published on [Substack](https://dbmcco.substack.com/p/is-lifescience-compliance-ready-for-chatgpt) on June 12, 2023. Migrated to this blog on May 29, 2025.*
+Because that's a solvable problem. The other approach - pretending these tools don't exist - isn't really an option anymore.

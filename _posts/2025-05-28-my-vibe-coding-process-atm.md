@@ -7,6 +7,7 @@ tags: [substack-import, ai, development, claude-code, workflow]
 original_url: https://dbmcco.substack.com/p/my-vibe-coding-process-atm
 ---
 
+# My "Vibe Coding" Process ATM
 
 I've been experimenting with an approach I call "vibe coding" using multiple Claude Code CLI instances for complex projects. The goal is to create a more "repeatable, scalable and predictable" development process.
 

@@ -6,6 +6,7 @@ categories: business healthcare events
 tags: [covid-19, virtual-meetings, healthcare, events]
 ---
 
+# Virtual Meetings: Rapid Response Needs During COVID-19
 
 Following the significant increase in healthcare sector meetings being postponed or cancelled due to the global COVID-19 outbreak, this post breaks down a conversation between Mark Handforth of 3Sixty Event Consulting and Braydon McCormick, CEO of intempio.com. As their discussion evolved, they realized their insights could help those now facing the fast turnaround of virtual meeting strategies and deployments.
 

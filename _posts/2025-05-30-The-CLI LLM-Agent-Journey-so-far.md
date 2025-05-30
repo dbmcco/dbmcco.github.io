@@ -6,6 +6,12 @@ categories: development ai workflow
 tags:
 ---
 
+
+
+---
+
+# The CLI LLM Agent Journey So Far
+
 At the moment, I'm building a multi-agent autogen, waterfall-style dev structure using Claude code (with env for codex and ollama, and maybe Claude Code SDK). The goal of this structure is to keep Claude code CLI (or Codex or Ollama) inside a pretty tight box to enforce TDD, rigorous requirements adherence and proper architecture alignment for more complex projects. Since I'm not a trained developer, but I'm deeply familiar with process and infrastructure, the real goal is to use these structures to prevent the AI agent from things it thinks are smart and that I would never know if it is or not. 
 
 ## The Beginning; six weeks ago
@@ -53,3 +59,10 @@ So now I have two development models (autogen style still not really ready yet):
 ## What's old is new
 
 All this is heading toward a somewhat waterfally-style dev approach, but with some feedback loops in there. One of the interesting things about working with LLM dev is that you can just start over and throw out thousands of lines of code and it doesn't matter. With that in mind, water fall is great. And, I have not been able to see how I can structure an agile model (other than some minor feedback loops). I actually am staring to think that we have to rethink (or maybe regress) how we develop with LLM Agents - it's NOT human coding - it's something else entirely. Another post for another day.
+
+## What's next - a new messaging bus?
+In addition to finishing AutoGen.... 10+ years ago my co-founded had done some kind of model where he used the Twitter API as a messaging bus for a different application.  The high throughput and small message size allowed for some effective controller applications (although now I don't recall what it was exactly). At that time Twitter allowed this kind of thing, but he wound up hitting it too hard and they cut him off. C'est la vie.   
+
+Recently there have been a bunch of new AI tools sitting on top of Github - OpenAI's Codex being a really strong and interesting one. And Claude Code now has Github actions. To that end, it occurred to me that, for my multi-agent model I might be able to treat Gihub as a kind of old-twitter-esque messaging bus using Issues, tags and comments.  In which we have our PRD and requirements as a doc set, our issues/comments as instructions (depending on the tags associated with each) and code, is code. 
+
+If that works, then I can also have a docker creator agent and push straight to Render.com from Github.  That is where I want to get to.

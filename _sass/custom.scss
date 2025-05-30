@@ -1,7 +1,7 @@
 // Import Google Fonts for retro typography
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
-// Retro color palette
+// Retro color palette with enhanced header colors
 :root {
   --primary-text: #2c2c2c;
   --secondary-text: #666666;
@@ -9,6 +9,9 @@
   --light-gray: #f8f8f8;
   --border-color: #e0e0e0;
   --background: #ffffff;
+  --header-bg: #5a7a7a; // Matching the teal from screenshot
+  --header-text: #ffffff;
+  --header-accent: #e8d5b7; // Light cream color for buttons
 }
 
 // Reset and base typography
@@ -37,36 +40,75 @@ h3 { font-size: 1.5rem !important; line-height: 1.4 !important; }
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-// Site header styling
+// Site header styling - enhanced design
 .site-header {
-  background-color: var(--background) !important;
-  border-bottom: 1px solid var(--border-color) !important;
-  padding: 1.5rem 0 !important;
+  background-color: var(--header-bg) !important;
+  border-bottom: none !important;
+  padding: 2rem 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
   
-  .site-title {
-    font-size: 1.8rem !important;
-    font-weight: 600 !important;
-    color: var(--primary-text) !important;
-    text-decoration: none !important;
-    
-    &:hover {
-      color: var(--accent-color) !important;
+  .wrapper {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  .site-title-area {
+    .site-title {
+      font-size: 2.2rem !important;
+      font-weight: 600 !important;
+      color: var(--header-text) !important;
       text-decoration: none !important;
+      letter-spacing: 0.5px !important;
+      text-transform: uppercase !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+      
+      &:hover {
+        opacity: 0.9 !important;
+        text-decoration: none !important;
+      }
+    }
+    
+    .site-subtitle {
+      font-size: 0.95rem !important;
+      color: var(--header-accent) !important;
+      margin-top: 0.2rem !important;
+      font-weight: 300 !important;
+      letter-spacing: 0.5px !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
   }
 }
 
-// Navigation
+// Navigation - refined button style
 .site-nav {
+  .trigger {
+    display: flex !important;
+    gap: 1rem !important;
+  }
+  
   .page-link {
-    color: var(--secondary-text) !important;
-    font-weight: 400 !important;
-    margin-left: 2rem !important;
+    background-color: var(--header-accent) !important;
+    color: var(--header-bg) !important;
+    font-weight: 500 !important;
+    margin-left: 0 !important;
     text-decoration: none !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s ease !important;
+    display: inline-block !important;
     
     &:hover {
-      color: var(--accent-color) !important;
+      background-color: #f5e8d0 !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
       text-decoration: none !important;
+    }
+    
+    &:active {
+      transform: translateY(0) !important;
+      box-shadow: none !important;
     }
   }
 }

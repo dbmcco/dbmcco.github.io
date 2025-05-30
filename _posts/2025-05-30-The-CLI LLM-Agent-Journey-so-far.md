@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '"The CLI LLM Agent Journey So Far"'
+title: The CLI LLM Agent Journey So Far
 date: 2025-05-30 08:58:13 -0500
 categories: development ai workflow
 tags:

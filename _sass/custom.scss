@@ -1,5 +1,5 @@
-// Import Google Fonts for retro typography
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+// Import clean sans-serif font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 // Retro color palette
 :root {
@@ -13,11 +13,13 @@
 
 // Reset and base typography
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
   font-size: 16px !important;
   line-height: 1.7 !important;
   color: var(--primary-text) !important;
   background-color: var(--background) !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 // Headers - clean sans-serif
@@ -42,25 +44,25 @@ h3 { font-size: 1.25rem !important; }
 .site-header {
   background-color: var(--background) !important;
   border-bottom: 1px solid var(--border-color) !important;
-  padding: 2rem 0 1.5rem 0 !important;
+  padding: 1.5rem 0 !important;
   
   .wrapper {
     display: flex !important;
     justify-content: space-between !important;
-    align-items: baseline !important;
+    align-items: center !important;
   }
   
   .site-title-area {
     .site-title {
-      font-size: 1.5rem !important;
-      font-weight: 600 !important;
+      font-size: 1.4rem !important;
+      font-weight: 700 !important;
       color: var(--primary-text) !important;
       text-decoration: none !important;
-      letter-spacing: -0.5px !important;
+      letter-spacing: -0.3px !important;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
       
       &:hover {
-        color: var(--accent-color) !important;
+        opacity: 0.7 !important;
         text-decoration: none !important;
       }
     }
@@ -70,30 +72,39 @@ h3 { font-size: 1.25rem !important; }
       color: var(--secondary-text) !important;
       margin-top: 0.1rem !important;
       font-weight: 400 !important;
+      font-style: normal !important; // Remove italics
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
   }
 }
 
-// Navigation - minimal text links
+// Navigation - small unobtrusive links
 .site-nav {
   .trigger {
     display: flex !important;
-    gap: 2rem !important;
+    gap: 1.2rem !important;
   }
   
   .page-link {
     color: var(--secondary-text) !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     text-decoration: none !important;
-    font-size: 0.9rem !important;
-    transition: color 0.2s ease !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 3px !important;
     
     &:hover {
       color: var(--primary-text) !important;
+      background-color: var(--light-gray) !important;
       text-decoration: none !important;
     }
+  }
+  
+  // Hide mobile menu icon on desktop
+  .nav-trigger, .menu-icon {
+    display: none !important;
   }
 }
 
@@ -136,7 +147,7 @@ h3 { font-size: 1.25rem !important; }
   margin: 0 !important;
   
   li {
-    margin-bottom: 3rem !important;
+    margin-bottom: 2.5rem !important;
     padding-bottom: 2rem !important;
     border-bottom: 1px solid var(--border-color) !important;
     
@@ -147,23 +158,33 @@ h3 { font-size: 1.25rem !important; }
 }
 
 .post-meta {
-  font-size: 0.9rem !important;
+  font-size: 0.875rem !important;
   color: var(--secondary-text) !important;
   font-weight: 400 !important;
   margin-bottom: 0.5rem !important;
   display: block !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
 .post-link {
   color: var(--primary-text) !important;
   text-decoration: none !important;
-  font-size: 1.4rem !important;
+  font-size: 1.3rem !important;
   font-weight: 600 !important;
   line-height: 1.3 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   
   &:hover {
     color: var(--accent-color) !important;
     text-decoration: none !important;
+  }
+}
+
+// Post header on individual pages
+.post-header {
+  .post-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 700 !important;
   }
 }
 
@@ -189,6 +210,7 @@ h3 { font-size: 1.25rem !important; }
 
 // Post content typography
 .post-content {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 16px !important;
   line-height: 1.7 !important;
   
@@ -203,5 +225,10 @@ h3 { font-size: 1.25rem !important; }
     li {
       margin-bottom: 0.5rem !important;
     }
+  }
+  
+  // Ensure all text elements use sans-serif
+  * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   }
 }

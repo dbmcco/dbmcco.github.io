@@ -7,7 +7,6 @@ tags: [substack-import, ai, healthcare, llm, training-data, generative-ai]
 original_url: https://dbmcco.substack.com/p/training-data-considerations-for
 ---
 
-# Training Data Considerations for Implementing GenAI & LLMs in Healthcare
 
 The successful implementation of Generative AI and Large Language Models (LLMs) in healthcare hinges critically on training data considerations. This article explores the importance of using "local data" tailored to specific healthcare organizations and the challenges inherent in data collection.
 

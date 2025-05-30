@@ -6,7 +6,6 @@ categories: productivity workflow
 tags: [obsidian, jekyll, automation, blogging]
 ---
 
-# Building an Obsidian to Jekyll Workflow
 
 After years of trying different note-taking and blogging systems, I've finally found a setup that works: **Obsidian for writing, Jekyll for publishing**.
 

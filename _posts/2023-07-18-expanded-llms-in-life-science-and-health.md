@@ -7,7 +7,6 @@ tags: [substack-import, ai, life-sciences, llm, mixture-of-experts]
 original_url: https://dbmcco.substack.com/p/expanded-llms-in-life-science-and
 ---
 
-# Expanded LLMs in Life Science and Health
 
 ## Overview
 

@@ -7,7 +7,6 @@ tags: [substack-import, ai, life-sciences, medcomm, llm]
 original_url: https://dbmcco.substack.com/p/transforming-medcomm-with-ai
 ---
 
-# Transforming MedComm with AI: The Promise of Fine-Tuned Large Language Models and Vector Databases
 
 ## Executive Summary
 

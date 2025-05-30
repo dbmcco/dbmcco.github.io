@@ -7,7 +7,6 @@ tags: [substack-import, ai, life-sciences, compliance, chatgpt]
 original_url: https://dbmcco.substack.com/p/is-lifescience-compliance-ready-for-chatgpt
 ---
 
-# Is LifeScience Compliance Ready for ChatGPT?
 
 ## Introduction
 

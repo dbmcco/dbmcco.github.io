@@ -7,7 +7,6 @@ tags: [substack-import, ai, privacy, llm, healthcare, enterprise]
 original_url: https://dbmcco.substack.com/p/privacy-and-llms-a-pragmatic-shift
 ---
 
-# Privacy and LLMs: A Pragmatic Shift
 
 *A product idea for balancing Organizational Efficiency with Data Security*
 

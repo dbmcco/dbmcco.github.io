@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strength of weak ties for understanding information diffusion
-date: 2025-05-30 06:41:35 -0500
+date: 2021-06-01 10:00:00 -0500
 categories: Information theory
 tags:
 ---

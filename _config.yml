@@ -1,6 +1,6 @@
 # Site settings
 title: Means of Production
-email: braydon@example.com
+email: b@mcco.us
 description: Personal blog covering technology, business, and life insights
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dbmcco.github.io" # the base hostname & protocol for your site

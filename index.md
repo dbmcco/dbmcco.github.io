@@ -4,5 +4,5 @@ title: "Home"
 ---
 
 <div class="intro">
-  <p>Technology, business, and the intersection of human creativity with systematic thinking.</p>
+  <p>Tech, business, creativity and systematic thinking.</p>
 </div>

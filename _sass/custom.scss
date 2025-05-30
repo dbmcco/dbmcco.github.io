@@ -42,8 +42,8 @@ h3 { font-size: 1.25rem !important; }
 
 // Site header styling - minimal and clean
 .site-header {
-  background-color: var(--background) !important;
-  border-bottom: 1px solid var(--border-color) !important;
+  background-color: #5a7a7a !important; // Teal background
+  border-bottom: none !important;
   padding: 1.5rem 0 !important;
   
   .wrapper {
@@ -56,48 +56,62 @@ h3 { font-size: 1.25rem !important; }
     .site-title {
       font-size: 1.4rem !important;
       font-weight: 700 !important;
-      color: var(--primary-text) !important;
+      color: #ffffff !important; // White text for contrast
       text-decoration: none !important;
       letter-spacing: -0.3px !important;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+      text-transform: uppercase !important;
       
       &:hover {
-        opacity: 0.7 !important;
+        opacity: 0.9 !important;
         text-decoration: none !important;
       }
     }
     
     .site-subtitle {
       font-size: 0.85rem !important;
-      color: var(--secondary-text) !important;
+      color: rgba(255, 255, 255, 0.8) !important; // Slightly transparent white
       margin-top: 0.1rem !important;
       font-weight: 400 !important;
-      font-style: normal !important; // Remove italics
+      font-style: normal !important;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
   }
 }
 
-// Navigation - small unobtrusive links
+// Navigation - modern flat links
 .site-nav {
   .trigger {
     display: flex !important;
-    gap: 1.2rem !important;
+    gap: 0 !important; // No gap, we'll use borders
   }
   
   .page-link {
-    color: var(--secondary-text) !important;
-    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500 !important;
     text-decoration: none !important;
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
     transition: all 0.2s ease !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    padding: 0.4rem 0.8rem !important;
-    border-radius: 3px !important;
+    padding: 0.5rem 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    margin-left: -1px !important; // Overlap borders
+    
+    &:first-child {
+      border-top-left-radius: 3px !important;
+      border-bottom-left-radius: 3px !important;
+    }
+    
+    &:last-child {
+      border-top-right-radius: 3px !important;
+      border-bottom-right-radius: 3px !important;
+    }
     
     &:hover {
-      color: var(--primary-text) !important;
-      background-color: var(--light-gray) !important;
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: #ffffff !important;
       text-decoration: none !important;
     }
   }

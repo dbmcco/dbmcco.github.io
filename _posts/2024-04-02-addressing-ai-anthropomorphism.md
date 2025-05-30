@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Addressing AI Anthropomorphism with clients
-date: 2025-05-30 06:48:36 -0500
+date: 2024-04-02
 categories: ai healthcare life-sciences
 tags:
   - AI

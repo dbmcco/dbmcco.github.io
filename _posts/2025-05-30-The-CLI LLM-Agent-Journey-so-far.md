@@ -29,7 +29,7 @@ But rather than delve into my own structural thinking issues, to solve the first
 And this model helped a LOT with the context windows issue (and resulted in fewer auto-compacts, that would often wreck everything), but it presented a different challenge: there was no way to get the CLI instances to really talk to each other - you can't pipe i/o from one session to another (I tried. I have not tried TMUX, but that feels wildly daunting to me at the moment). So, I developed an async, markdown driven model, in which each instance would write updates back and forth. 
 
 ![](/assets/images/screenshot-2025-05-31-at-4.45.44-pm.png)
-* So many messages back and forth. *
+*So many messages back and forth.*
 
 This was WILD to read. In addition to the technical updates, each AI instance would write to the other instances as though they were on a team, using formal update language and encouraging words like "Great progress today developer!" and would give me updates similarly: "we are way ahead of schedule and making great progress!". It was pretty funny. 
 
@@ -52,7 +52,7 @@ At the same time I was moving to this model, Claude 4 came out, and CLI introduc
 
 Then, since I have multiple projects underway in my local repo, taking a page from [Jesse Vincent](https://blog.fsck.com/) and Harper, I retooled a multi-project, modular claude.md memory structure so that memory would flow well between projects - and ideally my claude cli would adhere to my TDD rules. It's ok; not awesome. As usual, the deeper into the context window you get, the more Claude forgets. But using their "always call me [name]" it gives hints into how Claude is doing memory context wise.  Here's my [repo](https://github.com/dbmcco/claude-workspace)
 
-![](/assets/images/screenshot-2025-05-31-at-10.28.04-am.png) *This cracks me up. I have explicitly stated in my claude.md, "don't blow smoke up my ass."  Clearly Claude is not listening. But notice "Bray.Doc" - that's what I force Claude to call me so I can assess how well it's remembering things. Since I have a modular claude structure, I am not sure how well the memory flows through to the other modules. 
+![](/assets/images/screenshot-2025-05-31-at-10.28.04-am.png) *This cracks me up. I have explicitly stated in my claude.md, "don't blow smoke up my ass."  Clearly Claude is not listening. But notice "Bray.Doc" - that's what I force Claude to call me so I can assess how well it's remembering things. Since I have a modular claude structure, I am not sure how well the memory flows through to the other modules.* 
 ## Exploring AutoGen
 
 Around the same time, I encountered [Microsoft AutoGen](https://github.com/microsoft/autogen) framework, and I realized I might be able to pass messages between instances using API calls rather than CLI typed commands. So, using this TDD model, I began setting this up via python scripting. Unfortunately I keep realizing things I missed or could be improved: 1. using second pass LLM review/challenge/refine of functional requirements and 2. adding in a UX/UI requirements dev step (more on this particularly thorny issue) and 3. adding in a deployment step in the end. This framework is still underway. Claude tells me we're 80% of the way there. But who knows what that even means. 

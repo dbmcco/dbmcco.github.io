@@ -330,4 +330,24 @@ a.page-link,
   * {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   }
+  
+  // Image captions - style italicized text immediately after images
+  img + em {
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.9em !important;
+    color: var(--secondary-text) !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    font-style: italic !important;
+    line-height: 1.4 !important;
+  }
+  
+  // Also style images to ensure proper spacing
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
 }

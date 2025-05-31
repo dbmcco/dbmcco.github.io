@@ -6,9 +6,7 @@
 set -euo pipefail  # Exit on any error, undefined vars, pipe failures
 
 OBSIDIAN_BLOG_DIR="/Users/braydon/Obsidian/bvault/blog"
-OBSIDIAN_VAULT_ROOT="/Users/braydon/Obsidian/bvault"
 JEKYLL_POSTS_DIR="/Users/braydon/projects/dbmcco.github.io/_posts"
-JEKYLL_ASSETS_DIR="/Users/braydon/projects/dbmcco.github.io/assets/images"
 LOG_FILE="/Users/braydon/projects/dbmcco.github.io/sync.log"
 AUTO_PUBLISH=false
 VERBOSE=false
@@ -74,51 +72,6 @@ validate_file() {
     return 0
 }
 
-# Function to process images referenced in markdown files
-process_images() {
-    local file="$1"
-    local temp_file="${file}.tmp"
-    local content=$(cat "$file")
-    local modified=false
-    
-    log_verbose "Processing images in: $(basename "$file")"
-    
-    # Find all Obsidian-style image references: ![[image.png]]
-    while IFS= read -r line; do
-        if [[ "$line" =~ !\[\[([^]]+)\]\] ]]; then
-            local image_name="${BASH_REMATCH[1]}"
-            # Check if it's an image file
-            if [[ ! "$image_name" =~ \.(png|jpg|jpeg|gif|webp)$ ]]; then
-                continue
-            fi
-            log_verbose "Found image reference: $image_name"
-            
-            # Search for the image in the Obsidian vault
-            local image_path=$(find "$OBSIDIAN_VAULT_ROOT" -name "$image_name" -type f 2>/dev/null | head -1)
-            
-            if [[ -n "$image_path" && -f "$image_path" ]]; then
-                # Copy image to Jekyll assets
-                local safe_image_name=$(echo "$image_name" | sed 's/ /-/g' | tr '[:upper:]' '[:lower:]')
-                cp "$image_path" "$JEKYLL_ASSETS_DIR/$safe_image_name"
-                log "COPIED IMAGE: $image_name -> $safe_image_name"
-                ((IMAGES_COPIED++))
-                
-                # Replace Obsidian syntax with Jekyll syntax
-                content=$(echo "$content" | sed "s|!\\[\\[$image_name\\]\\]|![](/assets/images/$safe_image_name)|g")
-                modified=true
-            else
-                log "WARNING: Image not found: $image_name"
-            fi
-        fi
-    done < <(echo "$content" | grep -o '!\[\[[^]]*\]\]')
-    
-    # Write modified content back if changes were made
-    if [[ "$modified" == true ]]; then
-        echo "$content" > "$file"
-        log_verbose "Updated image references in: $(basename "$file")"
-    fi
-}
-
 # Check if Obsidian blog directory exists
 if [ ! -d "$OBSIDIAN_BLOG_DIR" ]; then
     echo "❌ Error: Obsidian blog directory not found: $OBSIDIAN_BLOG_DIR"
@@ -126,15 +79,13 @@ if [ ! -d "$OBSIDIAN_BLOG_DIR" ]; then
     exit 1
 fi
 
-# Create posts and assets directories if they don't exist
+# Create posts directory if it doesn't exist
 mkdir -p "$JEKYLL_POSTS_DIR"
-mkdir -p "$JEKYLL_ASSETS_DIR"
 
 # Track what we're doing
 COPIED_COUNT=0
 SKIPPED_COUNT=0
 ERROR_COUNT=0
-IMAGES_COPIED=0
 
 # Copy all markdown files from Obsidian blog to Jekyll posts
 # Only copy files that have Jekyll front matter and pass validation
@@ -147,8 +98,6 @@ for file in "$OBSIDIAN_BLOG_DIR"/*.md; do
             echo "✅ Copying: $filename"
             log "COPIED: $filename"
             cp "$file" "$JEKYLL_POSTS_DIR/"
-            # Process images in the copied file
-            process_images "$JEKYLL_POSTS_DIR/$filename"
             ((COPIED_COUNT++))
         else
             exit_code=$?
@@ -167,10 +116,9 @@ done
 echo ""
 echo "📊 Sync Summary:"
 echo "   • Copied: $COPIED_COUNT posts"
-echo "   • Images: $IMAGES_COPIED copied"
 echo "   • Skipped: $SKIPPED_COUNT files"
 echo "   • Errors: $ERROR_COUNT files"
-log "Sync completed - Copied: $COPIED_COUNT, Skipped: $SKIPPED_COUNT, Errors: $ERROR_COUNT, Images: $IMAGES_COPIED"
+log "Sync completed - Copied: $COPIED_COUNT, Skipped: $SKIPPED_COUNT, Errors: $ERROR_COUNT"
 
 # Stop if there are critical errors
 if [ $ERROR_COUNT -gt 0 ]; then

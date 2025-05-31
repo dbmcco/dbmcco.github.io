@@ -104,6 +104,7 @@ process_images() {
                 ((IMAGES_COPIED++))
                 
                 # Replace Obsidian syntax with Jekyll syntax
+                # Ensure caption text stays on separate line if it exists
                 content=$(echo "$content" | sed "s|!\\[\\[$image_name\\]\\]|![](/assets/images/$safe_image_name)|g")
                 modified=true
             else

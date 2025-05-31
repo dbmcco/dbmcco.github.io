@@ -1397,3 +1397,6 @@
 [2025-05-31 12:31:00] Sync completed - Copied: 189, Skipped: 1, Errors: 0, Images: 1
 [2025-05-31 12:31:00] Starting auto-publish process
 [2025-05-31 12:31:00] Changes detected, committing...
+[2025-05-31 12:31:00] Pushing to GitHub...
+[2025-05-31 12:31:01] Successfully pushed to GitHub
+[2025-05-31 12:31:01] Sync process completed successfully

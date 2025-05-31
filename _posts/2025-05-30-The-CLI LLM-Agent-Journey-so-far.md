@@ -10,7 +10,7 @@ tags:
 
 ---
 
-At the moment, I'm building a multi-agent autogen, waterfall-style dev structure using [Claude code CLI](https://github.com/anthropics/claude-code) (with env for codex and ollama, and maybe [Claude Code SDK](https://docs.anthropic.com/en/docs/claude-code/sdk)). The goal of this structure is to keep Claude code CLI (or Codex or Ollama) inside a pretty tight box to enforce TDD, rigorous requirements adherence and proper architecture alignment for more complex projects. Since I'm not a trained developer, but I'm deeply familiar with process and infrastructure, the real goal is to use these structures to prevent the AI agent from things it thinks are smart and that I would never know if it is or not. 
+At the moment, I'm building a multi-agent autogen, waterfall-style dev structure using [Claude code CLI](https://github.com/anthropics/claude-code) (with env for Codex and Ollama, and maybe [Claude Code SDK](https://docs.anthropic.com/en/docs/claude-code/sdk)). The goal of this structure is to keep Claude code CLI (or Codex or Ollama) inside a pretty tight box to enforce TDD, rigorous requirements adherence and proper architecture alignment for more complex projects. Since I'm not a trained developer, but I'm deeply familiar with process and infrastructure, the real goal is to use these structures to prevent the AI agent from things it thinks are smart and that I would never know if it is or not. 
 
 ## The Beginning; six weeks ago
 

@@ -6,6 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dbmcco.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username: dbmcco
+google_analytics: G-7DW98F03WK
 
 # Navigation
 header_pages:

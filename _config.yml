@@ -40,6 +40,11 @@ plugins:
 # Theme
 theme: minima
 
+# Include directories for processing
+include:
+  - _pages
+  - notes
+
 # Exclude from processing
 exclude:
   - Gemfile

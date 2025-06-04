@@ -2,6 +2,7 @@
   title: Executive Brief
   layout: page
 ---
+
 # Healthcare Data Intelligence: Strategic Platform Transformation
 
 *Executive Strategic Brief*

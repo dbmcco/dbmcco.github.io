@@ -1,6 +1,6 @@
 ---
-  title: Executive Brief
-  layout: page
+title: Executive Brief
+layout: page
 ---
 
 # Healthcare Data Intelligence: Strategic Platform Transformation

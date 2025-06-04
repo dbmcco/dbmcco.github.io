@@ -5,7 +5,7 @@ layout: page
 
 # Healthcare Data Intelligence: Strategic Platform Transformation
 
-*Executive Strategic Brief*
+*Executive Strategic Brief - Updated*
 
 ## Strategic Assessment: RLDatix's Platform Opportunity Under Dan Michelson
 

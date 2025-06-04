@@ -1,5 +1,5 @@
 ---
-title: Executive Brief
+title: Executive Summary
 layout: page
 ---
 

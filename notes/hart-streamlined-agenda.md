@@ -83,8 +83,8 @@ h1 { font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; }
 
     <div class="session">
         <div class="session-header">
-            <div class="session-title">Working Dinner - Strategic Context</div>
-            <div class="time-badge">Evening • 2 hours</div>
+            <div class="session-title">Afternoon Meet and Greet - Strategic Context</div>
+            <div class="time-badge">Afternoon • 2 hours</div>
         </div>
         <div class="outcome">
             <strong>Outcome:</strong> Understand Hart's growth challenges and assess working compatibility

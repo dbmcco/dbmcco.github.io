@@ -99,40 +99,38 @@ h1 { font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; }
 
     <div class="day-header">Day 2: July 1 - Strategic Co-Creation</div>
 
-    <div class="session-grid">
-        <div class="session">
-            <div class="session-header">
-                <div class="session-title">Account Portfolio Strategy</div>
-                <div class="time-badge">9:00-11:00 AM</div>
-            </div>
-            <div class="outcome">
-                <strong>Outcome:</strong> Create actionable account strategy with immediate expansion opportunities
-            </div>
-            <ul class="checklist">
-                <li>Analysis of Hart's top 20 accounts (bring real data)</li>
-                <li>Collaborative tiering based on revenue, relationships, risks and potential</li>
-                <li>Identify immediate expansion opportunities and relationship gaps</li>
-                <li>Evidence-based Q4 pipeline validation using Hart's deals</li>
-            </ul>
+    <div class="session">
+        <div class="session-header">
+            <div class="session-title">Account Portfolio Strategy</div>
+            <div class="time-badge">9:00-11:00 AM</div>
         </div>
+        <div class="outcome">
+            <strong>Outcome:</strong> Create actionable account strategy with immediate expansion opportunities
+        </div>
+        <ul class="checklist">
+            <li>Analysis of Hart's top 20 accounts (bring real data)</li>
+            <li>Collaborative tiering based on revenue, relationships, risks and potential</li>
+            <li>Identify immediate expansion opportunities and relationship gaps</li>
+            <li>Evidence-based Q4 pipeline validation using Hart's deals</li>
+        </ul>
+    </div>
 
-        <div class="session">
-            <div class="session-header">
-                <div class="session-title">Growth Engine Design</div>
-                <div class="time-badge">1:00-2:30 PM</div>
-            </div>
-            <div class="outcome">
-                <strong>Outcome:</strong> Develop systematic growth strategy and partner leverage plan
-            </div>
-            <ul class="checklist">
-                <li>Map Hart's actual partner relationships and immediate co-selling opportunities</li>
-                <li>Design partner enablement approach using Hart's Oracle channel</li>
-                <li>Create thought leadership strategy for Hart's specific market position</li>
-                <li>Plan reference program and success story development approach</li>
-                <li>Create QBR framework and goals</li>
-                <li>Design board reporting framework to metrics</li>
-            </ul>
+    <div class="session">
+        <div class="session-header">
+            <div class="session-title">Growth Engine Design</div>
+            <div class="time-badge">1:00-2:30 PM</div>
         </div>
+        <div class="outcome">
+            <strong>Outcome:</strong> Develop systematic growth strategy and partner leverage plan
+        </div>
+        <ul class="checklist">
+            <li>Map Hart's actual partner relationships and immediate co-selling opportunities</li>
+            <li>Design partner enablement approach using Hart's Oracle channel</li>
+            <li>Create thought leadership strategy for Hart's specific market position</li>
+            <li>Plan reference program and success story development approach</li>
+            <li>Create QBR framework and goals</li>
+            <li>Design board reporting framework to metrics</li>
+        </ul>
     </div>
 
     <div class="session">

@@ -79,7 +79,7 @@ h1 { font-size: 2.5em; color: #2c3e50; margin-bottom: 10px; }
         <p style="color: #95a5a6; margin-top: 10px;">Work together on real challenges • Create immediate value • Assess partnership fit</p>
     </div>
 
-    <div class="day-header">Day 1: June 30 - Context & Chemistry</div>
+    <div class="day-header">Day 1: June 30 - Context</div>
 
     <div class="session">
         <div class="session-header">

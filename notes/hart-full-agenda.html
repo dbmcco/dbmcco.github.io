@@ -3,710 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hart Meeting Agenda - June 30-July 1</title>
+    <title>Hart Account Management Focus Session</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fafafa;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         h1 {
-            font-size: 3em;
             color: #2c3e50;
-            margin-bottom: 10px;
-            font-weight: 300;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
         }
         
         .subtitle {
-            font-size: 1.2em;
             color: #7f8c8d;
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
         
-        .date-badge {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            margin-top: 20px;
-            font-weight: 500;
-        }
-        
-        .day-section {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .day-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ecf0f1;
-        }
-        
-        .day-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-            margin-right: 20px;
-        }
-        
-        .day-title {
-            font-size: 2em;
-            color: #2c3e50;
-        }
-        
-        .session-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .session-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .session-card:hover {
-            border-color: #3498db;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
-        }
-        
-        .session-card.expanded {
-            border-color: #3498db;
-            background: white;
-        }
-        
-        .expand-icon {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            width: 24px;
-            height: 24px;
-            background: #3498db;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-        
-        .session-card.expanded .expand-icon {
-            transform: rotate(45deg);
-        }
-        
-        .session-time {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        
-        .session-title {
-            font-size: 1.3em;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-weight: 600;
-            padding-right: 30px;
-        }
-        
-        .goal-badge {
-            background: #e8f4f8;
-            color: #3498db;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .bullet-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .bullet-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            color: #5a6c7d;
-        }
-        
-        .bullet-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #3498db;
-            font-weight: bold;
-        }
-        
-        .session-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-            margin-top: 20px;
-            padding-top: 0;
-        }
-        
-        .session-card.expanded .session-details {
-            max-height: 1000px;
-            padding-top: 20px;
-            border-top: 1px solid #ecf0f1;
-        }
-        
-        .detail-section {
-            margin-bottom: 20px;
-        }
-        
-        .detail-section h4 {
+        h2 {
             color: #34495e;
-            margin-bottom: 10px;
-            font-size: 1.1em;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 5px;
+            margin: 2rem 0 1rem 0;
         }
         
-        .detail-section p {
-            color: #5a6c7d;
-            margin-bottom: 10px;
+        h3 {
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .section-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        ul {
+            margin: 0.5rem 0 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
         }
         
         .timeline {
             display: flex;
-            justify-content: space-between;
-            margin: 30px 0;
-            position: relative;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
         }
         
-        .timeline:before {
-            content: "";
-            position: absolute;
-            top: 30px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #ecf0f1;
-            z-index: 0;
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+            flex-shrink: 0;
         }
         
-        .timeline-item {
-            background: white;
-            border: 2px solid #3498db;
-            border-radius: 10px;
-            padding: 15px 20px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
+        .timeline-content {
             flex: 1;
-            margin: 0 10px;
         }
         
-        .timeline-month {
-            font-weight: 600;
-            color: #3498db;
-            margin-bottom: 5px;
+        .phase {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 1rem 0;
         }
         
-        .timeline-desc {
-            font-size: 0.9em;
-            color: #7f8c8d;
+        .phase h3 {
+            margin-top: 0;
+            color: #2c3e50;
         }
         
-        .output-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            margin: 2rem 0;
+            border-radius: 1px;
         }
         
-        .output-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 500;
+        .highlight {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
         }
         
-        .output-number {
-            font-size: 2em;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .question-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        
-        .question-box h4 {
-            color: #856404;
-            margin-bottom: 10px;
-        }
-        
-        .pre-meeting-box {
-            background: #d4edda;
-            border-left: 4px solid #28a745;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        
-        .pre-meeting-box h3 {
-            color: #155724;
-            margin-bottom: 15px;
-        }
-        
-        @media (max-width: 768px) {
-            .session-grid {
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 1.5rem;
             }
             
-            .day-title {
-                font-size: 1.5em;
+            h2 {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Hart Working Session</h1>
-            <p class="subtitle">Co-Creation & Mutual Assessment</p>
-            <span class="date-badge">June 30 - July 1, 2025</span>
-            <p style="margin-top: 20px; color: #95a5a6;">Work together on real challenges • Create immediate value • Assess partnership fit</p>
+        <h1>Hart Account Management Focus Session</h1>
+        <div class="subtitle">June 30-July 1, 2025 • Existing Client Growth & Relationship Expansion</div>
+        
+        <hr class="divider">
+        
+        <h2>June 30 - Working Dinner</h2>
+        
+        <div class="section-header">Portfolio Assessment & Challenges</div>
+        <ul>
+            <li>Hart's 48 accounts: current relationship depth, expansion potential, and growth barriers</li>
+            <li>Account management gaps preventing deeper client penetration</li>
+            <li>Service expansion opportunities and missed revenue within existing client base</li>
+            <li>Current touchpoint approach and QBR effectiveness</li>
+        </ul>
+        
+        <div class="section-header">Resource & Capability Review</div>
+        <ul>
+            <li>Current systems/structures for account intelligence and relationship tracking</li>
+            <li>Success metrics and accountability framework needs</li>
+        </ul>
+        
+        <hr class="divider">
+        
+        <h2>July 1 - Morning Account Management Strategy</h2>
+        
+        <div class="phase">
+            <h3>Account Intelligence & Prioritization</h3>
+            <div class="section-header">Live Account Analysis</div>
+            <ul>
+                <li>Tier Hart's 48 accounts using expansion potential, relationship depth/activity, and risk factors</li>
+                <li>Identify top 15 accounts for immediate expansion focus</li>
+                <li>Map current stakeholder relationships and critical gaps</li>
+                <li>Surface immediate upsell/cross-sell opportunities</li>
+            </ul>
         </div>
-
-        <!-- June 30 -->
-        <div class="day-section">
-            <div class="day-header">
-                <div class="day-icon">🤝</div>
-                <h2 class="day-title">June 30 - Context</h2>
-            </div>
-            <div class="session-grid">
-                <div class="session-card" onclick="toggleCard(this)">
-                    <div class="expand-icon">+</div>
-                    <div class="session-time">Afternoon</div>
-                    <h3 class="session-title">Afternoon Meet and Greet</h3>
-                    <ul class="bullet-list">
-                        <li>Hart's team structure and capabilities</li>
-                        <li>Current systems and processes</li>
-                        <li>Resource constraints and opportunities</li>
-                    </ul>
-                    <div class="session-details">
-                        <div class="detail-section">
-                            <h4>Focus Areas</h4>
-                            <p>Understand Hart's operational reality - team skills, system capabilities, resource availability. Assess execution readiness for systematic account management.</p>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Key Stakeholders</h4>
-                            <ul class="bullet-list">
-                                <li>Dominique Gross (CEO) - Strategic perspective</li>
-                                <li>Kortnee Johnson (COO) - Operational capabilities</li>
-                                <li>RevOps team - System and process support</li>
-                                <li>Client-facing team - Current relationship status</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="session-card" onclick="toggleCard(this)">
-                    <div class="expand-icon">+</div>
-                    <div class="session-time">Afternoon • 2 hours</div>
-                    <h3 class="session-title">Strategic Context</h3>
-                    <ul class="bullet-list">
-                        <li>Hart's $3M → $5M growth challenges</li>
-                        <li>Competitive positioning analysis</li>
-                        <li>Working style compatibility</li>
-                    </ul>
-                    <div class="session-details">
-                        <div class="detail-section">
-                            <h4>Collaborative Discussion Topics</h4>
-                            <ul class="bullet-list">
-                                <li>What's really blocking Hart's growth - root cause analysis</li>
-                                <li>Market positioning vs. Particle Health, ClearSense, competitors</li>
-                                <li>Board expectations and decision-making authority</li>
-                                <li>Communication preferences and accountability framework</li>
-                                <li>Resource constraints and team capability assessment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="phase">
+            <h3>Systematic Engagement Framework</h3>
+            <div class="section-header">Relationship Expansion Blueprint</div>
+            <ul>
+                <li>Design account-specific engagement strategies and touchpoint frequencies</li>
+                <li>Create QBR frameworks that drive expansion conversations</li>
+                <li>Develop stakeholder mapping and department expansion approaches</li>
+                <li>Build conversation frameworks and scripts for account growth discussions</li>
+            </ul>
         </div>
-
-        <!-- July 1 -->
-        <div class="day-section">
-            <div class="day-header">
-                <div class="day-icon">⚡</div>
-                <h2 class="day-title">July 1 - Strategic Co-Creation</h2>
-            </div>
-
-            <!-- Morning Sessions -->
-            <h3 style="margin: 30px 0 20px 0; color: #34495e;">Morning Working Session</h3>
-            <div class="session-grid">
-                <div class="session-card" onclick="toggleCard(this)">
-                    <div class="expand-icon">+</div>
-                    <div class="session-time">9:00-11:00 AM</div>
-                    <h3 class="session-title">Account Portfolio Strategy</h3>
-                    <span class="goal-badge">Live Analysis with Hart's Data</span>
-                    <ul class="bullet-list">
-                        <li>Hart's actual top 20 accounts analysis</li>
-                        <li>Collaborative tiering and prioritization</li>
-                        <li>Q4 pipeline evidence assessment</li>
-                    </ul>
-                    <div class="session-details">
-                        <div class="detail-section">
-                            <h4>Real Account Analysis</h4>
-                            <ul class="bullet-list">
-                                <li>Review Hart's actual top 20 accounts with current data</li>
-                                <li>Apply tiering framework live with Hart's input on relationships</li>
-                                <li>Identify immediate expansion opportunities and relationship gaps</li>
-                                <li>Spot accounts at risk and develop retention strategies</li>
-                                <li>Prioritize accounts for Q4 focus based on realistic potential</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Engagement Model Design</h4>
-                            <ul class="bullet-list">
-                                <li>Define realistic touchpoint frequency for Hart's resources</li>
-                                <li>Create QBR framework Hart can actually execute</li>
-                                <li>Map stakeholder engagement strategy per account tier</li>
-                                <li>Plan systematic relationship expansion approach</li>
-                                <li>Design measurement and tracking system</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Q4 Pipeline Reality Check</h4>
-                            <ul class="bullet-list">
-                                <li>Evidence-based assessment of Hart's actual Q4 deals</li>
-                                <li>Calculate realistic weighted forecast</li>
-                                <li>Identify deals needing immediate attention</li>
-                                <li>Gap analysis vs. Q4 targets</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Working Session Outcome</h4>
-                            <p>Create actionable account strategy with clear next steps for Hart's top 20 accounts.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="session-card" onclick="toggleCard(this)">
-                    <div class="expand-icon">+</div>
-                    <div class="session-time">10:30 AM-12:00 PM</div>
-                    <h3 class="session-title">Pipeline Reality</h3>
-                    <span class="goal-badge">Q4 Assessment</span>
-                    <ul class="bullet-list">
-                        <li>Deal-by-deal review</li>
-                        <li>Confidence scoring</li>
-                        <li>Thought leadership plan</li>
-                    </ul>
-                    <div class="session-details">
-                        <div class="detail-section">
-                            <h4>Pipeline Forensics Process</h4>
-                            <ul class="bullet-list">
-                                <li>Review each Q4 projected deal</li>
-                                <li>Assess evidence for closure (contract status, budget confirmation)</li>
-                                <li>Score confidence: High (80%+), Medium (50%), Low (20%)</li>
-                                <li>Calculate weighted pipeline value</li>
-                                <li>Identify gaps to Q4 profitability target</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Healthcare Deal Patterns</h4>
-                            <p><strong>Why deals close:</strong></p>
-                            <ul class="bullet-list">
-                                <li>Regulatory/compliance deadlines</li>
-                                <li>M&A or divestiture events</li>
-                                <li>System sunset dates</li>
-                                <li>Budget use-it-or-lose-it</li>
-                                <li>New executive mandates</li>
-                            </ul>
-                            <p><strong>Why deals stall:</strong></p>
-                            <ul class="bullet-list">
-                                <li>No burning platform</li>
-                                <li>Committee decision paralysis</li>
-                                <li>Budget reallocation</li>
-                                <li>IT bandwidth constraints</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Thought Leadership Topics</h4>
-                            <ul class="bullet-list">
-                                <li>Weekly industry insights email</li>
-                                <li>Quarterly trend reports</li>
-                                <li>Peer success stories (anonymized)</li>
-                                <li>Regulatory update briefings</li>
-                                <li>Technology roadmap previews</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Afternoon Sessions -->
-            <h3 style="margin: 30px 0 20px 0; color: #34495e;">Afternoon Sessions</h3>
-            <div class="session-grid">
-                <div class="session-card" onclick="toggleCard(this)">
-                    <div class="expand-icon">+</div>
-                    <div class="session-time">1:00-2:00 PM</div>
-                    <h3 class="session-title">Growth Strategy</h3>
-                    <span class="goal-badge">Organic + M&A</span>
-                    <ul class="bullet-list">
-                        <li>Roadmap engagement</li>
-                        <li>M&A opportunities</li>
-                        <li>Partner leverage</li>
-                    </ul>
-                    <div class="session-details">
-                        <div class="detail-section">
-                            <h4>Systematic Growth Tactics</h4>
-                            <ul class="bullet-list">
-                                <li>Client advisory council formation</li>
-                                <li>Roadmap co-creation sessions</li>
-                                <li>"You asked, we built" campaigns</li>
-                                <li>Expansion playbook development</li>
-                                <li>Reference program design</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>M&A/Strategic Options</h4>
-                            <ul class="bullet-list">
-                                <li>RLDatix roll-up model (Hart + LDA)</li>
-                                <li>Complementary technology acquisitions</li>
-                                <li>Geographic expansion via acquisition</li>
-                                <li>Strategic partnership vs. acquisition analysis</li>
-                                <li>Board positioning for inorganic growth</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Partner Leverage Strategy</h4>
-                            <ul class="bullet-list">
-                                <li>Epic/Cerner partnership deepening</li>
-                                <li>Co-selling motion development</li>
-                                <li>Integration marketplace presence</li>
-                                <li>Channel partner recruitment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="session-card" onclick="toggleCard(this)">
-                    <div class="expand-icon">+</div>
-                    <div class="session-time">2:00-3:30 PM</div>
-                    <h3 class="session-title">90-Day Plan</h3>
-                    <span class="goal-badge">Execution Roadmap</span>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-month">Month 1</div>
-                            <div class="timeline-desc">Foundation</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-month">Month 2</div>
-                            <div class="timeline-desc">Launch</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-month">Month 3</div>
-                            <div class="timeline-desc">Scale</div>
-                        </div>
-                    </div>
-                    <div class="session-details">
-                        <div class="detail-section">
-                            <h4>Month 1: Foundation (Days 1-30)</h4>
-                            <ul class="bullet-list">
-                                <li>Complete product training and technical deep dive</li>
-                                <li>Shadow 5+ client calls with team</li>
-                                <li>Review all 48 accounts in detail</li>
-                                <li>Finalize account tiers and assignments</li>
-                                <li>Build intelligence files for top 20</li>
-                                <li>Create first thought leadership pieces</li>
-                                <li>Get all system access operational</li>
-                                <li>NO solo client meetings</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Month 2: Implementation (Days 31-60)</h4>
-                            <ul class="bullet-list">
-                                <li>Co-lead client meetings with team support</li>
-                                <li>Schedule first 5 QBRs for Month 3</li>
-                                <li>Complete pipeline validation with confidence scores</li>
-                                <li>Launch weekly insights program</li>
-                                <li>Initiate partner conversations</li>
-                                <li>Begin relationship expansion in top accounts</li>
-                                <li>Develop Q4 deal strategies</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Month 3: Execution (Days 61-90)</h4>
-                            <ul class="bullet-list">
-                                <li>Lead 10+ QBRs independently</li>
-                                <li>Identify 3-5 expansion opportunities</li>
-                                <li>Establish weekly pipeline rhythm</li>
-                                <li>Deliver board-ready Q4 forecast</li>
-                                <li>Prove systematic engagement model</li>
-                                <li>Full account ownership achieved</li>
-                            </ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Success Metrics</h4>
-                            <ul class="bullet-list">
-                                <li>QBR completion rate: 80%+ of Platinum/Gold</li>
-                                <li>Pipeline forecast accuracy: Within 20%</li>
-                                <li>New stakeholder relationships: 20+</li>
-                                <li>Expansion opportunities: $500K+ identified</li>
-                                <li>Thought leadership engagement: 50%+ open rate</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Decision Session -->
-            <div class="session-card" style="margin-top: 30px; background: #e8f4f8;" onclick="toggleCard(this)">
-                <div class="expand-icon">+</div>
-                <div class="session-time">3:30-4:30 PM</div>
-                <h3 class="session-title">Decision & Next Steps</h3>
-                <div class="question-box">
-                    <h4>Key Questions</h4>
-                    <ul class="bullet-list">
-                        <li>Can we hit Q4 targets?</li>
-                        <li>What support is available?</li>
-                        <li>How do we explore M&A?</li>
-                        <li>Compensation alignment?</li>
-                    </ul>
-                </div>
-                <div class="session-details">
-                    <div class="detail-section">
-                        <h4>Decision Criteria</h4>
-                        <ul class="bullet-list">
-                            <li>Realistic path to Q4 profitability</li>
-                            <li>Adequate support for success</li>
-                            <li>Cultural and strategic alignment</li>
-                            <li>Compensation meets requirements</li>
-                            <li>Clear authority to execute</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Resource Requirements</h4>
-                        <ul class="bullet-list">
-                            <li>Dedicated product training support</li>
-                            <li>RevOps assistance for reporting</li>
-                            <li>Marketing support for thought leadership</li>
-                            <li>Executive access for strategic initiatives</li>
-                            <li>Travel budget for client engagement</li>
-                        </ul>
-                    </div>
-                    <div class="detail-section">
-                        <h4>Next Steps If Moving Forward</h4>
-                        <ul class="bullet-list">
-                            <li>Finalize compensation package</li>
-                            <li>Set start date and onboarding schedule</li>
-                            <li>Schedule Week 1 training sessions</li>
-                            <li>Identify initial client shadowing opportunities</li>
-                            <li>Create 30-day check-in schedule</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="phase">
+            <h3>Operations & Implementation</h3>
+            <div class="section-header">Execution Planning</div>
+            <ul>
+                <li>Account health monitoring and early warning systems</li>
+                <li>Upsell pipeline development and tracking mechanisms</li>
+                <li>30-60-90 day implementation roadmap with specific milestones</li>
+                <li>Resource requirements, team development needs, and success metrics</li>
+            </ul>
         </div>
-
-        <!-- Pre-Meeting Prep -->
-        <div class="day-section">
-            <div class="pre-meeting-box">
-                <h3>Pre-Meeting Preparation</h3>
-                <ul class="bullet-list">
-                    <li>Review top 20 accounts in detail</li>
-                    <li>Bring QBR template example</li>
-                    <li>Prepare compensation requirements</li>
-                    <li>List specific concerns about Q4 targets</li>
-                    <li>Think through M&A strategic value proposition</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Outputs -->
-        <div class="day-section">
-            <div class="day-header">
-                <div class="day-icon">📊</div>
-                <h2 class="day-title">Meeting Deliverables</h2>
-            </div>
-            <div class="output-grid">
-                <div class="output-item">
-                    <span class="output-number">1</span>
-                    Account Tiers Defined
-                </div>
-                <div class="output-item">
-                    <span class="output-number">2</span>
-                    QBR Framework
-                </div>
-                <div class="output-item">
-                    <span class="output-number">3</span>
-                    Q4 Pipeline Reality
-                </div>
-                <div class="output-item">
-                    <span class="output-number">4</span>
-                    90-Day Roadmap
-                </div>
-                <div class="output-item">
-                    <span class="output-number">5</span>
-                    Go/No-Go Decision
-                </div>
-            </div>
+        
+        <div class="highlight">
+            <div class="section-header">Decision & Partnership Assessment</div>
+            <ul>
+                <li>Value assessment: Does this approach address Hart's immediate account management needs?</li>
+                <li>Execution fit: Can Hart's team systematically implement account expansion with current resources?</li>
+                <li>Go/no-go decision with clear reasoning and next steps</li>
+            </ul>
         </div>
     </div>
-
-    <script>
-        function toggleCard(card) {
-            card.classList.toggle('expanded');
-        }
-    </script>
 </body>
 </html>

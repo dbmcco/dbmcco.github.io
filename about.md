@@ -6,27 +6,29 @@ permalink: /about/
 
 # About Braydon McCormick
 
-I'm an entrepreneur and systems thinker working at the intersection of healthcare technology, AI, and business transformation. With a PhD in music theory and a background spanning diverse fields, I specialize in building intelligent systems that solve complex problems.
+My career looks scattered on paper. Music theory PhD, healthcare entrepreneur, film composer, AI experimenter. But there's a thread: I'm drawn to problems where different worlds need to connect.
 
-## What I Do
+## The Winding Path
 
-- **Healthcare Data Intelligence** - Building AI systems for clinical decision support and medical data analysis
-- **AI Development Systems** - Creating multi-agent AI frameworks and LLM applications
-- **Financial Modeling** - Developing analytical tools for entertainment and business sectors
-- **Knowledge Management** - Designing workflows that connect disparate information systems
+**Music & Film** - Composed for movies including my sister's films. Now helping her launch Resilience Creative, a climate-focused film company, because storytelling and business strategy aren't that different.
 
-My approach blends technical expertise with creative problem-solving, drawing unexpected connections between disciplines like music theory and software architecture. As a marathon runner and continuous learner, I'm passionate about pushing boundaries and exploring complex systems.
+**RVIBE (2004-2016)** - Started as P2P music sharing, became interactive concert broadcasting, ended up as virtual training. We were early to remote engagement. Sometimes being early feels like being wrong.
 
-## Technical Focus
+**Intempio (2016-present)** - Built virtual meeting platforms for pharmaceutical companies before anyone wanted virtual meetings. COVID validated the approach. Now we work with half the top 20 life sciences companies.
 
-- **Languages**: Python, JavaScript/TypeScript, SQL
-- **Technologies**: React, Node.js, Docker, Jekyll
-- **Specialties**: Multi-agent AI systems, Clinical ML models, Data integration
-- **Current Projects**: LLM-driven development pipelines, healthcare compliance frameworks
+**Aclara Advanced Materials (2020-present)** - Co-invented antimicrobial fabric technology (US 11,975,221) for healthcare PPE. From idea to patent to manufacturing.
 
-## What I Write About
+**LightForge Works (2023-present)** - Using AI tools to build custom software for businesses. My theory: entrepreneurs shouldn't need computer science degrees to solve software problems.
 
-This blog chronicles my journey building technology companies, exploring AI applications in healthcare, and discovering connections between creativity and systematic thinking. You'll find insights on everything from technical architecture decisions to the philosophy of building sustainable systems.
+## The Through Line
+
+Whether it's music composition, business strategy, or AI-assisted development, I'm always trying to create structure from complexity. Music theory taught me pattern recognition. Healthcare taught me systems thinking. Film taught me storytelling. AI is teaching me what's possible.
+
+## Current Reality
+
+I use Claude Code and similar tools to build everything from healthcare platforms to personal finance apps. I'm not a trained developer, but I can solve problems and document what works. Other business leaders will follow similar paths.
+
+My career makes more sense in retrospect than it did while living it.
 
 ## Connect
 
@@ -34,4 +36,4 @@ This blog chronicles my journey building technology companies, exploring AI appl
 - **Email**: [b@mcco.us](mailto:b@mcco.us)
 - **LinkedIn**: [linkedin.com/in/dbmcco](https://www.linkedin.com/in/dbmcco/)
 
-Thanks for reading! I hope you find something that sparks your curiosity or helps with your own projects.
+Still figuring it out.

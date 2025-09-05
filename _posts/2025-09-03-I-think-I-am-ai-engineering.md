@@ -6,6 +6,9 @@ categories: development ai workflow
 tags: [ai, development, tdd, workflow, lessons]
 ---
 
+![Vibe vs AI](/assets/images/vibe-vs-ai.png)
+*Thanks, nano banana*
+
 # I think I'm AI-engineering
 
 ## Where I Left Off (And What I Skipped Over)
@@ -13,6 +16,9 @@ tags: [ai, development, tdd, workflow, lessons]
 In my [previous posts](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/) about vibe coding and multi-agent development, I ended up focused on the AutoGen framework and GitHub-as-messaging-bus ideas. Then I sort of... stopped writing about the process for a few months.
 
 Not because I stopped working. Because I was deep in the weeds figuring out what actually works and moving from haphazard "vibe coding" to something much more rigorous (even if it's not as rigorous as it needs to be yet). Something much more akin to AI supported engineering. I figured out GitHub actions and workflows, then moved on.
+
+![GitHub Actions](/assets/images/github-actions-screenshot.png)
+*A lot of messy GH actions*
 
 BTW - next post is my config at the moment.
 
@@ -60,6 +66,9 @@ This sounds like overkill, but it prevents the agents from going off the rails. 
 
 The agents understand these constraints and work within them. It's like guardrails for AI development.
 
+![Claude Hooks](/assets/images/claude-hooks-screenshot.png)
+*It's a little hard to tell here, but Claude is running hooks before and after each tool call in a multi-agent sequence. Gives much needed controls over what the orchestrating agent is doing. Bonus - tmux over ssh setup!*
+
 I was doing these in GitHub while using the Claude GitHub Actions, but have since starting adding hooks into the settings.json /hooks within Claude Code cli, which I find is faster (and uses my Max account rather than the API, so it's "cheaper"). The only downside is that I don't see under the covers as easily as when monitoring GH actions and issue work, and if I get tired or lazy, things can get fouled up.
 
 ### Multi-Agent Coordination (When Done Right)
@@ -89,6 +98,9 @@ I can get backends working reliably. APIs, databases, business logic - the agent
 
 But UI work? Still a nightmare. Building UX in the terminal is tough - even if you add screenshots for interpretation. The agents can write React components, but getting the styling right, making interactions feel smooth, handling responsive design - it requires too much back-and-forth iteration. It took me two hours to get Claude to write a Gartner Magic Quadrant. Then I did a mock up in PPT and it got it, once I told it to dumb down and use HTML and CSS (huh?).
 
+![UI Development Screenshot](/assets/images/ui-development-screenshot.png)
+*Ugly and not at all what I specified*
+
 v0 is much better, but introduces other challenges. For example, when you have your mockup most of the way there, you download the code and then have to refactor for your API layer. Annoying.  We've been experimenting with using agents to reverse engineer the UX code into functional and technical requirements, which is kind interesting, but also super annoying.
 
 ### Complex State Management
@@ -102,6 +114,9 @@ It seems there is a way to do this, maybe with the OTS code, but that is current
 ### Deployment and DevOps
 
 The only consistent deployment model I have at the moment is GitHub -> Vercel. That is rock solid. Our team has a robust AWS deployment model, but also beyond my capabilities.
+
+![Vercel Deploy](/assets/images/vercel-deploy.png)
+*Works well, but does it scale? No idea.*
 
 ## Process Insights That Surprised Me
 
@@ -139,10 +154,9 @@ The key is accepting that this is a different discipline than traditional softwa
 
 Once you stop trying to make it look like human development and start optimizing for what actually works with AI agents, it becomes much more productive.
 
+![Gemini Generated Portrait](/assets/images/gemini-generated-portrait.png)
+*What Gemini thought of my post. I'm not that good looking.*
+
 ---
 
 *This post was written with Claude Code's assistance as part of documenting my ongoing AI development journey, but I did rewrite a ton of it manually.*
-
-🤖 Generated with [Claude Code](https://claude.ai/code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>

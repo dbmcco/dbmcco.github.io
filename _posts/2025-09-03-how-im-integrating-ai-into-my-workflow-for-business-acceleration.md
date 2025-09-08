@@ -37,7 +37,7 @@ The thing is, what I ended up building isn't really about coding anymore. It's b
 
 ## The Clean Slate Advantage
 
-This is the first time I’ve mentioned LightForge Works here, so a quick intro: LightForge Works (LFW) is our new company focused on building AI‑native workflows and products. We’re about 60 days in with a team of four.
+This is the first time I’ve mentioned LightForge Works here, so a quick intro: LightForge Works (LFW) is our new company focused on building AI‑native workflows and products. We’re about 60 days in with a team of four. We build Single Purpose Applications (SPAs) with an integration‑first approach using a 30/60/90 framework (30 days discovery, 60 days delivery, ~90 days to ROI).
 
 One thing that's probably important to mention: our new company, LightForge Works, is starting from zero. No legacy systems, no existing technical debt, no "that's how we've always done it" constraints.
 

@@ -15,13 +15,15 @@ created: 2025-09-08T15:55:40.812Z
 ![vibe vs ai]({{ '/assets/images/vibe-vs-ai.png' | relative_url }}) *Thanks, nano banana*
 # How I'm integrating AI into my workflow for business acceleration
 
-## Where I Left Off (And What Changed Everything)
+## Where I Left Off
 
 In my [previous posts](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/) about vibe coding and multi-agent development, I ended up focused on the [AutoGen framework](https://github.com/microsoft/autogen) and [GitHub](https://github.com)-as-messaging-bus ideas. Then I sort of... stopped writing about the process for a few months.
 
-Not because I stopped working. Because everything changed in April when I started using [Claude Code CLI](https://claude.ai/code) with file system access, and I've been deep in the weeds figuring out what actually works.
+Not because I stopped working. For me, everything changed in April when I started using [Claude Code CLI](https://claude.ai/code) with file system access, and I've been deep in the weeds figuring out what actually works.
 
 I'd been using [ChatGPT](https://chatgpt.com) and [Claude](https://claude.ai) in browsers since 2023 - mostly for writing assistance and research. But [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) with file system access was a completely different beast. Suddenly AI could read my entire project structure, modify files directly, run commands, and maintain context across my whole workspace.
+
+To be clear: developers have used AI code completion in IDEs like VS Code for years. As a business operator, I wasn’t living in an editor — the leap for me wasn’t autocomplete; it was granting an agent filesystem access, the terminal, and my full project context.
 
 The last 4-5 months have been this rapid evolution - first figuring out basic development workflows, then MCP integrations started rolling out, and now I've got this integrated system where AI manages most of my operational workflows. But it's only been through using formal development processes (TDD, hooks, quality gates) that any of this has become reliable enough to trust with real business operations.
 
@@ -30,6 +32,8 @@ The last 4-5 months have been this rapid evolution - first figuring out basic de
 The thing is, what I ended up building isn't really about coding anymore. It's become this integrated workflow where AI manages most of my operational stuff - meeting notes turn into CRM updates, competitive research becomes marketing campaigns, requirements conversations become actual applications. But it took months of debugging and process development to make it work consistently.
 
 ## The Clean Slate Advantage
+
+This is the first time I’ve mentioned LightForge Works here, so a quick intro: LightForge Works (LFW) is our new company focused on building AI‑native workflows and products. We’re about 60 days in with a team of four.
 
 One thing that's probably important to mention: our new company, LightForge Works, is starting from zero. No legacy systems, no existing technical debt, no "that's how we've always done it" constraints.
 

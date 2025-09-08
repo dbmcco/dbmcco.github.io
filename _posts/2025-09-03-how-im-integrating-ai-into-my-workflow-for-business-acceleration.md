@@ -15,6 +15,10 @@ created: 2025-09-08T15:55:40.812Z
 ![vibe vs ai]({{ '/assets/images/vibe-vs-ai.png' | relative_url }}) *Thanks, nano banana*
 # How I'm integrating AI into my workflow for business acceleration
 
+_Approx. 9 min read_
+
+**TL;DR:** I shifted from browser-based AI to granting an agent (Claude Code CLI) access to my filesystem, terminal, and project context. That change — not IDE autocomplete — let me operationalize AI across the business: meeting intelligence that safely updates notes/CRM, faster strategic messaging and campaign execution, and requirements-to-implementation workflows. It only works because I wrapped AI in structure (validation, gates, context discipline) and, with LightForge Works starting from zero, designed AI‑native processes instead of retrofitting legacy ones. Think more waterfall than agile, keep context tight, and the speed gains are real.
+
 ## Where I Left Off
 
 In my [previous posts](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/) about vibe coding and multi-agent development, I ended up focused on the [AutoGen framework](https://github.com/microsoft/autogen) and [GitHub](https://github.com)-as-messaging-bus ideas. Then I sort of... stopped writing about the process for a few months.

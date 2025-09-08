@@ -17,11 +17,11 @@ created: 2025-09-08T15:55:40.812Z
 
 ## Where I Left Off (And What Changed Everything)
 
-In my [previous posts](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/) about vibe coding and multi-agent development, I ended up focused on the AutoGen framework and GitHub-as-messaging-bus ideas. Then I sort of... stopped writing about the process for a few months.
+In my [previous posts](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/) about vibe coding and multi-agent development, I ended up focused on the [AutoGen framework](https://github.com/microsoft/autogen) and [GitHub](https://github.com)-as-messaging-bus ideas. Then I sort of... stopped writing about the process for a few months.
 
-Not because I stopped working. Because everything changed in April when I started using Claude Code CLI with file system access, and I've been deep in the weeds figuring out what actually works.
+Not because I stopped working. Because everything changed in April when I started using [Claude Code CLI](https://claude.ai/code) with file system access, and I've been deep in the weeds figuring out what actually works.
 
-I'd been using ChatGPT and Claude in browsers since 2023 - mostly for writing assistance and research. But Claude Code CLI with file system access was a completely different beast. Suddenly AI could read my entire project structure, modify files directly, run commands, and maintain context across my whole workspace.
+I'd been using [ChatGPT](https://chatgpt.com) and [Claude](https://claude.ai) in browsers since 2023 - mostly for writing assistance and research. But [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) with file system access was a completely different beast. Suddenly AI could read my entire project structure, modify files directly, run commands, and maintain context across my whole workspace.
 
 The last 4-5 months have been this rapid evolution - first figuring out basic development workflows, then MCP integrations started rolling out, and now I've got this integrated system where AI manages most of my operational workflows. But it's only been through using formal development processes (TDD, hooks, quality gates) that any of this has become reliable enough to trust with real business operations.
 
@@ -43,7 +43,7 @@ Most companies are trying to layer AI on top of systems that were built 10+ year
 
 Every meeting I have flows through this process now:
 1. Recording gets transcribed 
-2. AI analyzes it with context from my entire Obsidian vault (previous meetings, competitive intel, project status)
+2. AI analyzes it with context from my entire [Obsidian](https://obsidian.md) vault (previous meetings, competitive intel, project status)
 3. Generates structured notes, action items, and CRM updates
 4. Everything gets validated and conflict-checked before updating systems
 
@@ -53,11 +53,11 @@ The key insight: AI needs way more structure and babysitting than you'd expect. 
 
 ### Strategic Messaging for LightForge Works
 
-For our startup (we're only 60 days old with 4 employees), I can iterate on positioning and messaging incredibly fast now. Feed AI all our competitive research, customer conversations, and strategic thinking from Obsidian. It generates positioning angles, tests messaging variations, creates full HTML email campaigns with dynamic fields.
+For our startup (we're only 60 days old with 4 employees), I can iterate on positioning and messaging incredibly fast now. Feed AI all our competitive research, customer conversations, and strategic thinking from [Obsidian](https://obsidian.md). It generates positioning angles, tests messaging variations, creates full HTML email campaigns with dynamic fields.
 
 What used to take weeks with agencies now takes hours. But only because Claude has access to all our accumulated strategic thinking. Without that context, it just generates generic marketing fluff.
 
-The workflow: Competitive intel → Strategic framework → Messaging variations → Campaign creation → SendGrid execution → Attio tracking. All automated but with validation at each step.
+The workflow: Competitive intel → Strategic framework → Messaging variations → Campaign creation → [SendGrid](https://sendgrid.com) execution → [Attio](https://attio.com) tracking. All automated but with validation at each step.
 
 This speed is crucial for a new company - we can test market positioning, iterate on messaging, and launch campaigns faster than competitors who are still doing this manually or fighting with legacy marketing systems.
 
@@ -65,7 +65,7 @@ This speed is crucial for a new company - we can test market positioning, iterat
 
 Building MCP connectors and micro-apps isn't really technical work anymore - it's strategic capability development. When I need a new integration (meeting transcripts ↔ project management, competitive intel ↔ sales workflows), I'm having strategic conversations with AI about what business processes need optimization.
 
-The AI understands our business model, competitive situation, and operational constraints. So technical decisions become strategic decisions. But this only works because I've fed it business context through Obsidian.
+The AI understands our business model, competitive situation, and operational constraints. So technical decisions become strategic decisions. But this only works because I've fed it business context through [Obsidian](https://obsidian.md).
 
 ## The Technical Stuff That Makes Business AI Reliable
 
@@ -119,7 +119,7 @@ I've learned to keep business rules as simple as possible and validate everythin
 
 ### Deployment and DevOps Beyond GitHub → Vercel
 
-The only deployment model I trust is GitHub → Vercel. It works consistently. Our team has more sophisticated AWS deployment processes, but that's beyond my current capabilities. (I'm still figuring out basic networking concepts, honestly.)
+The only deployment model I trust is [GitHub](https://github.com) → [Vercel](https://vercel.com). It works consistently. Our team has more sophisticated AWS deployment processes, but that's beyond my current capabilities. (I'm still figuring out basic networking concepts, honestly.)
 
 ## Process Insights That Actually Matter
 

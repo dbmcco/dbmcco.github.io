@@ -12,7 +12,7 @@ tags:
 created: 2025-09-08T15:55:40.812Z
 ---
 
-![[vibe vs ai.png]] *Thanks, nano banana*
+![vibe vs ai](/assets/images/vibe-vs-ai.png) *Thanks, nano banana*
 # How I'm integrating AI into my workflow for business acceleration
 
 ## Where I Left Off (And What Changed Everything)
@@ -25,7 +25,7 @@ I'd been using ChatGPT and Claude in browsers since 2023 - mostly for writing as
 
 The last 4-5 months have been this rapid evolution - first figuring out basic development workflows, then MCP integrations started rolling out, and now I've got this integrated system where AI manages most of my operational workflows. But it's only been through using formal development processes (TDD, hooks, quality gates) that any of this has become reliable enough to trust with real business operations.
 
-![[Screenshot 2025-09-05 at 2.20.18 PM.png]] *A lot of messy automation*
+![GitHub Actions Screenshot](/assets/images/github-actions-screenshot.png) *A lot of messy automation*
 
 The thing is, what I ended up building isn't really about coding anymore. It's become this integrated workflow where AI manages most of my operational stuff - meeting notes turn into CRM updates, competitive research becomes marketing campaigns, requirements conversations become actual applications. But it took months of debugging and process development to make it work consistently.
 
@@ -153,7 +153,7 @@ For LightForge Works, this means I can iterate on competitive positioning, gener
 
 The clean slate advantage is real. Established organizations have to work around existing technical debt, legacy processes, and "the way we've always done things." We get to design everything around what actually works with AI.
 
-![[Gemini_Generated_Image_9plx7q9plx7q9plx 1.png]] *Still not that good looking*
+![Gemini Generated Portrait](/assets/images/gemini-generated-portrait.png) *Still not that good looking*
 
 I don't know if this approach scales to larger teams or more complex systems. I don't know if I'm building technical debt that'll bite me later. But I do know that having AI as a strategic thought partner with access to years of business context is genuinely transformative.
 

@@ -132,12 +132,12 @@ flowchart LR
   <div class="bar-row">
     <div class="bar-label">After the studio builds the loop</div>
     <div class="bar-track">
-      <div class="bar-fill bar-short">2 hrs</div>
+      <div class="bar-fill bar-short">45 min</div>
     </div>
   </div>
 </div>
 
-*Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones.*
+*Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones. That kind of leverage unlocks an entirely different way of working—more on that soon.*
 
 ## Plugging the Studio Into My World
 

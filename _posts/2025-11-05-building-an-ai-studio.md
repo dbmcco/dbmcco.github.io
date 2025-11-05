@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building an AI Studio (Instead of Just Prompting)
-date: 2025-11-06 09:15:00 -0500
+date: 2025-11-05 09:15:00 -0500
 categories: development ai workflow
 tags: [ai-studio, workflow, practice, mindset]
 ---

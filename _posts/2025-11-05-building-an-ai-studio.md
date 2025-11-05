@@ -12,15 +12,15 @@ mermaid: true
   <figcaption>Nano banana is so fun!</figcaption>
 </figure>
 
-This week a teammate sent me a tidy agenda for “how Braydon uses LLMs.” It read like a step-by-step architecture review. I realized we weren’t talking about the same kind of work. The agenda imagined a straight line; I’m working in a flexible AI studio.
+This week a teammate sent me an agenda to learn “how Braydon uses LLMs.” These requests are becoming more frequent, which is encouraging, but what struck me this time is that the agenda read like a flat instruction set—almost the way you’d stage assembling an IKEA dresser. It made something really clear: we were thinking about LLMs in entirely different ways. The agenda imagined a straight line; I’m operating an AI studio.
 
-When I say “studio,” I’m thinking about those Renaissance workshops where a lead artist framed the piece, set the order of operations, and highly skilled collaborators executed parts with precision. That’s closer to what’s actually happening in my day-to-day flow. I’m not nudging a chatbot for code or text. I’m orchestrating a crew of capable (and occasionally temperamental) collaborators, each with a defined surface area and constraint set.
+When I say “studio,” I’m thinking about those Renaissance workshops where a lead artist framed the piece (I’m no Renaissance master, but I admire the structure), set the order of operations, and highly skilled collaborators executed the parts with precision. That’s closer to my day-to-day reality. I’m not nudging a chatbot for code or copy. I’m orchestrating a crew of capable (and occasionally temperamental) collaborators, each with a defined surface area and constraint set.
 
-There’s a loud drumbeat right now that says “learn prompt engineering, paste the magic incantation into ChatGPT, watch the finished product fall out.” That framing treats the model like a vending machine: the more clever the words, the better the prize. The agenda I was handed shares the same base assumption even though it’s structured differently—it still expects the model to take instructions and go away. My studio mindset flips that: I build a space where we *work together*, loop fast, challenge each other, and keep the environment ready so the models can act like collaborators.
+There’s still a loud drumbeat in LLM-land that says “master prompt engineering, paste the magic incantation into ChatGPT, and the finished product will fall out.” That framing treats the model like a vending machine: clever words in, prize out. The agenda I saw shared that assumption—it still expected the model to take instructions and disappear until the job was done. My studio mindset flips that: I build a space where we *work together*, loop fast, challenge each other, and keep the environment ready so the models can act like collaborators.
 
 ## The Mental Model Gap
 
-That agenda assumed a long hallway: define the architecture, integrate the services, lay in the interface, test at the end. In my world the work happens in tight loops:
+That linear agenda assumed a long hallway: define the architecture, integrate the services, lay in the interface, test at the end. In my world the work happens in tight loops:
 
 - **I coach the models like senior specialists.** Every session starts with context, friction points, and an explicit brief. “Here are the knobs you can touch; here are the ones you can’t.”  
 - **We pressure-test ideas together.** I’ll ask for counter-arguments, anti-pattern hunts, or three sub-agents to disagree on the next step. It keeps me out of the “Claude, please fix” spiral and surfaces better answers.  
@@ -36,7 +36,7 @@ Most modern “prompt tricks” belong to the first two camps. The studio model 
 
 ## What People Are Picking Up
 
-In the last few weeks I’ve had more people ask, “Can you show me how you’re doing this?” Every time I demo the studio, the reaction is the same: “Oh, that’s totally different—and 10x faster.” I think what they’re sensing is:
+In the last few weeks more people have asked, “Can you show me how you’re doing this?” Every time I demo the studio, the reaction is the same: “Oh, that’s totally different—and 10x faster.” I think what they’re sensing is:
 
 - **I arrange the room, not just the words.** Before the model does anything, I’ve already staged the tools, the access, and the boundaries. They see the environment, not just the prompt.  
 - **They can watch the feedback loops.** I narrate each pass, where the model pushes back, when I tighten the guardrails. It’s obvious there’s a conversation, not a one-shot request.  
@@ -85,7 +85,7 @@ If you want to try this without rebuilding my entire setup, here’s a compresse
 
 Do this two or three times and you’ll feel what I’m chasing: you’re not “using an LLM,” you’re running a studio that happens to have silicon apprentices.
 
-### Visual: The Studio Environment
+## Visual: The Studio Environment
 
 {% raw %}
 <div class="mermaid-container">
@@ -97,6 +97,8 @@ flowchart LR
     Vercel["Vercel<br/>Deployments &amp; Logs"]
     Todoist["Todoist<br/>Commitments"]
     Reminders["Apple Reminders<br/>Custom MCP"]
+    Attio["Attio<br/>Skills + API"]
+    SendGrid["SendGrid<br/>Skills + API"]
     Perplexity["Perplexity<br/>Research"]
     Local["Local Files<br/>Transcripts &amp; Docs"]
     Drive["Google Drive<br/>Skills access"]
@@ -107,6 +109,8 @@ flowchart LR
     Studio <-->|Claude/Codex Skill + API| Vercel
     Studio <-->|Custom MCP| Todoist
     Studio <-->|Custom MCP| Reminders
+    Studio <-->|Claude/Codex Skill + API| Attio
+    Studio <-->|Claude/Codex Skill + API| SendGrid
     Studio <-->|Claude/Codex Skill + API| Perplexity
     Studio <-->|CLI| Local
     Studio <-->|Claude/Codex Skill + Service Account| Drive

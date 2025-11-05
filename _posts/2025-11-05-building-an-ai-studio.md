@@ -14,13 +14,13 @@ mermaid: true
 
 This week a teammate sent me an agenda to learn “how Braydon uses LLMs.” These requests are becoming more frequent, which is encouraging, but what struck me this time is that the agenda read like a flat instruction set—almost the way you’d stage assembling an IKEA dresser. It made something really clear: we were thinking about LLMs in entirely different ways. The agenda imagined a straight line; I’m operating an AI studio.
 
-When I say “studio,” I’m thinking about those Renaissance workshops where a lead artist framed the piece (I’m no Renaissance master, but I admire the structure), set the order of operations, and highly skilled collaborators executed the parts with precision. That’s closer to my day-to-day reality. I’m not nudging a chatbot for code or copy. I’m orchestrating a crew of capable (and occasionally temperamental) collaborators, each with a defined surface area and constraint set.
+When I say “studio,” I’m thinking about those Renaissance workshops where a lead artist framed the piece (I’m no Renaissance master, but I admire the structure), set the order of operations, and highly skilled collaborators executed the parts with precision. That’s closer to my day-to-day reality. I’m not nudging a chatbot for code or copy. I’m orchestrating a crew of capable (and occasionally temperamental) collaborators, each with a defined surface area and constraint set. (If you’re curious where that work lands, my repos live at [github.com/dbmcco](https://github.com/dbmcco).)
 
 There’s still a loud drumbeat in LLM-land that says “master prompt engineering, paste the magic incantation into ChatGPT, and the finished product will fall out.” That framing treats the model like a vending machine: clever words in, prize out. The agenda I saw shared that assumption—it still expected the model to take instructions and disappear until the job was done. My studio mindset flips that: I build a space where we *work together*, loop fast, challenge each other, and keep the environment ready so the models can act like collaborators.
 
 ## The Mental Model Gap
 
-That linear my world work with LLMs happens in tight loops:
+That linear agenda assumed a long hallway: define the architecture, integrate the services, lay in the interface, test at the end. In my world, the work with LLMs happens in tight loops:
 
 - **I coach the models like senior specialists.** Every session starts with context, friction points, and an explicit brief. “Here are the knobs you can touch; here are the ones you can’t.”  
 - **We pressure-test ideas together.** I’ll ask for counter-arguments, anti-pattern hunts, or three sub-agents to disagree on the next step. It keeps me out of the “Claude, please fix” spiral and surfaces better answers.  
@@ -50,11 +50,11 @@ It’s not magic; it’s a different way of thinking about the tools. Once you s
 Once you adopt the studio mindset, the first order of business is designing the room your collaborators will work in. Here’s what that looks like on a good day:
 
 1. **Room setup (infrastructure first).**  
-   - Keys ready: API tokens, MCPs, agents, CLI for the services I need, already trimmed to the smallest scope that works.  
-   - Tools open: Claude Code (the command-line helper I lean on), Codex for extended context, Perplexity for research, browser devtools when they’re useful.  I am trying claude.ai and codex web for coding, but wow that is not working well for me.
-   - Dashboards up: deployment logs, a dedicated terminal pane per collaborator  so the conversation stays organized.  Tmux is the way to go here, hands down. More on that another time.
+   - Keys ready: API tokens, MCP connectors, agents, CLI helpers for the services I need, already trimmed to the smallest scope that works.  
+   - Tools open: [Claude Code CLI](https://github.com/anthropics/claude-code) (the command-line helper I lean on), my [Codex workspace](https://github.com/dbmcco/codex-workspace) for extended context, [Perplexity](https://www.perplexity.ai/) for research, and browser devtools when they’re useful. I keep experimenting with [claude.ai](https://claude.ai/) and the Codex web UI for coding, but wow does that still feel rough compared to the CLI.
+   - Dashboards up: deployment logs, and a dedicated [tmux](https://github.com/tmux/tmux) pane per collaborator so the conversation stays organized. Tmux is the way to go here—more on that another time.
 
-1. **Crew assignments.**   I don't always use crews of agents, but when I do, I drink Corona. No wait, I mean I will use Claude sub agents, or agent to agent using tmux, or the aforementioned mess of trying claude.ai.  Generally the below are right. Thanks to Jesse's superpowers, these are getting better all the time.  And this model is not just for coding - writing - blogs - CRM - everything.
+1. **Crew assignments.**   I don't always use crews of agents, but when I do, I drink Corona. No wait, I mean I will use Claude sub agents, or agent to agent using tmux, or the aforementioned mess of trying claude.ai.  Generally the below are right. Thanks to [Jesse’s LACE superpowers](https://github.com/obra/lace), these are getting better all the time.  And this model is not just for coding - writing - blogs - CRM - everything.
    - `PM` agent guards requirements, sequencing, and dependency calls.  
    - `Builder` agent handles the implementation slices (often switching between Claude and Codex).  
    - `Tester` agent runs the safety checks and watches the tests.  
@@ -120,6 +120,8 @@ flowchart LR
 {% endraw %}
 
 *The studio sits in the middle. Each service is a surface the models can touch, with scoped permissions and clear responsibilities. (CLI = direct shell tools, Custom MCP = bespoke connector, Claude/Codex Skill = scripted agent skill with API bindings.)*
+
+Outside the diagram, these touchpoints map to the real tooling: [Obsidian](https://obsidian.md/) for notes and strategy docs, [GitHub](https://github.com/) for repos, [Vercel](https://vercel.com/) for deploys, [Todoist](https://todoist.com/) and [Apple Reminders](https://www.apple.com/reminders/) via custom MCPs, [Attio](https://attio.com/) and [SendGrid](https://sendgrid.com/) through Claude/Codex skills, [Perplexity](https://www.perplexity.ai/) for research, [local files](https://github.com/dbmcco) for quick access, and [Google Drive](https://www.google.com/drive/) through a service-account skill. The MPC side of all this leans on the [Model Context Protocol](https://modelcontextprotocol.dev/) implementations we’ve been stitching together.
 
 ## What Keeps Breaking for People
 

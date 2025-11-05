@@ -170,4 +170,4 @@ I still don’t have a satisfying answer for front-end UX in the terminal. Compl
 
 For now, the invitation is simple: stop prompting like a solo dev with a fancy autocomplete. Stand up your own AI studio. Give the models a room, a process, and a shared mission. Then direct the work like the piece is yours—because it is.
 
-*Process note: I drafted this with Codex inside the studio. I defined the goals, prompts, and guardrails; Codex executed the heavy lift on prose and diagrams. Human direction, machine acceleration.* 
+*Process note: I drafted this with Codex inside the studio. I defined the goals, prompts, and guardrails; Codex executed the heavy lift on prose and diagrams. Human direction, machine acceleration—including that silly sounding phrase.*

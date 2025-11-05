@@ -54,7 +54,7 @@ Once you adopt the studio mindset, the first order of business is designing the 
    - Tools open: [Claude Code CLI](https://github.com/anthropics/claude-code) (the command-line helper I lean on), my [Codex workspace](https://github.com/dbmcco/codex-workspace) for extended context, [Perplexity](https://www.perplexity.ai/) for research, and browser devtools when they’re useful. I keep experimenting with [claude.ai](https://claude.ai/) and the Codex web UI for coding, but wow does that still feel rough compared to the CLI.
    - Dashboards up: deployment logs, and a dedicated [tmux](https://github.com/tmux/tmux) pane per collaborator so the conversation stays organized. Tmux is the way to go here—more on that another time.
 
-1. **Crew assignments.**   I don't always use crews of agents, but when I do, I drink Corona. No wait, I mean I will use Claude sub agents, or agent to agent using tmux, or the aforementioned mess of trying claude.ai.  Generally the below are right. Thanks to [Jesse’s LACE superpowers](https://github.com/obra/lace), these are getting better all the time.  And this model is not just for coding - writing - blogs - CRM - everything.
+1. **Crew assignments.**   I don't always use crews of agents, but when I do, I drink Corona. No wait, I mean I will use Claude sub agents, or agent to agent using tmux, or the aforementioned mess of trying claude.ai.  Generally the below are right. Thanks to [Jesse’s superpowers repo](https://github.com/obra/superpowers), these are getting better all the time.  And this model is not just for coding - writing - blogs - CRM - everything.
    - `PM` agent guards requirements, sequencing, and dependency calls.  
    - `Builder` agent handles the implementation slices (often switching between Claude and Codex).  
    - `Tester` agent runs the safety checks and watches the tests.  
@@ -120,6 +120,8 @@ flowchart LR
 {% endraw %}
 
 *The studio sits in the middle. Each service is a surface the models can touch, with scoped permissions and clear responsibilities. (CLI = direct shell tools, Custom MCP = bespoke connector, Claude/Codex Skill = scripted agent skill with API bindings.)*
+
+These are the tools *I* lean on today, but the pattern is intentionally tool-agnostic—swap in whatever stack lets your team move fastest. And if you want help wiring your own studio together, my crew at [LightForgeWorks](https://lightforgeworks.com/) loves doing exactly that.
 
 Outside the diagram, these touchpoints map to the real tooling: [Obsidian](https://obsidian.md/) for notes and strategy docs, [GitHub](https://github.com/) for repos, [Vercel](https://vercel.com/) for deploys, [Todoist](https://todoist.com/) and [Apple Reminders](https://www.apple.com/reminders/) via custom MCPs, [Attio](https://attio.com/) and [SendGrid](https://sendgrid.com/) through Claude/Codex skills, [Perplexity](https://www.perplexity.ai/) for research, [local files](https://github.com/dbmcco) for quick access, and [Google Drive](https://www.google.com/drive/) through a service-account skill. The MPC side of all this leans on the [Model Context Protocol](https://modelcontextprotocol.dev/) implementations we’ve been stitching together.
 

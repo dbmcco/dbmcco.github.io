@@ -20,7 +20,7 @@ There’s still a loud drumbeat in LLM-land that says “master prompt engineeri
 
 ## The Mental Model Gap
 
-That linear agenda assumed a long hallway: define the architecture, integrate the services, lay in the interface, test at the end. In my world the work happens in tight loops:
+That linear my world work with LLMs happens in tight loops:
 
 - **I coach the models like senior specialists.** Every session starts with context, friction points, and an explicit brief. “Here are the knobs you can touch; here are the ones you can’t.”  
 - **We pressure-test ideas together.** I’ll ask for counter-arguments, anti-pattern hunts, or three sub-agents to disagree on the next step. It keeps me out of the “Claude, please fix” spiral and surfaces better answers.  
@@ -50,12 +50,11 @@ It’s not magic; it’s a different way of thinking about the tools. Once you s
 Once you adopt the studio mindset, the first order of business is designing the room your collaborators will work in. Here’s what that looks like on a good day:
 
 1. **Room setup (infrastructure first).**  
-   - Keys ready: API tokens for the services I need, already trimmed to the smallest scope that works.  
-   - Tools open: Claude Code (the command-line helper I lean on), Codex for extended context, Perplexity for research, browser devtools when they’re useful.  
-   - Dashboards up: deployment logs, lightweight debug switches, a dedicated terminal pane per collaborator so the conversation stays organized.  
-   The model doesn’t babysit my environment; it lives inside it.
+   - Keys ready: API tokens, MCPs, agents, CLI for the services I need, already trimmed to the smallest scope that works.  
+   - Tools open: Claude Code (the command-line helper I lean on), Codex for extended context, Perplexity for research, browser devtools when they’re useful.  I am trying claude.ai and codex web for coding, but wow that is not working well for me.
+   - Dashboards up: deployment logs, a dedicated terminal pane per collaborator  so the conversation stays organized.  Tmux is the way to go here, hands down. More on that another time.
 
-2. **Crew assignments.**  
+1. **Crew assignments.**   I don't always use crews of agents, but when I do, I drink Corona. No wait, I mean I will use Claude sub agents, or agent to agent using tmux, or the aforementioned mess of trying claude.ai.  Generally the below are right. Thanks to Jesse's superpowers, these are getting better all the time.  And this model is not just for coding - writing - blogs - CRM - everything.
    - `PM` agent guards requirements, sequencing, and dependency calls.  
    - `Builder` agent handles the implementation slices (often switching between Claude and Codex).  
    - `Tester` agent runs the safety checks and watches the tests.  

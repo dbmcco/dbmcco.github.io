@@ -139,16 +139,6 @@ flowchart LR
 
 *Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones. That kind of leverage unlocks an entirely different way of working—more on that soon.*
 
-## Plugging the Studio Into My World
-
-Once the studio is wired into my actual universe—Obsidian for strategy notes, GitHub repos for in-flight builds, Todoist for commitments, Perplexity for research—the model isn’t guessing in the dark. It’s inside my mental model.
-
-- **Strategy stays coherent.** When Claude pulls an Obsidian note, it isn’t just copying text; it’s aligning implementation work with the priorities I’ve already set.  
-- **Execution picks up speed.** Because the studio has real access to repos or deployment logs, I can hand off “make this change, run the tests, show me the result” without losing context.  
-- **Decisions stay mine.** The model can surface options, contradictions, or risks faster than I can alone. But the call still runs through the way I think about quality, customers, process. The integrations supercharge my judgment—they don’t replace it.
-
-That’s the quiet benefit. With the right wiring, the studio amplifies my thinking loops. Instead of asking, “What prompt gives me the answer?” the question becomes, “How do I give the studio the raw material to accelerate the way I already work?”
-
 There’s also a big gap between passive and active use. Reading an AI-generated meeting recap is useful. Having the studio interrogate that recap—pull out the mental models in play, highlight conflicting assumptions, update my strategy notes, adjust my task list, and surface research prompts for a follow-up session—fundamentally changes my planning. The first is consumption. The second is collaboration.
 
 ### Visual: Passive vs. Active Follow-up
@@ -174,6 +164,10 @@ There’s also a big gap between passive and active use. Reading an AI-generated
   </div>
 </div>
 
-## Plugging the Studio Into My World
+## Where I’m Pushing Next
 
-Once the studio is wired into my actual universe—Obsidian for strategy notes, GitHub repos for in-flight builds, Todoist for commitments, Perplexity for research—the model isn’t guessing in the dark. It’s inside my mental model.
+I still don’t have a satisfying answer for front-end UX in the terminal. Complex state management blows up more often than I like. And I’m experimenting with a shared scratchpad so agents can hand off without me shuttling notes back and forth. Studios evolve—so will this one.
+
+For now, the invitation is simple: stop prompting like a solo dev with a fancy autocomplete. Stand up your own AI studio. Give the models a room, a process, and a shared mission. Then direct the work like the piece is yours—because it is.
+
+*Process note: I drafted this with Codex inside the studio. I defined the goals, prompts, and guardrails; Codex executed the heavy lift on prose and diagrams. Human direction, machine acceleration.* 

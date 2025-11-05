@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Mindset Gap: How an AI Studio Changed My Workflow
+title: "The Mindset Gap: How an AI Studio Changed My Workflow"
 date: 2025-11-05 09:15:00 -0500
 categories: development ai workflow
 tags: [ai-studio, workflow, practice, mindset]

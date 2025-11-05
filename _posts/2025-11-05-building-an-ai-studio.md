@@ -87,16 +87,29 @@ Do this two or three times and you’ll feel what I’m chasing: you’re not �
 ### Visual: The Studio Environment
 
 {% raw %}
-<div class="mermaid">
+<div class="mermaid-container">
+  <div class="mermaid">
 flowchart LR
-    subgraph Studio["Studio (Claude CLI · Codex)"]
-    end
-    Obsidian["Obsidian<br/>Strategy & Narrative"] --> Studio
-    Studio --> GitHub["GitHub<br/>Repos & PRs"]
-    Studio --> Vercel["Vercel<br/>Deployments & Logs"]
-    Studio --> Todoist["Todoist<br/>Commitments"]
-    Perplexity["Perplexity<br/>Research"] --> Studio
-    Studio --> ReturnLoop["Updates & Briefs"]
+    Studio((Studio<br/>(Claude CLI · Codex)))
+    Obsidian["Obsidian<br/>Strategy & Narrative"]
+    GitHub["GitHub<br/>Repos & PRs"]
+    Vercel["Vercel<br/>Deployments & Logs"]
+    Todoist["Todoist<br/>Commitments"]
+    Perplexity["Perplexity<br/>Research"]
+    Local["Local Files<br/>Transcripts & Docs"]
+    Drive["Google Drive<br/>(Skills access)"]
+    ReturnLoop["Updates & Briefs"]
+
+    Studio <--> Obsidian
+    Studio <--> GitHub
+    Studio <--> Vercel
+    Studio <--> Todoist
+    Studio <--> Perplexity
+    Studio <--> Local
+    Studio <--> Drive
+    Studio --> ReturnLoop
+    ReturnLoop --> Obsidian
+  </div>
 </div>
 {% endraw %}
 
@@ -122,37 +135,43 @@ There’s also a big gap between passive and active use. Reading an AI-generated
 
 ### Visual: Passive vs. Active Follow-up
 
-{% raw %}
-<div class="mermaid">
-flowchart LR
-    subgraph Passive["Passive Consumption"]
-        P1("Read AI summary")
-        P2("Maybe paste a snippet into notes")
-        P3("Tell yourself you'll follow up")
-        P4("Context fog builds by next meeting")
-        P1 --> P2 --> P3 --> P4
-    end
-    subgraph Active["Active Studio Collaboration"]
-        A1("Ask studio to map mental models")
-        A2("Flag conflicting assumptions & gaps")
-        A3("Update strategy notes & Todoist")
-        A4("Generate research prompts & follow-up brief")
-        A5("Walk into next session ready")
-        A1 --> A2 --> A3 --> A4 --> A5
-    end
+<div class="comparison-grid">
+  <div>
+    <h4>Passive consumption</h4>
+    <ul>
+      <li>Read the AI-generated summary.</li>
+      <li>Maybe copy a highlight into notes.</li>
+      <li>Tell yourself you’ll follow up later.</li>
+      <li>Walk into the next meeting with fuzzy context.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Active studio collaboration</h4>
+    <ul>
+      <li>Ask the studio to map the mental models in the room.</li>
+      <li>Flag conflicting assumptions and missing data.</li>
+      <li>Update strategy notes, adjust Todoist, open research prompts.</li>
+      <li>Show up with a brief, open questions, and a plan to close gaps.</li>
+    </ul>
+  </div>
 </div>
-{% endraw %}
 
 ### Visual: Shrinking the Friction
 
-{% raw %}
-<div class="mermaid">
-pie showData
-    title Hours Spent on One Deliverable
-    "Manual loop before the studio" : 10
-    "After the studio builds the loop" : 2
+<div class="bar-chart">
+  <div class="bar-row">
+    <div class="bar-label">Manual loop before the studio</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-long">10 hrs</div>
+    </div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">After the studio builds the loop</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-short">2 hrs</div>
+    </div>
+  </div>
 </div>
-{% endraw %}
 
 *Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones.*
 

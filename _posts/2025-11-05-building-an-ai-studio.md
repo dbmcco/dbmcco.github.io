@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building an AI Studio (Instead of Just Prompting)
+title: The AI Studio Workflow That Cut My Build Time to 45 Minutes
 date: 2025-11-05 09:15:00 -0500
 categories: development ai workflow
 tags: [ai-studio, workflow, practice, mindset]

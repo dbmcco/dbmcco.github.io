@@ -23,7 +23,7 @@ minima:
 show_excerpts: true
 
 # Jekyll build settings
-future: false
+future: true
 unpublished: false
 
 # Build settings

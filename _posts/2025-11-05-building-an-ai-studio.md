@@ -121,6 +121,23 @@ flowchart LR
 - **Token budgets turn into resource budgets.** Once you treat models like teammates, you start managing capacity: which one gets the long memory, who handles research, where do we store shared context. That framing unlocks bigger missions.  
 - **You reclaim your attention.** The studio’s real output isn’t code, it’s leverage. The more loops we automate, the more headroom we get for architecture, strategy, and the human decisions that still matter.
 
+<div class="bar-chart">
+  <div class="bar-row">
+    <div class="bar-label">Manual loop before the studio</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-long">10 hrs</div>
+    </div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">After the studio builds the loop</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-short">2 hrs</div>
+    </div>
+  </div>
+</div>
+
+*Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones.*
+
 ## Plugging the Studio Into My World
 
 Once the studio is wired into my actual universe—Obsidian for strategy notes, GitHub repos for in-flight builds, Todoist for commitments, Perplexity for research—the model isn’t guessing in the dark. It’s inside my mental model.
@@ -155,25 +172,6 @@ There’s also a big gap between passive and active use. Reading an AI-generated
     </ul>
   </div>
 </div>
-
-### Visual: Shrinking the Friction
-
-<div class="bar-chart">
-  <div class="bar-row">
-    <div class="bar-label">Manual loop before the studio</div>
-    <div class="bar-track">
-      <div class="bar-fill bar-long">10 hrs</div>
-    </div>
-  </div>
-  <div class="bar-row">
-    <div class="bar-label">After the studio builds the loop</div>
-    <div class="bar-track">
-      <div class="bar-fill bar-short">2 hrs</div>
-    </div>
-  </div>
-</div>
-
-*Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones.*
 
 ## Where I’m Pushing Next
 

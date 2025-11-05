@@ -96,25 +96,27 @@ flowchart LR
     GitHub["GitHub<br/>Repos &amp; PRs"]
     Vercel["Vercel<br/>Deployments &amp; Logs"]
     Todoist["Todoist<br/>Commitments"]
+    Reminders["Apple Reminders<br/>Custom MCP"]
     Perplexity["Perplexity<br/>Research"]
     Local["Local Files<br/>Transcripts &amp; Docs"]
     Drive["Google Drive<br/>Skills access"]
     ReturnLoop["Updates &amp; Briefs"]
 
-    Studio <--> Obsidian
-    Studio <--> GitHub
-    Studio <--> Vercel
-    Studio <--> Todoist
-    Studio <--> Perplexity
-    Studio <--> Local
-    Studio <--> Drive
+    Studio <-->|Custom MCP| Obsidian
+    Studio <-->|CLI| GitHub
+    Studio <-->|Claude/Codex Skill + API| Vercel
+    Studio <-->|Custom MCP| Todoist
+    Studio <-->|Custom MCP| Reminders
+    Studio <-->|Claude/Codex Skill + API| Perplexity
+    Studio <-->|CLI| Local
+    Studio <-->|Claude/Codex Skill + Service Account| Drive
     Studio --> ReturnLoop
     ReturnLoop --> Obsidian
   </div>
 </div>
 {% endraw %}
 
-*The studio sits in the middle. Each service is a surface the models can touch, with scoped permissions and clear responsibilities.*
+*The studio sits in the middle. Each service is a surface the models can touch, with scoped permissions and clear responsibilities. (CLI = direct shell tools, Custom MCP = bespoke connector, Claude/Codex Skill = scripted agent skill with API bindings.)*
 
 ## What Keeps Breaking for People
 

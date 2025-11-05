@@ -86,7 +86,8 @@ Do this two or three times and you’ll feel what I’m chasing: you’re not �
 
 ### Visual: The Studio Environment
 
-```mermaid
+{% raw %}
+<div class="mermaid">
 flowchart LR
     subgraph Studio["Studio (Claude CLI · Codex)"]
     end
@@ -96,7 +97,8 @@ flowchart LR
     Studio --> Todoist["Todoist<br/>Commitments"]
     Perplexity["Perplexity<br/>Research"] --> Studio
     Studio --> ReturnLoop["Updates & Briefs"]
-```
+</div>
+{% endraw %}
 
 *The studio sits in the middle. Each service is a surface the models can touch, with scoped permissions and clear responsibilities.*
 
@@ -120,7 +122,8 @@ There’s also a big gap between passive and active use. Reading an AI-generated
 
 ### Visual: Passive vs. Active Follow-up
 
-```mermaid
+{% raw %}
+<div class="mermaid">
 flowchart LR
     subgraph Passive["Passive Consumption"]
         P1("Read AI summary")
@@ -137,16 +140,19 @@ flowchart LR
         A5("Walk into next session ready")
         A1 --> A2 --> A3 --> A4 --> A5
     end
-```
+</div>
+{% endraw %}
 
 ### Visual: Shrinking the Friction
 
-```mermaid
+{% raw %}
+<div class="mermaid">
 pie showData
     title Hours Spent on One Deliverable
     "Manual loop before the studio" : 10
     "After the studio builds the loop" : 2
-```
+</div>
+{% endraw %}
 
 *Once the loop exists, the studio runs it. The human work shifts to defining new problems, not repeating old ones.*
 

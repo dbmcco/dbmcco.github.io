@@ -91,14 +91,14 @@ Do this two or three times and you’ll feel what I’m chasing: you’re not �
   <div class="mermaid">
 flowchart LR
     Studio((Studio<br/>(Claude CLI · Codex)))
-    Obsidian["Obsidian<br/>Strategy & Narrative"]
-    GitHub["GitHub<br/>Repos & PRs"]
-    Vercel["Vercel<br/>Deployments & Logs"]
+    Obsidian["Obsidian<br/>Strategy &amp; Narrative"]
+    GitHub["GitHub<br/>Repos &amp; PRs"]
+    Vercel["Vercel<br/>Deployments &amp; Logs"]
     Todoist["Todoist<br/>Commitments"]
     Perplexity["Perplexity<br/>Research"]
-    Local["Local Files<br/>Transcripts & Docs"]
+    Local["Local Files<br/>Transcripts &amp; Docs"]
     Drive["Google Drive<br/>(Skills access)"]
-    ReturnLoop["Updates & Briefs"]
+    ReturnLoop["Updates &amp; Briefs"]
 
     Studio <--> Obsidian
     Studio <--> GitHub

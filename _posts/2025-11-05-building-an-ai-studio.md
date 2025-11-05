@@ -6,6 +6,7 @@ categories: development ai workflow
 tags: [ai-studio, workflow, practice, mindset]
 mermaid: true
 ---
+
 <figure class="post-figure">
   <img src="{{ '/assets/images/ai-studio.png' | relative_url }}" alt="AI studio environment sketch">
   <figcaption>Nano banana is so fun!</figcaption>
@@ -115,11 +116,11 @@ flowchart LR
 
 *The studio sits in the middle. Each service is a surface the models can touch, with scoped permissions and clear responsibilities.*
 
-## Why This Matters Right Now
+## What Keeps Breaking for People
 
-- **Turnkey builders still collapse under real-world complexity.** In the transcript you can hear how often people wrestle with v0 UI prompts—we’ve all been there. The studio model keeps control of the infrastructure, so the work is portable and debuggable.  
-- **Token budgets turn into resource budgets.** Once you treat models like teammates, you start managing capacity: which one gets the long memory, who handles research, where do we store shared context. That framing unlocks bigger missions.  
-- **You reclaim your attention.** The studio’s real output isn’t code, it’s leverage. The more loops we automate, the more headroom we get for architecture, strategy, and the human decisions that still matter.
+- **Turnkey builders still collapse under real-world complexity.** I hear about v0 prompting struggles almost every week. The moment a project needs real integrations or deeper testing, the “one prompt” dream falls apart.  
+- **Token budgets get wasted without a plan.** Treat the model as a teammate, hand it a clear brief, and suddenly the context window works like a real resource instead of a black hole.  
+- **Attention is the scarcest asset.** The studio’s output isn’t “more features,” it’s reclaimed headspace. The loops we automate give me time back for architecture, strategy, and the human decisions that still matter.
 
 <div class="bar-chart">
   <div class="bar-row">
@@ -173,8 +174,6 @@ There’s also a big gap between passive and active use. Reading an AI-generated
   </div>
 </div>
 
-## Where I’m Pushing Next
+## Plugging the Studio Into My World
 
-I still don’t have a satisfying answer for front-end UX in the terminal. Complex state management blows up more often than I like. And I’m experimenting with a shared scratchpad so agents can hand off without me shuttling notes back and forth. Studios evolve—so will this one.
-
-For now, the invitation is simple: stop prompting like a solo dev with a fancy autocomplete. Stand up your own AI studio. Give the models a room, a process, and a shared mission. Then direct the work like the piece is yours—because it is.
+Once the studio is wired into my actual universe—Obsidian for strategy notes, GitHub repos for in-flight builds, Todoist for commitments, Perplexity for research—the model isn’t guessing in the dark. It’s inside my mental model.

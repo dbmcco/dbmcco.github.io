@@ -6,8 +6,10 @@ categories: development ai workflow
 tags: [ai-studio, workflow, practice, mindset]
 mermaid: true
 ---
-
-![AI studio environment sketch]({{ "/assets/images/ai-studio.png" | relative_url }})
+<figure class="post-figure">
+  <img src="{{ '/assets/images/ai-studio.png' | relative_url }}" alt="AI studio environment sketch">
+  <figcaption>Nano banana is so fun!</figcaption>
+</figure>
 
 This week a teammate sent me a tidy agenda for “how Braydon uses LLMs.” It read like a step-by-step architecture review. I realized we weren’t talking about the same kind of work. The agenda imagined a straight line; I’m working in a flexible AI studio.
 

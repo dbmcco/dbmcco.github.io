@@ -15,11 +15,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   {% if page.mermaid %}
-  <script type="module">
-    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: "neutral"
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.mermaid) {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: "neutral"
+        });
+      }
     });
   </script>
   {% endif %}
@@ -210,6 +214,24 @@
 
     .archive-link a:hover {
       color: var(--accent-color) !important;
+    }
+
+    .post-figure {
+      margin: 2rem auto !important;
+      text-align: center !important;
+    }
+
+    .post-figure img {
+      max-width: 100% !important;
+      border-radius: 6px !important;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12) !important;
+    }
+
+    .post-figure figcaption {
+      font-size: 0.9rem !important;
+      color: var(--secondary-text) !important;
+      margin-top: 0.75rem !important;
+      font-style: italic !important;
     }
 
     /* Responsive design */

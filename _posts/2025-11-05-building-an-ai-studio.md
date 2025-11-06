@@ -5,6 +5,7 @@ date: 2025-11-05 09:15:00 -0500
 categories: development ai workflow
 tags: [ai-studio, workflow, practice, mindset]
 mermaid: true
+description: "Why my LLM work feels like running an AI studio, and how the environment, connectors, and mindset fit together."
 ---
 
 <figure class="post-figure">

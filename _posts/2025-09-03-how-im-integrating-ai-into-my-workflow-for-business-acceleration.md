@@ -9,6 +9,7 @@ tags:
   - strategy
   - workflow
   - intelligence
+description: "The playbook I'm using to embed AI agents across meetings, CRM, messaging, and build workflows for business acceleration."
 created: 2025-09-08T15:55:40.812Z
 ---
 

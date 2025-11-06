@@ -4,6 +4,7 @@ title: The CLI LLM Agent Journey So Far
 date: 2025-05-30 08:58:13 -0500
 categories: development ai workflow
 tags:
+description: "How my command-line LLM agent workflow evolved from simple scripts to layered project manager, developer, and tester roles."
 ---
 
 

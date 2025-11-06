@@ -4,6 +4,7 @@ title: "My 'Vibe Coding' Process ATM"
 date: 2025-05-28 10:00:00 -0500
 categories: development ai workflow
 tags: [substack-import, ai, development, claude-code, workflow]
+description: "A walkthrough of my multi-agent vibe coding setup using Claude CLI roles, status rituals, and handoffs."
 original_url: https://dbmcco.substack.com/p/my-vibe-coding-process-atm
 ---
 

@@ -4,6 +4,7 @@ title: "Building an Obsidian to Jekyll Workflow"
 date: 2025-05-25 14:30:00 -0500
 categories: productivity workflow
 tags: [obsidian, jekyll, automation, blogging]
+description: "How I wired my Obsidian vault into a repeatable Jekyll publishing pipeline with git and automation."
 ---
 
 # Building an Obsidian to Jekyll Workflow

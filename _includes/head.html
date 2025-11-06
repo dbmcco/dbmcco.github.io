@@ -73,14 +73,16 @@
 
     .site-header .wrapper {
       display: flex !important;
-      justify-content: space-between !important;
+      flex-direction: column !important;
       align-items: center !important;
+      gap: 1rem !important;
     }
 
     .site-title-area {
       display: flex !important;
       flex-direction: column !important;
-      align-items: flex-start !important;
+      align-items: center !important;
+      text-align: center !important;
     }
 
     .site-title {
@@ -117,6 +119,10 @@
       margin-top: 0 !important;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
       float: none !important;
+      display: flex !important;
+      gap: 0.5rem !important;
+      width: 100% !important;
+      justify-content: center !important;
     }
 
     .page-link {
@@ -344,29 +350,14 @@
         text-align: center !important;
       }
       
-      .site-title {
-        font-size: 1.75rem !important;
-        margin-bottom: 0 !important;
-      }
-
-      .site-subtitle {
-        font-size: 0.75rem !important;
-        margin-top: 0.2rem !important;
-        margin-bottom: 0.75rem !important;
-      }
-
       .site-nav {
         flex-direction: column !important;
         align-items: stretch !important;
         width: 100% !important;
-        margin-top: 0.5rem !important;
         padding: 0 !important;
         background: transparent !important;
         box-shadow: none !important;
-      }
-
-      .wrapper {
-        padding: 0 1rem !important;
+        gap: 0.5rem !important;
       }
 
       .page-link {

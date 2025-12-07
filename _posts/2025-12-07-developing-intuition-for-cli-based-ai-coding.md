@@ -187,6 +187,8 @@ The quote at the top of this post—"externalize model configs, adversarially te
 
 That understanding might be the real product here. Everything else is implementation detail.
 
+A note to the group: there's so much cool stuff you all have contributed that I couldn't figure out how to weave into this post. AR glasses, the deep dives on model routing, the ongoing debates about when to use which model for what—I had to leave a lot on the cutting room floor. Also, I used Claude to help me parse the entire chat log for main topics, which felt appropriate given the subject matter.
+
 ---
 
 ### People and resources mentioned
@@ -209,3 +211,7 @@ That understanding might be the real product here. Everything else is implementa
 - [Jesse's methodology post](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/)
 
 *See also: [CLI AI Coding: A Vault of Valuable Things]({{ '/2025/12/07/cli-ai-coding-vault-of-valuable-things/' | relative_url }}) for a comprehensive list of repos, configs, and guidance.*
+
+---
+
+*Claude helped me write this post. A lot. But the thinking and tone are mine (except for all the stuff the guys in the chat have contributed).*

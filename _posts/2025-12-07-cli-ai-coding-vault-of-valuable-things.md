@@ -234,3 +234,7 @@ Patterns that aren't tools but are worth codifying:
 ---
 
 *Last updated: December 2025*
+
+---
+
+*Claude helped me write this post. A lot. But the thinking and tone are mine (except for all the stuff the guys in the chat have contributed).*

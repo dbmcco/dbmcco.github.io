@@ -8,6 +8,11 @@ description: "What I've learned about working with LLMs in CLI contexts—the pa
 unlisted: true
 ---
 
+<figure class="post-figure">
+  <img src="{{ '/assets/images/llm-post/nano-banana-intuition.png' | relative_url }}" alt="Nano banana's take on this post">
+  <figcaption>This is what nano-banana thinks of my post</figcaption>
+</figure>
+
 At this point I think there are three general buckets of thinking about LLM/GenAI "Model" use. There are certainly other ways of viewing LLM use, and if you are deep in ML or model training then you likely have an entirely different perspective, but from a "how do people use these darn things", I feel this represents a pretty decent categorization… for the moment.
 
 1. Web/app based chatbots with some "extended" capabilities beyond the chat interface. [ChatGPT](https://chatgpt.com), [Claude](https://claude.ai), [NoteBookLM](https://notebooklm.google.com/), [Grok](https://grok.com) - with internet search, maybe some RAG, maybe some GitHub integration. Generally an endpoint unto itself.

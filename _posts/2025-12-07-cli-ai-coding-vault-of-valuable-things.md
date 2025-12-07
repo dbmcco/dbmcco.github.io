@@ -10,6 +10,11 @@ unlisted: true
 
 *This is a companion post to [Developing intuition for CLI-based AI coding]({{ '/2025/12/07/developing-intuition-for-cli-based-ai-coding/' | relative_url }}) — that post is about the understanding; this one is about the tools.*
 
+<figure class="post-figure">
+  <img src="{{ '/assets/images/llm-post/nano-banana-vault.png' | relative_url }}" alt="Nano banana's take on this post">
+  <figcaption>This is what nano-banana thought of this post</figcaption>
+</figure>
+
 ---
 
 ## What this is

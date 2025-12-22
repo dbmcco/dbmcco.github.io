@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Developing intuition for CLI-based AI coding"
-date: 2025-12-07 09:00:00 -0500
+date: 2025-12-22 09:00:00 -0500
 categories: development ai workflow
 tags: [ai, claude-code, cli, intuition, workflow]
 description: "What I've learned about working with LLMs in CLI contexts—the patterns, the pitfalls, and why understanding matters more than tooling."
-unlisted: true
 ---
 
 <figure class="post-figure">
@@ -61,11 +60,11 @@ If you've spent any time with Claude, you probably know this dynamic. The phrase
 
 And actual merch (courtesy of [Eran Sandler](https://www.linkedin.com/in/erans)):
 
-![Usage limit t-shirt]({{ '/assets/images/llm-post/usage-limit-tshirt.jpg' | relative_url }})
+![You're absolutely right t-shirt]({{ '/assets/images/llm-post/usage-limit-tshirt.jpg' | relative_url }})
 
-- [Usage limit shirt](https://www.stickermule.com/studio/design/765c3098-ac19-4cde-ac0f-e98cc62374c9/share)
-- [You're absolutely right shirt](https://www.stickermule.com/studio/design/6fb791eb-fb86-43f0-9a0e-e12c79593539/share)
-- [Plain version](https://www.stickermule.com/studio/design/495c3ca3-3011-4008-a0c0-62da089c1471/share)
+- [Auto-compact shirt](https://www.stickermule.com/studio/design/765c3098-ac19-4cde-ac0f-e98cc62374c9/share)
+- [Unreliable Turing Machine shirt](https://www.stickermule.com/studio/design/6fb791eb-fb86-43f0-9a0e-e12c79593539/share)
+- [You're absolutely right shirt](https://www.stickermule.com/studio/design/495c3ca3-3011-4008-a0c0-62da089c1471/share)
 
 ### When it just... makes stuff up
 

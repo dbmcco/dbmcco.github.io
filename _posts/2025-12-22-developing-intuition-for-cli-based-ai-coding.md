@@ -62,9 +62,9 @@ And actual merch (courtesy of [Eran Sandler](https://www.linkedin.com/in/erans))
 
 ![You're absolutely right t-shirt]({{ '/assets/images/llm-post/usage-limit-tshirt.jpg' | relative_url }})
 
-- [Auto-compact shirt](https://www.stickermule.com/studio/design/765c3098-ac19-4cde-ac0f-e98cc62374c9/share)
-- [Unreliable Turing Machine shirt](https://www.stickermule.com/studio/design/6fb791eb-fb86-43f0-9a0e-e12c79593539/share)
-- [You're absolutely right shirt](https://www.stickermule.com/studio/design/495c3ca3-3011-4008-a0c0-62da089c1471/share)
+- <a href="https://www.stickermule.com/studio/design/765c3098-ac19-4cde-ac0f-e98cc62374c9/share" target="_blank">Auto-compact shirt</a>
+- <a href="https://www.stickermule.com/studio/design/6fb791eb-fb86-43f0-9a0e-e12c79593539/share" target="_blank">Unreliable Turing Machine shirt</a>
+- <a href="https://www.stickermule.com/studio/design/495c3ca3-3011-4008-a0c0-62da089c1471/share" target="_blank">You're absolutely right shirt</a>
 
 ### When it just... makes stuff up
 

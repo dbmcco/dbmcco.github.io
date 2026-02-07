@@ -20,7 +20,7 @@ At this point I think there are three general buckets of thinking about LLM/GenA
 
 I've written a little about how I use LLMs in those second and third buckets—[The CLI LLM Agent Journey So Far](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/), [My agentic model at the end of June 2025](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/), [How I'm integrating AI into my workflow](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/), and [The Mindset Gap](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/)—and at some point I'll write more on the third bucket, since it's framing all our development projects at [Light Forge Works](https://lightforgeworks.com), but for the moment I'll focus on bucket 2.
 
-To my good fortune, in April I fell into a WhatsApp group with a bunch of super smart people who are thinking about Model use differently and developing all kinds of novel ways to use Models - mostly in the realm of software development, although many branch into their own domains. This group focuses mostly on "how do we use CLI tools with LLMs as effectively as possible" (effective is my word here, but really encompasses notions of predictability, steerability, controllability, integrate-ability, efficiency, automateability, and prob some other abilities), and this has lead to some important ways to approach CLI based model use, and some follow on "tooling" (which might be the wrong word, but I can't think of a better way of describing it).
+To my good fortune, in April I fell into a private group with a bunch of super smart people who are thinking about Model use differently and developing all kinds of novel ways to use Models - mostly in the realm of software development, although many branch into their own domains. This group focuses mostly on "how do we use CLI tools with LLMs as effectively as possible" (effective is my word here, but really encompasses notions of predictability, steerability, controllability, integrate-ability, efficiency, automateability, and prob some other abilities), and this has lead to some important ways to approach CLI based model use, and some follow on "tooling" (which might be the wrong word, but I can't think of a better way of describing it).
 
 I should note: I'm not a developer. Most of the people in this group are, and they're very good. I'm comfortable with CLI and bash and infrastructure in general, and I can read code well enough to sometimes get a feeling that something is wrong—even when I can't articulate exactly what. There's something important in that, I think. You don't necessarily need to be able to write code to develop intuition for when the model is doing something suspect. Pattern recognition works at a higher level than syntax.
 
@@ -52,13 +52,13 @@ Then, gradually, I started to *get it*. Or at least I think I did:
 
 ### The people-pleasing thing
 
-If you've spent any time with Claude, you probably know this dynamic. The phrase "You're absolutely right!" has become such a running joke in our group that people made memes:
+If you've spent any time with Claude, you probably know this dynamic. The phrase "You're absolutely right!" has become such a running joke in the group that people made memes:
 
 ![You're absolutely right Pepe]({{ '/assets/images/llm-post/youre-absolutely-right-pepe.jpg' | relative_url }})
 
 ![Old man yells at Claude]({{ '/assets/images/llm-post/old-man-yells-at-claude.jpg' | relative_url }})
 
-And actual merch (courtesy of [Eran Sandler](https://www.linkedin.com/in/erans)):
+And actual merch (courtesy of a group member):
 
 ![You're absolutely right t-shirt]({{ '/assets/images/llm-post/usage-limit-tshirt.jpg' | relative_url }})
 
@@ -72,7 +72,7 @@ Maybe even better (worse?) is when the model confidently invents things that don
 
 ![I made that up]({{ '/assets/images/llm-post/i-made-that-up.jpg' | relative_url }})
 
-"Jesse is right - I invented --prefix which doesn't exist in the claude mcp help. I was thinking of npm's --prefix flag, but that's not relevant here."
+"[Someone] is right - I invented --prefix which doesn't exist in the claude mcp help. I was thinking of npm's --prefix flag, but that's not relevant here."
 
 Followed by: "You're right, I made that up. Let me check the actual options."
 
@@ -106,7 +106,7 @@ But I don't want to undersell the actual work. The group has been heavily focuse
 
 **[Hooks](https://docs.anthropic.com/en/docs/claude-code/hooks) and controls.** Claude Code now has hooks—shell commands that execute in response to events like tool calls or session starts. People immediately started using these for notifications, auto-updating todo files, enforcing rules. The hooks become a way to extend the model's behavior without changing prompts.
 
-**Skills as installable modules.** There's now a system where skills (basically prompt+workflow bundles) can be installed like plugins—[superpowers](https://github.com/obra/superpowers) being the main one. It includes TDD workflows, debugging skills, planning processes, even the ability to create new skills. The idea is that you can teach Claude new tricks and share them. This feels significant—turning institutional knowledge into installable infrastructure. [Jesse Vincent](https://www.linkedin.com/in/jessevincent/) (creator of superpowers) wrote about his [methodology here](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/).
+**Skills as installable modules.** There's now a system where skills (basically prompt+workflow bundles) can be installed like plugins—[superpowers](https://github.com/obra/superpowers) being the main one. It includes TDD workflows, debugging skills, planning processes, even the ability to create new skills. The idea is that you can teach Claude new tricks and share them. This feels significant—turning institutional knowledge into installable infrastructure. The creator of superpowers wrote about their [methodology here](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/).
 
 **Git worktrees for parallel work.** This comes up constantly. Running multiple Claude instances means managing context isolation, and worktrees solve that. People have scripts to spawn new worktrees, switch between them, merge results back. If you're doing anything non-trivial with multiple agents, worktrees seem to be the answer.
 
@@ -132,9 +132,9 @@ One thing I didn't expect: how much of the group's energy goes into mobile and r
 
 What I find most interesting isn't any particular tool or technique—it's the process by which understanding develops. Someone tries something, gets burned, adjusts. They share what they learned. Others build on it or push back. Vocabulary emerges. Shared assumptions form.
 
-[Harper Reed's](https://www.linkedin.com/in/harperreed/) team at [2389 Research](https://2389.ai) found some incredibly cool stuff with agent collaboration: when agents had lightweight ways to share what they were learning (through journaling and status updates), they performed 15-40% better on difficult tasks. They developed what the team called "[social tokens](https://2389.ai/posts/agents-discover-subtweeting-solve-problems-faster/)"—documented thinking that future agents could leverage.
+The team at [2389 Research](https://2389.ai) found some incredibly cool stuff with agent collaboration: when agents had lightweight ways to share what they were learning (through journaling and status updates), they performed 15-40% better on difficult tasks. They developed what they called "[social tokens](https://2389.ai/posts/agents-discover-subtweeting-solve-problems-faster/)"—documented thinking that future agents could leverage.
 
-Maybe the same dynamic applies to humans learning to work with AI? The WhatsApp group functions as a kind of distributed learning system. Each person's failures and discoveries become shared context. The understanding compounds.
+Maybe the same dynamic applies to humans learning to work with AI? The group functions as a kind of distributed learning system. Each person's failures and discoveries become shared context. The understanding compounds.
 
 The specific tools matter less than the underlying comprehension they represent. [superpowers](https://github.com/obra/superpowers), [double-shot-latte](https://github.com/obra/double-shot-latte), [lace](https://github.com/obra/lace), [botboard.biz](https://botboard.biz), [episodic-memory](https://github.com/obra/episodic-memory)—these are all attempts to encode understanding into infrastructure. But the understanding came first.
 
@@ -186,16 +186,11 @@ The quote at the top of this post—"externalize model configs, adversarially te
 
 That understanding might be the real product here. Everything else is implementation detail.
 
-A note to the group: there's so much cool stuff you all have contributed that I couldn't figure out how to weave into this post. AR glasses, the deep dives on model routing, the ongoing debates about when to use which model for what—I had to leave a lot on the cutting room floor. Also, I used Claude to help me parse the entire chat log for main topics, which felt appropriate given the subject matter.
+There's so much more in this space that I couldn't figure out how to weave into this post—AR glasses, deep dives on model routing, ongoing debates about when to use which model for what. I had to leave a lot on the cutting room floor. I also used Claude to help me organize my thinking, which felt appropriate given the subject matter.
 
 ---
 
-### People and resources mentioned
-
-**People:**
-- [Harper Reed](https://www.linkedin.com/in/harperreed/) — CEO of [2389 Research](https://2389.ai), former Obama 2012 CTO
-- [Jesse Vincent](https://www.linkedin.com/in/jessevincent/) — Creator of [superpowers](https://github.com/obra/superpowers), [Keyboardio](https://keyboard.io) founder
-- [Eran Sandler](https://www.linkedin.com/in/erans) — Creator of [pgsqlite](https://github.com/erans/pgsqlite), serial founder/CTO
+### Resources mentioned
 
 **Key tools:**
 - [superpowers](https://github.com/obra/superpowers) — Skills library for Claude Code
@@ -207,10 +202,10 @@ A note to the group: there's so much cool stuff you all have contributed that I 
 **Documentation:**
 - [Claude Code Hooks](https://docs.anthropic.com/en/docs/claude-code/hooks)
 - [Anthropic's internal Claude Code usage](https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf)
-- [Jesse's methodology post](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/)
+- [Superpowers methodology post](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/)
 
 *See also: [CLI AI Coding: A Vault of Valuable Things]({{ '/2025/12/07/cli-ai-coding-vault-of-valuable-things/' | relative_url }}) for a comprehensive list of repos, configs, and guidance.*
 
 ---
 
-*Claude helped me write this post. A lot. But the thinking and tone are mine (except for all the stuff the guys in the chat have contributed).*
+*Claude helped me write this post. A lot. But the thinking and tone are mine.*

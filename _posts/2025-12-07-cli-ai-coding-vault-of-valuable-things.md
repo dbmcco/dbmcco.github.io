@@ -5,7 +5,6 @@ date: 2025-12-07 09:30:00 -0500
 categories: development ai workflow
 tags: [ai, claude-code, cli, tools, resources]
 description: "A curated list of repos, configs, and practices for CLI-based AI coding—road-tested by people doing real work."
-unlisted: true
 ---
 
 *This is a companion post to [Developing intuition for CLI-based AI coding]({{ '/2025/12/07/developing-intuition-for-cli-based-ai-coding/' | relative_url }}) — that post is about the understanding; this one is about the tools.*
@@ -28,7 +27,7 @@ A curated list of repos, configs, and practices that have emerged from a group o
 | Tool | What it does | Link |
 |------|--------------|------|
 | **superpowers** | Installable skills for Claude Code—TDD, debugging, planning, pressure tests | [repo](https://github.com/obra/superpowers) / [blog](https://blog.fsck.com/2025/10/09/superpowers/) |
-| **2389 Research skills** | fresh-eyes-review, scenario-testing from Harper's team | [repo](https://github.com/2389-research/claude-plugins) |
+| **2389 Research skills** | fresh-eyes-review, scenario-testing | [repo](https://github.com/2389-research/claude-plugins) |
 | **claude-commands** | UserPromptSubmit hook for multi-step workflows | [repo](https://github.com/jleechanorg/claude-commands) |
 
 **Installing superpowers:**
@@ -75,9 +74,9 @@ project/
 
 | Source | What's there | Link |
 |--------|--------------|------|
-| Ryan's dotfiles | ntfy.sh notifications setup | [settings.json](https://github.com/ryankanno/dotfiles/blob/main/dot_claude%2Bsettings.json) |
-| Harper's dotfiles | Commands and agents | [commands](https://github.com/harperreed/dotfiles/tree/master/.claude/commands) / [agents](https://github.com/harperreed/dotfiles/tree/master/.claude/agents) |
-| Dylan's dotfiles | Commands collection | [commands](https://github.com/detour1999/dotfiles/tree/main/.config/claude/commands) |
+| ryankanno/dotfiles | ntfy.sh notifications setup | [settings.json](https://github.com/ryankanno/dotfiles/blob/main/dot_claude%2Bsettings.json) |
+| harperreed/dotfiles | Commands and agents | [commands](https://github.com/harperreed/dotfiles/tree/master/.claude/commands) / [agents](https://github.com/harperreed/dotfiles/tree/master/.claude/agents) |
+| detour1999/dotfiles | Commands collection | [commands](https://github.com/detour1999/dotfiles/tree/main/.config/claude/commands) |
 
 ---
 
@@ -211,7 +210,7 @@ git worktree remove ../feature-branch
 
 | Post | Link |
 |------|------|
-| Jesse's methodology (June 2025) | [blog](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/) |
+| Superpowers methodology (June 2025) | [blog](https://blog.fsck.com/2025/06/24/my-agentic-coding-methodology-of-june-2025/) |
 | System prompts comparison | [blog](https://blog.fsck.com/2025/06/26/system-prompts-for-cli-coding-agents/) |
 | Anthropic's internal usage | [PDF](https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf) |
 
@@ -237,4 +236,4 @@ Patterns that aren't tools but are worth codifying:
 
 ---
 
-*Claude helped me write this post. A lot. But the thinking and tone are mine (except for all the stuff the guys in the chat have contributed).*
+*Claude helped me write this post. A lot. But the thinking and tone are mine.*

@@ -15,6 +15,63 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
     display: none;
   }
 
+  .site-header {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 120%, rgba(245, 236, 223, 0.92) 0%, rgba(245, 236, 223, 0) 42%),
+      linear-gradient(135deg, #5c281d 0%, #8e4523 48%, #d98d53 100%) !important;
+    border-bottom: 1px solid rgba(92, 40, 29, 0.14) !important;
+    box-shadow:
+      inset 0 -1px 0 rgba(255, 247, 239, 0.18),
+      0 14px 34px rgba(70, 39, 25, 0.12) !important;
+    margin-bottom: 0 !important;
+    padding: 2rem 0 1.25rem !important;
+  }
+
+  .site-header .wrapper {
+    max-width: 980px !important;
+    gap: 1.1rem !important;
+  }
+
+  .site-header .site-title {
+    color: #fff7ef !important;
+    text-shadow: 0 1px 2px rgba(44, 21, 12, 0.24) !important;
+  }
+
+  .site-header .site-title:hover {
+    color: #ffe5cd !important;
+  }
+
+  .site-header .site-subtitle {
+    color: rgba(255, 243, 232, 0.78) !important;
+    text-shadow: 0 1px 2px rgba(44, 21, 12, 0.18) !important;
+  }
+
+  .site-header .site-nav {
+    background: rgba(255, 247, 239, 0.14) !important;
+    border: 1px solid rgba(255, 247, 239, 0.22) !important;
+    box-shadow: 0 14px 28px rgba(61, 31, 20, 0.14) !important;
+    backdrop-filter: blur(10px);
+  }
+
+  .site-header .page-link {
+    background: rgba(255, 248, 241, 0.92) !important;
+    color: #5f3424 !important;
+    border: 1px solid rgba(95, 52, 36, 0.12) !important;
+    box-shadow: 0 6px 16px rgba(61, 31, 20, 0.08) !important;
+  }
+
+  .site-header .page-link:hover {
+    background: #f1d2b3 !important;
+    color: #4a2417 !important;
+    box-shadow: 0 10px 20px rgba(61, 31, 20, 0.12) !important;
+  }
+
+  .site-header .menu-icon > svg path {
+    fill: #fff7ef !important;
+  }
+
   .page-content {
     background:
       radial-gradient(circle at top, rgba(193, 114, 61, 0.18), transparent 32%),
@@ -402,6 +459,17 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
   }
 
   @media (max-width: 720px) {
+    .site-header {
+      padding-bottom: 1rem !important;
+    }
+
+    .site-header .site-nav {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+    }
+
     .forge-essay {
       padding-top: 1.25rem;
     }

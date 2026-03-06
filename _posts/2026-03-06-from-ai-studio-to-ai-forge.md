@@ -434,11 +434,11 @@ If I'm honest, I think what I'm really driving toward is my own bounded dark fac
 
 If I look back over the last year or so, I can see a pretty clear progression in how I've been trying to name what I was doing.
 
-- "Vibe coding" was really about discovering that I could build at all.
-- The early CLI and multi-agent posts were about context control and process discipline.
-- The workflow and business acceleration posts were about tying the models into actual operating systems.
-- The AI studio post was about the collaborative mental model.
-- The intuition post was about how to smell when the models are going wrong.
+- ["Vibe coding"](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/) was really about discovering that I could build at all.
+- The early [CLI journey](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/) and [agentic model](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/) posts were about context control and process discipline.
+- The [workflow and business acceleration post](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/) was about tying the models into actual operating systems.
+- The [AI studio post](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/) was about the collaborative mental model.
+- The [intuition post](https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/) was about how to smell when the models are going wrong.
 
 All of those were right. None of them were enough.
 
@@ -751,7 +751,9 @@ This draft was written with Codex helping me structure and tighten the argument 
 
 #### Related posts / references
 
+- [My 'Vibe Coding' Process ATM](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/)
 - [The CLI LLM Agent Journey So Far](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/)
+- [My agentic model at the end of June 2025](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/)
 - [How I'm integrating AI into my workflow for business acceleration](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/)
 - [The Mindset Gap: How an AI Studio Changed My Workflow](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/)
 - [Developing intuition for CLI-based AI coding](https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/)

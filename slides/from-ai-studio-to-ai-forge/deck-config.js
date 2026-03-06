@@ -1,0 +1,29 @@
+// ABOUTME: Deck configuration for the AI Forge companion slides.
+// ABOUTME: Loaded before the main deck script.
+window.KEYNOTE_DECK = {
+  id: "from-ai-studio-to-ai-forge",
+  title: "From AI Studio to AI Forge",
+  entity: "forgeworks",
+  deckType: "narrative",
+  audience: "blog readers",
+  createdAt: "2026-03-06T18:00:00Z",
+  updatedAt: "2026-03-06T18:00:00Z",
+  preferences: {
+    voice: "direct, reflective, systems-oriented",
+    headlineStyle: "editorial, thesis-first",
+    density: "low",
+    visualMood: "warm paper, dark ink, ember accent"
+  },
+  resources: {
+    assets: [
+      "resources/assets/hero.png",
+      "resources/assets/speedrift-story-slide-4.png"
+    ],
+    materials: [
+      "resources/materials/brief.md"
+    ],
+    notes: [
+      "slides.md"
+    ]
+  }
+};

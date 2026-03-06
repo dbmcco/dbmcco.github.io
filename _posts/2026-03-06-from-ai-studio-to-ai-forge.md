@@ -115,6 +115,7 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
   .forge-divider,
   .forge-diagram,
   .forge-diagram-caption,
+  .forge-artifact,
   .forge-endgrid {
     opacity: 0;
     transform: translateY(14px);
@@ -329,6 +330,39 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
     color: var(--forge-muted);
   }
 
+  .forge-artifact {
+    max-width: 860px;
+    margin: 2.25rem auto 0;
+    padding: 1rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(104, 71, 46, 0.14);
+    box-shadow: 0 18px 36px rgba(86, 57, 37, 0.06);
+  }
+
+  .forge-artifact h3 {
+    max-width: none;
+    margin: 0 0 0.85rem;
+  }
+
+  .forge-artifact img {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(104, 71, 46, 0.14);
+    margin-bottom: 1rem;
+  }
+
+  .forge-artifact p,
+  .forge-artifact ul {
+    max-width: none;
+  }
+
+  .forge-artifact ul {
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+
   .forge-essay h3 {
     max-width: 740px;
     font-size: 0.76rem;
@@ -385,6 +419,10 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
 
     .forge-endgrid {
       grid-template-columns: 1fr;
+    }
+
+    .forge-artifact ul {
+      columns: 1;
     }
   }
 </style>
@@ -554,6 +592,28 @@ The mental model shift in the Speedrift docs is actually the mental model shift 
 That is very close to the core of what I mean by AI Forge.
 
 Speedrift, to me, is not just a tool. It's one of the first real proving grounds for the dark-factory idea. Or maybe "crucible" is the better word, given the forge metaphor.
+
+<div class="forge-artifact" data-reveal markdown="1">
+
+### Recent work: the Speedrift story deck
+
+![](/assets/images/speedrift-ecosystem-story-slide-4.png)
+
+I recently pulled the ecosystem into a keynote-style story deck because I wanted a visual language for the operating rhythm, not just repo docs and READMEs. If you want the current public surface area, start here:
+
+- [Story deck](https://dbmcco.github.io/speedrift-ecosystem/decks/speedrift-ecosystem-story.html)
+- [speedrift-ecosystem](https://github.com/dbmcco/speedrift-ecosystem)
+- [driftdriver](https://github.com/dbmcco/driftdriver)
+- [coredrift](https://github.com/dbmcco/coredrift)
+- [specdrift](https://github.com/dbmcco/specdrift)
+- [datadrift](https://github.com/dbmcco/datadrift)
+- [depsdrift](https://github.com/dbmcco/depsdrift)
+- [uxdrift](https://github.com/dbmcco/uxdrift)
+- [therapydrift](https://github.com/dbmcco/therapydrift)
+- [yagnidrift](https://github.com/dbmcco/yagnidrift)
+- [redrift](https://github.com/dbmcco/redrift)
+
+</div>
 
 <div class="forge-divider" data-reveal><span></span><span>✦</span><span></span></div>
 
@@ -751,6 +811,7 @@ This draft was written with Codex helping me structure and tighten the argument 
 
 #### Related posts / references
 
+- [Companion slide deck](https://dbmcco.github.io/slides/from-ai-studio-to-ai-forge/)
 - [My 'Vibe Coding' Process ATM](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/)
 - [The CLI LLM Agent Journey So Far](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/)
 - [My agentic model at the end of June 2025](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/)

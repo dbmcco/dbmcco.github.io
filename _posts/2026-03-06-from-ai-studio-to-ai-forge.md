@@ -799,7 +799,7 @@ Whether "AI Forge" turns out to be the right name for it, I don't know yet. But 
 
 And right now, that feels useful.
 
-<div class="forge-endgrid" data-reveal">
+<div class="forge-endgrid" data-reveal>
   <div class="forge-card" markdown="1">
 
 #### Process note

@@ -114,6 +114,7 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
   .forge-pullquote,
   .forge-divider,
   .forge-diagram,
+  .forge-diagram-caption,
   .forge-endgrid {
     opacity: 0;
     transform: translateY(14px);
@@ -308,6 +309,18 @@ description: "Why the AI studio metaphor stopped being enough for me, and how I'
   .forge-diagram p {
     text-align: center;
     margin-top: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--forge-muted);
+  }
+
+  .forge-diagram-caption {
+    max-width: 740px;
+    margin: 1rem auto 0;
+    text-align: center;
     font-family: 'Instrument Sans', sans-serif;
     font-size: 0.82rem;
     line-height: 1.55;
@@ -603,9 +616,8 @@ No. I like operating systems. I like reducing friction. I like structure from co
 
 ## Visual: The shift I think I'm making
 
-<div class="forge-diagram" data-reveal markdown="1">
-
-```mermaid
+<div class="mermaid-container forge-diagram" data-reveal>
+  <div class="mermaid">
 flowchart TD
     Human["Human policy, judgment, strategy"]
     LFW["Light Forge Works<br/>client delivery + workflow transformation"]
@@ -636,11 +648,10 @@ flowchart TD
     AIF --> V
     AIF --> R
     AIF --> L
-```
-
-*The unit is no longer just the prompt or the agent. It's the operating loop.*
-
+  </div>
 </div>
+
+<p class="forge-diagram-caption" data-reveal><em>The unit is no longer just the prompt or the agent. It's the operating loop.</em></p>
 
 <div class="forge-divider" data-reveal><span></span><span>✦</span><span></span></div>
 

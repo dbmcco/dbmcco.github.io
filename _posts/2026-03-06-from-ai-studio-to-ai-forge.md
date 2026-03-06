@@ -800,26 +800,22 @@ Whether "AI Forge" turns out to be the right name for it, I don't know yet. But 
 And right now, that feels useful.
 
 <div class="forge-endgrid" data-reveal>
-  <div class="forge-card" markdown="1">
-
-#### Process note
-
-This draft was written with Codex helping me structure and tighten the argument while I pushed on the framing and the distinctions. It used my dossier as part of that process, which was itself derived from my writing style and my meeting transcripts, so the goal was not just to get the ideas down but to get them down in a voice that actually sounds like me. The hero image was generated with `grok-aurora-cli` because I wanted a visual that sat somewhere between workshop, control room, and operating metaphor.
-
+  <div class="forge-card">
+    <h4>Process note</h4>
+    <p>This draft was written with Codex helping me structure and tighten the argument while I pushed on the framing and the distinctions. It used my dossier as part of that process, which was itself derived from my writing style and my meeting transcripts, so the goal was not just to get the ideas down but to get them down in a voice that actually sounds like me. The hero image was generated with <code>grok-aurora-cli</code> because I wanted a visual that sat somewhere between workshop, control room, and operating metaphor.</p>
   </div>
-  <div class="forge-card" markdown="1">
-
-#### Related posts / references
-
-- [Companion slide deck](https://dbmcco.github.io/slides/from-ai-studio-to-ai-forge/)
-- [My 'Vibe Coding' Process ATM](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/)
-- [The CLI LLM Agent Journey So Far](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/)
-- [My agentic model at the end of June 2025](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/)
-- [How I'm integrating AI into my workflow for business acceleration](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/)
-- [The Mindset Gap: How an AI Studio Changed My Workflow](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/)
-- [Developing intuition for CLI-based AI coding](https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/)
-- [Speedrift Ecosystem](https://github.com/dbmcco/speedrift-ecosystem)
-
+  <div class="forge-card">
+    <h4>Related posts / references</h4>
+    <ul>
+      <li><a href="https://dbmcco.github.io/slides/from-ai-studio-to-ai-forge/">Companion slide deck</a></li>
+      <li><a href="https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/">My 'Vibe Coding' Process ATM</a></li>
+      <li><a href="https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/">The CLI LLM Agent Journey So Far</a></li>
+      <li><a href="https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/">My agentic model at the end of June 2025</a></li>
+      <li><a href="https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/">How I'm integrating AI into my workflow for business acceleration</a></li>
+      <li><a href="https://dbmcco.github.io/2025/11/05/building-an-ai-studio/">The Mindset Gap: How an AI Studio Changed My Workflow</a></li>
+      <li><a href="https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/">Developing intuition for CLI-based AI coding</a></li>
+      <li><a href="https://github.com/dbmcco/speedrift-ecosystem">Speedrift Ecosystem</a></li>
+    </ul>
   </div>
 </div>
 

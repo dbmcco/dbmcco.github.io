@@ -226,6 +226,8 @@ I should note that this is one reason the current conversation around AI can fee
 
 The easiest analogy I have found for this is still a mechanical one.
 
+Part of that is probably just how my own head works. I love cars. I named one of my repos `Speedrift` for a reason. I also have a private, curated, multi-tiered research engine that I use to stay on top of key topics and make decisions for myself. So when I reach for the word engine here, I do not mean "fast thing." I mean a system that turns raw power into directed, reliable motion. Intake matters. Tuning matters. Instrumentation matters. Transmission matters. What the engine is connected to matters.
+
 If you hand someone a powerful engine, they do not yet have a delivery van, or a forklift, or a race car, or a tractor. They have a powerful component that can become one of those things if it is put into the right frame, connected to the right controls, and aimed at a specific job. The engine matters. It matters a lot. But no one confuses the engine with the finished vehicle unless they are being careless, or unless the technology is new enough that people are still dazzled by raw power.
 
 I think frontier AI models are in that phase.
@@ -275,6 +277,8 @@ The second missing layer is workflow. A chatbot gives you an answer. A capabilit
 The third missing layer is the ability to ignore the wrong things. This matters more than many people think. A lot of business judgment is not just about seeing what is present; it is about knowing what does not matter yet. If three vendors say an order may be delayed, should the system trigger a full remediation workflow? Maybe. Or maybe the right move is to flag it, wait a day, and see whether the signal hardens into something real. A thin chat interaction usually does not know that difference, because why would it?
 
 The fourth missing layer is shaped context. People often say, "well, I gave it the file." Sure. But a file is not the same thing as usable operating context. Useful context is usually shaped. It has the right facts in the right structure with the right relationships attached to the right decisions inside the right boundary. That is different from "we uploaded a bunch of stuff."
+
+I think about this the same way I think about my own research systems. The value is not that I can dump more articles into a feed. The value is that the feed is curated, tiered, and oriented around decisions. It has structure. It has priorities. It has different lanes for weak signals, developing stories, and things that actually deserve action. Raw information is abundant. Decision-grade context is designed.
 
 And the fifth missing layer is repeatability. A good answer is nice. A repeatable business ability is better. A real capability has to work more than once, stay inside scope, fit into a workflow, expose mistakes, and operate with some consistency over time. That is a much higher bar than "this answer felt impressive."
 

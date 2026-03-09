@@ -218,7 +218,7 @@ If you take a document, drop it into Copilot or ChatGPT, and ask a few good ques
 
 Those are different questions, and they fail in different ways.
 
-If what you wanted was "give me a summary of this" or "help me think through this memo" or "find the obvious gaps," a thin interaction layer may be enough. But if what you really wanted was something more like "tell me what matters here for my business," "identify the real risk and not just the visible one," "understand what step this sits inside," or "handle this the way a strong operator on my team would handle it," then you have already moved into a different category of problem. That is no longer just a question-answering exercise. That is capability design, whether you call it that or not.
+If what you wanted was "turn this board memo into a crisp summary," "extract the open questions from this transcript," or "give me three good reactions to this draft," a thin interaction layer may be enough. But if what you really wanted was something more like "read this inbound RFP, compare it to our ICP, delivery capacity, pricing guardrails, redline history, and current pipeline, decide whether it is worth pursuing, surface the risks that actually matter, and hand the next step to the right person," then you have already moved into a different category of problem. That is no longer just a question-answering exercise. That is a stateful, policy-shaped, workflow-bound capability, whether you call it that or not.
 
 I should note that this is one reason the current conversation around AI can feel slippery. People think they are evaluating the whole stack when they are often just evaluating a very thin slice of it.
 
@@ -241,7 +241,9 @@ And I think a lot of present-day AI disappointment comes from confusing those tw
 <details>
 <summary>Tech note: I am not claiming foundation models do not matter</summary>
 
-The narrower claim is that the durable product layer usually sits above raw model access. Model quality matters. Retrieval quality matters. Tool access matters. But if you are trying to create a repeatable business capability, the differentiated work tends to show up in representation, orchestration, evaluation, and boundary design.
+For a developer, model choice shows up in very concrete ways: schema adherence, function-call reliability, long-context degradation, tool-selection accuracy, latency variance, token economics, and how often the system needs retries or repair prompts. A stronger substrate reduces how much defensive scaffolding you need around the model.
+
+But even with a frontier model, the application behavior you care about usually is not determined at the model boundary. The moment you need durable state, typed interfaces, constrained writes, multi-step control flow, evaluator passes, or escalation rules, you are already in application design. In practice, that is where a lot of the product differentiation lives. The model sets the ceiling on some classes of performance. It does not, by itself, define the operating behavior of the system.
 
 </details>
 
@@ -262,7 +264,9 @@ That is why I keep coming back to the same phrase: the model is not the product.
 <details>
 <summary>Tech note: what I mean by "configured capability"</summary>
 
-Not just a prompt and not just a wrapper. Usually some combination of workflow state, shaped context, tool access, evaluation logic, escalation thresholds, and persistent definitions of what the system is supposed to do and what it is not supposed to do.
+Think something closer to a typed service boundary than a clever prompt. A real capability usually has a state model, a context assembly layer, explicit tool contracts, a control loop, validators, evaluators, and rules about when writes are allowed. The system should know what object it is operating on, what state that object is in, what tools it is allowed to call, what success looks like, and what conditions require escalation.
+
+In implementation terms, that often means structured inputs, schema-constrained outputs, idempotent tool calls, durable memory separated from transient context, and some kind of planner-orchestrator-evaluator pattern. Prompt text still matters. But prompt text without typed state, control flow, and observable failure handling is not a capability. It is an improvisation layer.
 
 </details>
 
@@ -285,7 +289,9 @@ And the fifth missing layer is repeatability. A good answer is nice. A repeatabl
 <details>
 <summary>Tech note: retrieval is not the same thing as representation</summary>
 
-Getting the right chunk back from a vector store is useful. It is not the same thing as having a stable internal representation of entities, states, relationships, priorities, and workflow position. A lot of systems blur those together and then wonder why the outputs feel intelligent but operationally slippery.
+Retrieval answers a similarity question: what text chunks look most relevant to this query? Representation answers a state question: what objects exist in the system, what state are they in, and how are they related? Those are not the same operation.
+
+A vector store can help recover useful evidence. It is a poor substitute for an addressable model of the world. If the system needs to know that a deal is in procurement, legal already approved fallback clause B, the client has a history of late approvals, and the margin floor is 32 percent, those should not be rediscovered from semantically adjacent chunks on every turn. They should exist as typed state or computable facts. When teams blur retrieval and representation together, they get systems that sound informed but behave inconsistently because the same underlying reality is being re-inferred from text each time instead of being referenced directly.
 
 </details>
 
@@ -320,7 +326,9 @@ And the fifth is **boundary and governance**. Capabilities need edges. What is i
 <details>
 <summary>Tech note: the thin-layer failure modes I expect most</summary>
 
-Perspective collapse inside one giant context window. Local plausibility beating system coherence. Retrieval without shaped context. No explicit evaluation pass. No stable workflow state. No real boundary between draft, recommend, and act.
+The most common failure mode is context entanglement: planning, execution, critique, and decision all happen in one giant prompt, so the system loses separation of concerns and starts optimizing for local plausibility instead of process integrity. Closely related is evaluator collapse, where the same model instance both generates and grades without a genuinely distinct pass, so obvious defects slide through because nothing independent is checking them.
+
+After that, the usual culprits are retrieval collisions, where semantically similar but operationally irrelevant chunks outrank authoritative facts; hidden state drift across turns; prompt accretion that creates brittle behavior nobody can reason about; and tool optimism, where the model narrates an action as though it happened even though the underlying tool returned a partial or failed result. I would also worry about non-idempotent retries, no clean boundary between read paths and write paths, and no observability around why the system took a given branch. Those are not model parlor tricks. They are systems problems.
 
 </details>
 
@@ -328,82 +336,102 @@ Perspective collapse inside one giant context window. Local plausibility beating
 
 At some point diagrams are more honest than more prose, so here are the three pictures I think help most.
 
-### Picture one: what most people test versus what they think they tested
+### Picture one: the first test people run
 
 <div class="diagram-shell">
   <div class="mermaid">
 flowchart LR
-  subgraph A["What most people do"]
-    A1["Paste file into Copilot"]
+  subgraph A["What people do"]
+    A1["Paste in a document"]
     A2["Ask a few questions"]
-    A3["Get a mediocre answer"]
+    A3["Get a mixed result"]
   end
 
-  subgraph B["What they conclude"]
-    B1["AI is not very good"]
+  subgraph B["What they often conclude"]
+    B1["AI is not very useful here"]
   end
 
-  subgraph C["What was actually tested"]
-    C1["Model quality"]
-    C2["Prompt quality"]
-    C3["Maybe retrieval quality"]
+  subgraph C["What that mostly tested"]
+    C1["One chatbot interaction"]
+    C2["How the question was asked"]
+    C3["Whatever the tool could pull in"]
   end
 
   A3 --> B1
   A3 -. really measured .-> C1
-  A3 -. maybe measured .-> C2
-  A3 -. sometimes measured .-> C3
+  A3 -. sometimes measured .-> C2
+  A3 -. maybe measured .-> C3
   </div>
 
-<p class="diagram-label">a thin interaction layer often gets mistaken for the whole stack</p>
+<p class="diagram-label">a first chatbot test is real, but it is still a very narrow test</p>
 </div>
 
-### Picture two: model versus capability stack
-
-<div class="diagram-shell">
-  <div class="mermaid">
-flowchart TD
-  M["Model substrate"] --> R["Representation"]
-  R --> P["Perspective separation"]
-  P --> O["Orchestration"]
-  O --> E["Evaluation and judgment"]
-  E --> B["Boundary and governance"]
-  B --> C["Configured business capability"]
-  </div>
-
-<p class="diagram-label">the model matters, but the durable product layer usually sits above it</p>
-</div>
-
-### Picture three: raw context versus shaped context
+### Picture two: chatbot versus capability
 
 <div class="diagram-shell">
   <div class="mermaid">
 flowchart LR
-  subgraph Left["Raw context"]
-    L1["Documents"]
-    L2["Emails"]
-    L3["Meeting notes"]
-    L4["Chat interface"]
-    L1 --> L4
-    L2 --> L4
-    L3 --> L4
+  subgraph A["Chatbot interaction"]
+    A1["One question"]
+    A2["One answer"]
+    A1 --> A2
   end
 
-  subgraph Right["Shaped context"]
-    R1["Entities and states"]
-    R2["Priorities and judgment"]
-    R3["Workflow position"]
-    R4["Escalation thresholds"]
-    R5["Capability layer"]
-    R1 --> R5
-    R2 --> R5
-    R3 --> R5
-    R4 --> R5
+  subgraph B["Real capability"]
+    B1["Incoming work"]
+    B2["Relevant context"]
+    B3["Business judgment"]
+    B4["Next step"]
+    B1 --> B2 --> B3 --> B4
   end
   </div>
 
-<p class="diagram-label">more information is not the same thing as better operational context</p>
+<p class="diagram-label">the shift is from answering a question to helping work move correctly</p>
 </div>
+
+### Picture three: a pile of information versus working context
+
+<div class="diagram-shell">
+  <div class="mermaid">
+flowchart LR
+  subgraph Left["A pile of information"]
+    L1["Documents"]
+    L2["Emails"]
+    L3["Meeting notes"]
+    L4["Chats"]
+  end
+
+  subgraph Right["Working context"]
+    R1["What matters now"]
+    R2["What can wait"]
+    R3["Who owns next"]
+    R4["What needs escalation"]
+  end
+  </div>
+
+<p class="diagram-label">more information is not the same thing as usable operating context</p>
+</div>
+
+<details>
+<summary>Tech diagram: one concrete way to think about the capability layer</summary>
+
+<div class="diagram-shell">
+  <div class="mermaid">
+flowchart TD
+  A["Event or request"] --> B["Load typed state"]
+  B --> C["Assemble context"]
+  C --> D["Plan next step"]
+  D --> E["Call tools through contracts"]
+  E --> F["Evaluate result"]
+  F --> G{"Act or escalate?"}
+  G -->|Act| H["Write state and create next task"]
+  G -->|Escalate| I["Human review"]
+  </div>
+
+<p class="diagram-label">a more technical view: the capability layer is control flow plus state, tools, and evaluation</p>
+</div>
+
+</details>
 
 ## The questions I would ask instead
 

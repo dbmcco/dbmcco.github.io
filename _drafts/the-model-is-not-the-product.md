@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Model Is Not the Product"
-date: 2026-03-09 14:00:00 -0400
+date: 2026-03-09 15:00:00 -0400
 categories: development ai workflow
 tags: [ai, capabilities, lightforge, workflow, judgment]
 mermaid: true
@@ -190,212 +190,87 @@ description: "Why a mediocre result from Copilot or ChatGPT usually says less ab
   <p class="dek">Why a mediocre result from Copilot or ChatGPT usually says less about AI than about the mental model behind how it is being used.</p>
 </header>
 
-This week one of the LightForge team described a request they had heard that I think captures a pretty common misunderstanding about AI: connect my Google Drive, my email, my meeting notes, and build a virtual me.
+One of the LightForge team told me this week about a request they had heard from a prospect: connect my Google Drive, my email, my meeting notes, and build a virtual me.
 
-At the same time, I keep running into a separate but related reaction from smart, sophisticated, and very much not naive business people:
+That is one version of the misunderstanding.
 
-> "I copied the document into Copilot, asked a few questions, and the result wasn't very good."
+The other version is quieter and, in some ways, more important. It sounds like this:
 
-I think that is a fair reaction.
+> I copied the document into Copilot, asked a few questions, and the result wasn't very good.
 
-In fact, I think a lot of sensible people are having some version of that experience:
+I think that is a fair reaction. In fact, it may be the most honest and sensible reaction available if the only thing you have really tried is dropping a file into a chatbot and hoping the system will somehow bridge the gap between "what is in this document?" and "what should happen in my business?"
 
-- they paste a document into ChatGPT or Copilot
-- they ask for a summary, an analysis, or a recommendation
-- the result is sort of fine, but not especially useful
-- and they conclude that the whole AI thing is being oversold
+There are plenty of cases where a thin chat interaction is genuinely useful. A summary, a reframing, a first draft, a decent comparison, an extraction pass, sure. I use those all the time. But I also think a lot of smart people are running a very narrow test, getting a middling result, and then drawing a much broader conclusion than the test really supports.
 
-Sometimes it is being oversold. But I also think there is a different problem: people are often using AI in a way that almost guarantees disappointment, and then taking that disappointment as proof that the underlying capability is weak.
-
-The mental model gap, as I see it, is this:
-
-most people are treating the model as though it is already the finished product.
-
-I don't think it is.
-
-I think the model is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes shockingly so. But not, by itself, the thing a business is actually buying.
+The mental model gap, as I see it, is this: most people are treating the model as though it is already the finished product. I do not think it is. I think the model is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes almost unsettlingly good. But not, by itself, the thing a business is actually buying.
 
 That distinction matters a lot.
 
-## Why the Copilot experience often disappoints
+## The test most people are actually running
 
-If you take a document, drop it into a chatbot, and ask a few good questions, the system may absolutely help you.
+If you take a document, drop it into Copilot or ChatGPT, and ask a few good questions, you are running a pretty specific test. You are asking whether a general-purpose reasoning engine, with a thin interface around it, can produce a useful answer in a single interaction. Sometimes it can. Sometimes it really can. But that is not the same thing as asking whether AI can support a real business capability.
 
-It may:
+Those are different questions, and they fail in different ways.
 
-- summarize the document
-- extract themes
-- draft a follow-up email
-- identify obvious gaps
-- propose a next step
+If what you wanted was "give me a summary of this" or "help me think through this memo" or "find the obvious gaps," a thin interaction layer may be enough. But if what you really wanted was something more like "tell me what matters here for my business," "identify the real risk and not just the visible one," "understand what step this sits inside," or "handle this the way a strong operator on my team would handle it," then you have already moved into a different category of problem. That is no longer just a question-answering exercise. That is capability design, whether you call it that or not.
 
-That is real value.
+I should note that this is one reason the current conversation around AI can feel slippery. People think they are evaluating the whole stack when they are often just evaluating a very thin slice of it.
 
-But if what you actually wanted was something more like:
+## The model is the engine, not the vehicle
 
-- tell me what matters here for my business
-- identify the real risk, not just the obvious one
-- understand what this means in the context of our workflow
-- decide what should happen next
-- handle this the way a strong operator on my team would handle it
+The easiest analogy I have found for this is still a mechanical one.
 
-then a one-off chat interaction is usually the wrong instrument.
+If you hand someone a powerful engine, they do not yet have a delivery van, or a forklift, or a race car, or a tractor. They have a powerful component that can become one of those things if it is put into the right frame, connected to the right controls, and aimed at a specific job. The engine matters. It matters a lot. But no one confuses the engine with the finished vehicle unless they are being careless, or unless the technology is new enough that people are still dazzled by raw power.
 
-Not because the model is bad.
-
-Because you are asking a general-purpose reasoning engine to behave like a finished business capability.
-
-That is a different thing.
-
-## The easiest way I know to explain this
-
-I keep coming back to a pretty simple analogy.
-
-If you hand someone a high-performance engine, they do not yet have a delivery van, or a forklift, or a race car, or a tractor. They have a powerful component that can become one of those things if it is put into the right frame, connected to the right controls, and aimed at a specific job.
-
-I think frontier AI models are like that.
+I think frontier AI models are in that phase.
 
 The model is the engine.
 
-The finished capability is the vehicle.
+The finished business capability is the vehicle.
 
-And I think a lot of current AI disappointment comes from confusing those two things.
-
-When someone says, "I tried Copilot and it wasn't very good," what I often hear is:
-
-"I put a powerful engine on the floor, sat on it, and it did not drive like a truck."
-
-That does not mean the engine is useless. It means there is more between raw power and useful work than people first assume.
+And I think a lot of present-day AI disappointment comes from confusing those two things. When someone says, "I tried Copilot and it wasn't very good," what I often hear is: "I put a powerful engine on the floor, sat on it, and it did not drive like a truck." That does not mean the engine is useless. It means there is more between raw power and useful work than people first assume.
 
 <details>
-<summary>Tech note: the claim is not "foundation models are commodities, full stop."</summary>
+<summary>Tech note: I am not claiming foundation models do not matter</summary>
 
-The narrower claim is that the durable product layer usually sits above raw model access. Model quality still matters. Retrieval quality matters. Tool access matters. But if you are trying to create a repeatable business capability, the differentiated work tends to be in representation, orchestration, evaluation, and boundary design.
+The narrower claim is that the durable product layer usually sits above raw model access. Model quality matters. Retrieval quality matters. Tool access matters. But if you are trying to create a repeatable business capability, the differentiated work tends to show up in representation, orchestration, evaluation, and boundary design.
 
 </details>
 
-## A model is not the same thing as a capability
+## A capability is a different kind of thing
 
-This is the core distinction I have been trying to sharpen.
+This is the core distinction I have been trying to sharpen for myself.
 
-A model can:
+A model can generate text, summarize, classify, extract, answer, code, and generally behave in ways that look quite intelligent. Those are useful functions. But a business capability is something else. A business capability is a bounded, repeatable ability to get some important piece of work done.
 
-- generate text
-- answer questions
-- classify information
-- summarize documents
-- draft code
-- extract data
+That is why I think it helps to be much more precise about the unit of value.
 
-Those are useful functions.
+"Retrieve the email" is a function. "Pull fields from the attachment" is a function. "Draft the reply" is a function. "Correctly handle inbound RFP requests and move them to the next step" is a capability.
 
-But a business capability is different. A business capability is a repeatable, bounded ability to get some important job done.
+Businesses do not really buy AI for its own sake. They buy improvements in how work gets done. They buy fewer dropped balls, fewer manual handoffs, fewer missed details, faster throughput, lower cost, lower friction, better decisions in workflows that actually matter. In other words, they buy a capability that changes the economics of a piece of work.
 
-For example:
-
-- retrieve the email is a function
-- pull fields from the attachment is a function
-- draft a reply is a function
-- correctly handle inbound RFP requests and move them to the next step is a capability
-
-That is a much better unit of thinking.
-
-The reason is simple: businesses do not really buy AI for its own sake. They buy improvements in how work gets done.
-
-They want:
-
-- fewer dropped balls
-- fewer manual handoffs
-- less retyping and copying
-- fewer missed details
-- better speed
-- lower cost
-- better decisions in important workflows
-
-In other words, they want a capability that changes the economics of a piece of work.
-
-That is why I think the model is not the product.
-
-The configured capability is the product.
+That is why I keep coming back to the same phrase: the model is not the product. The configured capability is the product.
 
 <details>
 <summary>Tech note: what I mean by "configured capability"</summary>
 
-Not just a prompt. Not just a wrapper. Usually some combination of workflow state, shaped context, tool access, evaluation logic, escalation rules, and persistent definitions of what the system is allowed to do. You can implement that in a lot of ways. The implementation detail matters less than the fact that it exists.
+Not just a prompt and not just a wrapper. Usually some combination of workflow state, shaped context, tool access, evaluation logic, escalation thresholds, and persistent definitions of what the system is supposed to do and what it is not supposed to do.
 
 </details>
 
-## So what is missing from the average chatbot interaction?
+## Why the average chatbot interaction disappoints
 
-Usually, five things.
+I do not think the problem is mainly that the model is dumb. The problem is that a lot of the things people really want from AI are sitting one or two layers above what a basic chat interaction is designed to do.
 
-### 1. It does not know what "good" means in your context
+The first missing layer is definition of what "good" actually means. A chatbot can often tell you what is in a document. It can sometimes tell you what seems important in a general sense. But that is not the same thing as knowing what matters in your organization, in this workflow, right now. Which customer is politically sensitive? Which delay is noise and which one is dangerous? Which recommendation sounds good in theory but would create chaos in practice? That kind of judgment is often not written down anywhere. It lives in people, habits, consequences, and memory.
 
-This is one of the biggest issues.
+The second missing layer is workflow. A chatbot gives you an answer. A capability has to fit into a real process. It has to know what starts the work, what comes next, who owns the next step, what system needs to be updated, what counts as done, and when to stop and ask for help. If you do not define those things, then even a smart answer may simply become one more output a human has to interpret and manually route.
 
-A smart chatbot can tell you what is in the document. It can tell you what seems important in a general sense. It can sometimes even tell you what a thoughtful outside observer might conclude.
+The third missing layer is the ability to ignore the wrong things. This matters more than many people think. A lot of business judgment is not just about seeing what is present; it is about knowing what does not matter yet. If three vendors say an order may be delayed, should the system trigger a full remediation workflow? Maybe. Or maybe the right move is to flag it, wait a day, and see whether the signal hardens into something real. A thin chat interaction usually does not know that difference, because why would it?
 
-But that is not the same thing as knowing what matters in your organization.
+The fourth missing layer is shaped context. People often say, "well, I gave it the file." Sure. But a file is not the same thing as usable operating context. Useful context is usually shaped. It has the right facts in the right structure with the right relationships attached to the right decisions inside the right boundary. That is different from "we uploaded a bunch of stuff."
 
-Those are often different questions.
-
-For example:
-
-- which customer is politically sensitive right now?
-- which type of delay is normal noise and which one is dangerous?
-- which exception do we tolerate and which one do we escalate immediately?
-- which recommendation sounds good in theory but would create chaos in practice?
-
-That kind of judgment often lives in people, not in documents.
-
-### 2. It does not know the workflow it is supposed to fit into
-
-This is another major gap.
-
-A chatbot gives you an answer. A business capability has to live inside a workflow.
-
-That means it has to know things like:
-
-- what starts the work
-- what step comes next
-- who owns the next step
-- what system it has to update
-- what counts as done
-- when to stop and ask for help
-
-If you do not define those things, then even a smart answer may not be useful in practice.
-
-You just have one more output for a human to interpret and manually route.
-
-### 3. It does not know what to ignore
-
-This one is underrated.
-
-A lot of business judgment is not just about seeing what is there. It is about knowing what does not matter, yet.
-
-That is a different skill.
-
-If three vendors say an order may be delayed, should the system trigger a full remediation workflow? Maybe. Or maybe not. Maybe the correct move is simply to flag it for follow-up tomorrow and wait for confirmation. A generic chat interaction usually does not know the difference.
-
-Why would it?
-
-### 4. It is usually missing shaped context, not just raw context
-
-People often say, "well, I gave it the file."
-
-Sure. But a file is not the same thing as usable operating context.
-
-Useful context is often shaped. It includes:
-
-- the right facts
-- in the right structure
-- with the right relationships
-- tied to the right decisions
-- inside the right boundary
-
-That is different from "we uploaded a bunch of stuff."
-
-I should note: this is one reason I think a lot of AI conversations get confused. People use the word context as though it means "more information." In practice it often means "the right information, shaped for the right job."
+And the fifth missing layer is repeatability. A good answer is nice. A repeatable business ability is better. A real capability has to work more than once, stay inside scope, fit into a workflow, expose mistakes, and operate with some consistency over time. That is a much higher bar than "this answer felt impressive."
 
 <details>
 <summary>Tech note: retrieval is not the same thing as representation</summary>
@@ -404,233 +279,46 @@ Getting the right chunk back from a vector store is useful. It is not the same t
 
 </details>
 
-### 5. It gives you an answer, not a repeatable business ability
+## So what does a real capability require?
 
-This may be the most important point.
+Once I started thinking about AI this way, the architecture started to matter a lot more than the interface.
 
-A good answer is nice.
+At a very practical level, I think a real AI capability usually requires six things. It needs a bounded job. It needs a reasonably clear definition of what good looks like. It needs the right structure underneath the work so it is not improvising its own schema as it goes. It needs some orchestration, because not every meaningful problem should be solved in one shot. It needs human judgment in the places where human judgment actually matters. And it needs boundaries, because a capability without edges tends to become a blob.
 
-A repeatable business capability is better.
+That last one is especially important. A useful capability should be able to answer both of these questions: what do I do, and what do I not do? If you skip the second question, the system tends to sprawl in exactly the way software usually sprawls: costs go up, expectations get fuzzy, and reliability starts to bend under the weight of ambiguity.
 
-That means the system can:
-
-- do the task repeatedly
-- stay inside the intended scope
-- fit into a real workflow
-- expose mistakes
-- improve over time
-- operate with some consistency
-
-That is not what most people are testing when they try AI. They are testing whether a single conversation feels impressive.
-
-That is a much lower bar, and also a different one.
-
-## What I think a real AI capability actually requires
-
-Once I started thinking about AI this way, the architecture started to matter a lot more than the chat interface.
-
-At a high level, I think a real AI capability needs at least these elements.
-
-### 1. A bounded business job
-
-What exactly is the system supposed to do?
-
-Not in a vague "help with sales" sense, but in a concrete sense:
-
-- triage inbound requests
-- prepare a first-pass response
-- identify exceptions
-- route the work correctly
-- update the relevant system
-
-If you cannot clearly name the job, the system will sprawl.
-
-### 2. Criteria for what good looks like
-
-How does the system know whether it did a good job?
-
-This usually includes some mix of:
-
-- speed
-- accuracy
-- business priority
-- risk
-- acceptable exceptions
-- human review thresholds
-
-Without that, the system is just generating plausible output.
-
-### 3. The right structure underneath
-
-This is the less glamorous part, but it matters.
-
-The system needs the right internal representation of the work:
-
-- the right fields
-- the right states
-- the right relationships
-- the right memory of what happened before
-
-If that structure is wrong, the system tends to compensate in sloppy ways. It can still look smart on the surface for a while, but the capability itself becomes unstable.
-
-### 4. Some form of orchestration
-
-Not every problem should be solved in one shot.
-
-Sometimes useful AI work requires separate passes:
-
-- one pass to interpret
-- another to critique
-- another to compare options
-- another to decide whether something is safe to act on
-
-I am intentionally keeping this high-level, because the important point for a non-technical reader is not the mechanism. The important point is that one answer is often not enough. Real capability often requires staged reasoning.
-
-### 5. Human judgment in the right places
-
-I am not talking about vague "human in the loop" language here. I mean something more practical.
-
-Human expertise has to enter in ways the system can actually use:
-
-- what matters most
-- what tradeoffs to make
-- what failure is unacceptable
-- what kinds of outputs are useful
-- when to escalate
-
-That expertise does not get captured automatically just because you connected email and documents.
-
-It usually has to be extracted, clarified, and reinforced.
-
-### 6. Clear boundaries
-
-This is a big one.
-
-A capability should be able to answer both of these questions:
-
-- what do I do?
-- what do I not do?
-
-If you skip the second question, the capability tends to expand into a blob. Costs go up. Expectations get fuzzy. Reliability goes down.
-
-This happens in software generally, and AI is not exempt from it.
-
-## This is also why "make an AI version of me" is harder than it sounds
-
-The same misunderstanding shows up when people want the system to behave like an executive, an operator, or a subject matter expert.
-
-The naive version of the idea is:
-
-- connect my inbox
-- connect my docs
-- connect my meetings
-- now the system knows me
-
-But that is not usually where the real expertise lives.
-
-Real expertise often includes:
-
-- what the person notices quickly
-- what they routinely discount
-- what they worry about before others do
-- what they treat as noise
-- what they escalate immediately
-- what tradeoffs they make under pressure
-
-That is not simply a document problem.
-
-It is partly a cognition problem and partly a workflow problem.
-
-Which means that if you want the system to reproduce some piece of expert behavior, you usually need to design for that deliberately. You are not just giving it more content. You are trying to shape a capability.
-
-That is a different kind of work.
+This is also why "make an AI version of me" is harder than it sounds. The naive version of that idea is: connect my inbox, connect my docs, connect my meetings, and now the system knows me. But that is not usually where the real expertise lives. Real expertise often includes what the person notices quickly, what they routinely discount, what they worry about before others do, what they treat as noise, what they escalate immediately, and what tradeoffs they make under pressure. That is not simply a document problem. It is partly a cognition problem and partly a workflow problem, which means that if you want the system to reproduce some bounded slice of expert behavior, you usually need to design for it deliberately. You are not just giving it more content. You are shaping a capability.
 
 ## Said a bit more technically
 
 For the technical crowd, the claim here is not "chatbots are bad" or "foundation models do not matter." They obviously do matter. And a lot of valuable software will continue to look like a well-built model interface with retrieval, tools, and a good workflow around it.
 
-The claim is narrower than that, and I think more useful:
+The claim is narrower than that, and, I think, more useful: the differentiated product layer is usually above the model.
 
-the differentiated product layer is usually above the model.
+More concretely, if you are trying to build something durable for business use, the hard work tends to sit in a handful of layers that are easy to underweight when everyone is fixated on the model itself.
 
-Put differently, if you are trying to build something durable for business use, the real work is usually in at least five layers that sit above raw model access.
+The first is **representation**. What is the internal shape of the problem? What are the entities, the states, the relationships, the memory shape? If the representation is bad, the system will still produce plausible output for a while, but it will tend to drift, shortcut, or stuff new information into the wrong place. This is one reason purely top-down prompting often disappoints in more complex systems. The model can describe a good answer before it has a stable internal structure for producing one.
 
-### 1. Representation
+The second is **perspective separation**. Some tasks really do require distinct viewpoints. If you compress interpretation, generation, critique, and decision into one giant context window, you often get what I think of as perspective collapse. The output may sound smooth, but the actual tensions between roles disappear. That is why staged passes, role separation, or multi-agent patterns can matter. Not because "more agents" is fashionable, but because some work benefits from preserving distinct ways of seeing the problem.
 
-What is the internal shape of the problem?
+The third is **orchestration**. What runs in what order? What gets reviewed? What loops back? What escalates? A lot of AI failure is really orchestration failure. The right step happened too early. Critique came too late. State was not refreshed. The system acted when it should have paused. This is where capability starts becoming operational rather than merely clever.
 
-This includes things like:
+The fourth is **evaluation and judgment**. Retrieval is useful. RAG is useful. Tool access is useful. None of those, by themselves, tell the system what counts as a good decision in your environment. That usually requires explicit criteria, business priorities, exception logic, review thresholds, and some mechanism for judging outputs against real expectations.
 
-- entities
-- states
-- schemas
-- relationships
-- memory shape
-
-If the representation is bad, the system will still generate plausible output, but it will tend to drift, shortcut, or jam new information into the wrong place. This is one reason I think purely top-down prompting often disappoints in more complex systems. The model can describe a good answer before it has a stable internal structure for producing one.
-
-### 2. Perspective separation
-
-Some tasks really do require distinct viewpoints.
-
-If you compress interpretation, generation, critique, and decision into one giant context window, you often get what I think of as perspective collapse. The output may sound smooth, but the underlying tensions between roles disappear.
-
-That is why staged passes, role separation, or multi-agent patterns can matter. Not because "more agents" is fashionable, but because some work benefits from preserving distinct ways of seeing the problem.
-
-### 3. Orchestration
-
-What runs in what order? What gets reviewed? What loops back? What escalates?
-
-A lot of AI failure is really orchestration failure:
-
-- the right step happened too early
-- critique came too late
-- state was not refreshed
-- the system was allowed to act when it should have paused
-
-This is where capability starts to become operational rather than merely clever.
-
-### 4. Evaluation and judgment
-
-This is the place where I think a lot of "AI with your data" stories stay too shallow.
-
-Retrieval is useful. RAG is useful. Tool access is useful. But none of those, by themselves, tell the system what counts as a good decision in your environment.
-
-That usually requires:
-
-- explicit criteria
-- business priorities
-- exception logic
-- review thresholds
-- some mechanism for judging outputs against real expectations
-
-If you do not have that, then you mostly have plausible generation plus access to more information.
-
-### 5. Boundary and governance
-
-Capabilities need edges.
-
-What is in scope? What is out of scope? When can the system act? When must it escalate? What happens when it is wrong?
-
-This is the less glamorous part of the work, but it is a major part of what turns an interesting AI demo into something a business can actually trust.
+And the fifth is **boundary and governance**. Capabilities need edges. What is in scope? What is out of scope? When can the system act? When must it escalate? What happens when it is wrong? This is the less glamorous part of the work, but it is also a major part of what turns an interesting AI demo into something a business can actually trust.
 
 <details>
-<summary>Tech note: the failure modes I most expect in thin AI layers</summary>
+<summary>Tech note: the thin-layer failure modes I expect most</summary>
 
-- perspective collapse inside one giant context window
-- local plausibility beating system coherence
-- retrieval without shaped context
-- no explicit evaluation pass
-- no stable workflow state
-- no boundary between draft, recommend, and act
+Perspective collapse inside one giant context window. Local plausibility beating system coherence. Retrieval without shaped context. No explicit evaluation pass. No stable workflow state. No real boundary between draft, recommend, and act.
 
 </details>
 
-## Three visuals I think help
+## Three pictures that help
 
-The diagrams below are simple on purpose. I think they do a better job than another 800 words of explaining where the mindset shift really sits.
+At some point diagrams are more honest than more prose, so here are the three pictures I think help most.
 
-### 1. What most people test vs what they think they tested
+### Picture one: what most people test versus what they think they tested
 
 <div class="diagram-shell">
 
@@ -661,7 +349,7 @@ flowchart LR
 <p class="diagram-label">a thin interaction layer often gets mistaken for the whole stack</p>
 </div>
 
-### 2. Model vs capability stack
+### Picture two: model versus capability stack
 
 <div class="diagram-shell">
 
@@ -678,7 +366,7 @@ flowchart TD
 <p class="diagram-label">the model matters, but the durable product layer usually sits above it</p>
 </div>
 
-### 3. Raw context vs shaped context
+### Picture three: raw context versus shaped context
 
 <div class="diagram-shell">
 
@@ -710,52 +398,15 @@ flowchart LR
 <p class="diagram-label">more information is not the same thing as better operational context</p>
 </div>
 
-## So what should a sophisticated buyer ask instead?
+## The questions I would ask instead
 
-If I were evaluating an AI product or vendor for business use, these are much closer to the questions I would ask:
+If I were evaluating an AI product or vendor for business use, I do not think I would start with which model are you using, can it read our documents, or can it sound like our team. Those are not irrelevant questions, but they are secondary.
 
-### 1. What specific capability is this improving?
+I would want to know what specific capability is being improved, where it fits in the workflow, how the system knows what good looks like, what it explicitly does not do, and what happens when it is wrong. Those questions get you much closer to whether you are buying something real.
 
-Not what can your model do.
+That, to me, is the more interesting shift now underway in the market. A lot of current AI tooling is still sold at the level of interface and impression: chat with your data, ask better questions, generate insights, automate work. Some of that is useful. Some of it is real. But it is also easy to stop one layer too early and mistake a clever demo for a durable business instrument.
 
-What piece of work gets done better?
-
-### 2. Where does it fit in the workflow?
-
-What triggers it, what comes out of it, who reviews it, and what system gets updated?
-
-### 3. How does it know what good looks like?
-
-What criteria, priorities, and constraints shape its behavior?
-
-### 4. What does it not do?
-
-Where are the boundaries? What requires escalation? What counts as out of scope?
-
-### 5. What happens when it is wrong?
-
-How do errors show up? Who catches them? What is the rollback or correction path?
-
-Those questions get you much closer to whether you are buying something real.
-
-## This is where I think the market is still early
-
-A lot of current AI tooling is still sold at the level of interface and impression:
-
-- chat with your data
-- ask better questions
-- generate insights
-- automate work
-
-Some of that is useful. Some of it is real. But it is also easy to stop one layer too early and mistake a clever demo for a durable business instrument.
-
-I think the more interesting companies over the next few years will be the ones that move one layer up:
-
-from model access to capability design.
-
-That is where things start becoming economically meaningful.
-
-That is also where disappointment tends to go down, because you are no longer asking the system to magically become useful. You are defining the job, the boundary, the context, the review, and the measure of success.
+I think the more interesting companies over the next few years will be the ones that move one layer up, from model access to capability design. That is where things start becoming economically meaningful. It is also where disappointment tends to go down, because you are no longer asking the system to magically become useful. You are defining the job, the boundary, the context, the review, and the measure of success.
 
 In other words, you are shaping the vehicle, not just admiring the engine.
 
@@ -763,34 +414,12 @@ In other words, you are shaping the vehicle, not just admiring the engine.
 
 ## So what is the takeaway?
 
-If you pasted a document into Copilot, asked a few questions, and the result was not very good, that does not necessarily mean AI is weak.
+If you pasted a document into Copilot, asked a few questions, and the result was not very good, that does not necessarily mean AI is weak. It may just mean you tested the wrong layer.
 
-It may just mean you tested the wrong layer.
+You tested whether a raw reasoning engine could give you a useful answer in a single interaction. That is a perfectly reasonable first test. But it is not the same thing as testing whether AI can support or improve a real business capability.
 
-You tested whether a raw reasoning engine could give you a useful answer in a single interaction.
+And once you see that distinction, I think the conversation gets a lot more honest. You stop asking which model should we use and start asking what capability are we trying to improve, what does good actually look like, what context does the system really need, where does human judgment belong, and how do we make this repeatable.
 
-That is a perfectly reasonable first test. But it is not the same thing as testing whether AI can support or improve a real business capability.
-
-I think that distinction matters a lot.
-
-Because once you see it, the conversation changes.
-
-You stop asking:
-
-- which model should we use?
-- can it read our documents?
-- can it sound like our team?
-
-And you start asking:
-
-- what capability are we trying to improve?
-- what does good actually look like?
-- what context does the system really need?
-- where does human judgment belong?
-- how do we make this repeatable?
-
-That feels like a much more useful conversation to me.
-
-And, frankly, a much more honest one.
+That feels like a much better conversation to me.
 
 </div>

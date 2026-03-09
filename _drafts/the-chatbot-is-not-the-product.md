@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Model Is Not the Product"
+title: "The Chatbot Is Not the Product"
 date: 2026-03-09 15:00:00 -0400
 categories: development ai workflow
 tags: [ai, capabilities, lightforge, workflow, judgment]
@@ -186,7 +186,7 @@ description: "Why a mediocre result from Copilot or ChatGPT usually says less ab
 
 <header class="model-product-hero">
   <p class="eyebrow">Essay Draft • Means of Production</p>
-  <h1>The Model Is Not the Product</h1>
+  <h1>The Chatbot Is Not the Product</h1>
   <p class="dek">Why a mediocre result from Copilot or ChatGPT usually says less about AI than about the mental model behind how it is being used.</p>
 </header>
 
@@ -331,8 +331,7 @@ At some point diagrams are more honest than more prose, so here are the three pi
 ### Picture one: what most people test versus what they think they tested
 
 <div class="diagram-shell">
-
-```mermaid
+  <div class="mermaid">
 flowchart LR
   subgraph A["What most people do"]
     A1["Paste file into Copilot"]
@@ -354,7 +353,7 @@ flowchart LR
   A3 -. really measured .-> C1
   A3 -. maybe measured .-> C2
   A3 -. sometimes measured .-> C3
-```
+  </div>
 
 <p class="diagram-label">a thin interaction layer often gets mistaken for the whole stack</p>
 </div>
@@ -362,8 +361,7 @@ flowchart LR
 ### Picture two: model versus capability stack
 
 <div class="diagram-shell">
-
-```mermaid
+  <div class="mermaid">
 flowchart TD
   M["Model substrate"] --> R["Representation"]
   R --> P["Perspective separation"]
@@ -371,7 +369,7 @@ flowchart TD
   O --> E["Evaluation and judgment"]
   E --> B["Boundary and governance"]
   B --> C["Configured business capability"]
-```
+  </div>
 
 <p class="diagram-label">the model matters, but the durable product layer usually sits above it</p>
 </div>
@@ -379,8 +377,7 @@ flowchart TD
 ### Picture three: raw context versus shaped context
 
 <div class="diagram-shell">
-
-```mermaid
+  <div class="mermaid">
 flowchart LR
   subgraph Left["Raw context"]
     L1["Documents"]
@@ -403,7 +400,7 @@ flowchart LR
     R3 --> R5
     R4 --> R5
   end
-```
+  </div>
 
 <p class="diagram-label">more information is not the same thing as better operational context</p>
 </div>

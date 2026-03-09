@@ -202,6 +202,12 @@ I think that is a fair reaction. In fact, it may be the most honest and sensible
 
 There are plenty of cases where a thin chat interaction is genuinely useful. A summary, a reframing, a first draft, a decent comparison, an extraction pass, sure. I use those all the time. But I also think a lot of smart people are running a very narrow test, getting a middling result, and then drawing a much broader conclusion than the test really supports.
 
+A friend of mine recently described using Grok to do things like look up the sizing of a certain faucet, check whether it fit a building code requirement, and then see whether that code had been updated. That is real value. In fact, it is pretty great value. It is something like advanced retrieval plus synthesis plus recency checking. In many cases it is better than old-school Google because it collapses a bunch of manual searching and cross-checking into one pass.
+
+But I think that example helps because it is useful without being magical. Grok, in that case, is acting like a very strong research assistant or code-checking clerk. It is not really acting like an operator embedded in a business workflow. It is not carrying a bounded job across state, judgment, handoffs, and accountability. It is helping answer a question very well.
+
+That distinction matters because I think there are at least three different layers of AI value floating around in people's heads and getting blurred together. There is AI as advanced retrieval and synthesis, which is the Grok/faucet/building-code case. There is AI as a workbench assistant, which is the Copilot/ChatGPT "help me summarize this, draft this, or think through this" case. And then there is AI as configured capability, where the system is no longer just helping with an answer but is actually helping a bounded piece of work move correctly through a real workflow. I am not dismissing the first two. I use them constantly. I just think the third is a different thing, and it is the thing most worth understanding if you are trying to build or buy something durable.
+
 The mental model gap, as I see it, is this: most people are treating the model as though it is already the finished product. I do not think it is. I think the model is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes almost unsettlingly good. But not, by itself, the thing a business is actually buying.
 
 That distinction matters a lot.

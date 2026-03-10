@@ -184,21 +184,15 @@ A friend told me he was using Grok to figure out whether a certain faucet would 
 
 At first glance those sound like three different asks. I think they are actually three versions of a misunderstanding about where the power of AI really sits.
 
-The first imagines AI as a synthetic person. The second imagines AI as a general-purpose helper and then judges the whole stack from one thin interaction. The third imagines AI as a much better research surface. The last two are real value. I use them. But none of them, by itself, is the thing I think matters most for business use.
-
-The actual business need usually lives one layer up, and, in my experience, people rarely know to ask for it directly. You more or less have to walk them to the idea before they can even see it.
-
-So the taxonomy I keep coming back to is pretty simple:
+If I had to bucket them, the taxonomy is pretty simple:
 
 1. AI as advanced retrieval and synthesis.
 2. AI as a workbench assistant.
 3. AI as a configured capability.
 
-The Grok/faucet/building-code example lives mostly in the first bucket. The "I pasted it into Copilot and it wasn't very good" experience lives mostly in the second. The third is different. It is the system helping a bounded piece of work move correctly through a real workflow. I am not dismissing the first two. I use them constantly. I just think the third is the thing most worth understanding if you are trying to build or buy something durable.
+The faucet/building-code example lives mostly in the first bucket. The Copilot experience lives mostly in the second. The third is different. It is the system helping a bounded piece of work move correctly through a real workflow. The first two are real value. I use them constantly. But the actual business need usually lives one layer up, and, in my experience, people rarely know to ask for it directly. You more or less have to walk them to the idea before they can even see it.
 
 So here is the mental model gap as I see it: people keep treating the model as though it is already the finished product. I do not think it is. I think it is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes almost unsettlingly good. But not, by itself, the thing a business is actually buying.
-
-That distinction matters a lot.
 
 Before going any further, I think it helps to see the two thought models side by side.
 

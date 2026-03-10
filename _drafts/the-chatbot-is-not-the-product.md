@@ -63,7 +63,8 @@ description: "Why a mediocre result from Copilot or ChatGPT usually says less ab
   .model-product-post ul,
   .model-product-post ol,
   .model-product-post blockquote,
-  .model-product-post details {
+  .model-product-post details,
+  .model-product-post figure {
     max-width: 740px;
     margin-left: auto;
     margin-right: auto;
@@ -165,6 +166,27 @@ description: "Why a mediocre result from Copilot or ChatGPT usually says less ab
     color: var(--mop-muted);
   }
 
+  .model-product-post .concept-figure {
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .model-product-post .concept-figure img {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(69, 38, 22, 0.08);
+  }
+
+  .model-product-post .concept-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.94rem;
+    line-height: 1.5;
+    color: var(--mop-muted);
+    text-align: center;
+    font-style: italic;
+  }
+
   .model-product-post .bridge-note {
     max-width: 740px;
     margin: 2rem auto 0;
@@ -212,6 +234,29 @@ The mental model gap, as I see it, is this: most people are treating the model a
 
 That distinction matters a lot.
 
+Before going any further, I think it helps to see the two thought models side by side.
+
+<div class="diagram-shell">
+  <div class="mermaid">
+flowchart LR
+  subgraph A["Chatbot thought model"]
+    A1["One question"]
+    A2["One answer"]
+    A1 --> A2
+  end
+
+  subgraph B["Capability thought model"]
+    B1["Incoming work"]
+    B2["Relevant context"]
+    B3["Business judgment"]
+    B4["Next step"]
+    B1 --> B2 --> B3 --> B4
+  end
+  </div>
+
+<p class="diagram-label">the real shift is from answering a question to helping work move correctly</p>
+</div>
+
 ## The test most people are actually running
 
 If you take a document, drop it into Copilot or ChatGPT, and ask a few good questions, you are running a pretty specific test. You are asking whether a general-purpose reasoning engine, with a thin interface around it, can produce a useful answer in a single interaction. Sometimes it can. Sometimes it really can. But that is not the same thing as asking whether AI can support a real business capability.
@@ -237,6 +282,11 @@ The model is the engine.
 The finished business capability is the vehicle.
 
 And I think a lot of present-day AI disappointment comes from confusing those two things. When someone says, "I tried Copilot and it wasn't very good," what I often hear is: "I put a powerful engine on the floor, sat on it, and it did not drive like a truck." That does not mean the engine is useless. It means there is more between raw power and useful work than people first assume.
+
+<figure class="post-figure concept-figure">
+  <img src="{{ '/assets/images/the-chatbot-is-not-the-product-hero.png' | relative_url }}" alt="Editorial split illustration contrasting AI as a simple chatbot interaction with AI as a configured business capability">
+  <figcaption>A Grok/Imagen sketch of the same contrast: on one side a chatbot sitting on top of a pile of work, on the other a more deliberate operating layer turning the work into decisions and next steps.</figcaption>
+</figure>
 
 <details>
 <summary>Tech note: I am not claiming foundation models do not matter</summary>
@@ -305,24 +355,6 @@ That last one is especially important. A useful capability should be able to ans
 
 This is also why "make an AI version of me" is harder than it sounds. The naive version of that idea is: connect my inbox, connect my docs, connect my meetings, and now the system knows me. But that is not usually where the real expertise lives. Real expertise often includes what the person notices quickly, what they routinely discount, what they worry about before others do, what they treat as noise, what they escalate immediately, and what tradeoffs they make under pressure. That is not simply a document problem. It is partly a cognition problem and partly a workflow problem, which means that if you want the system to reproduce some bounded slice of expert behavior, you usually need to design for it deliberately. You are not just giving it more content. You are shaping a capability.
 
-## Said a bit more technically
-
-For the technical crowd, the claim here is not "chatbots are bad" or "foundation models do not matter." They obviously do matter. And a lot of valuable software will continue to look like a well-built model interface with retrieval, tools, and a good workflow around it.
-
-The claim is narrower than that, and, I think, more useful: the differentiated product layer is usually above the model.
-
-More concretely, if you are trying to build something durable for business use, the hard work tends to sit in a handful of layers that are easy to underweight when everyone is fixated on the model itself.
-
-The first is **representation**. What is the internal shape of the problem? What are the entities, the states, the relationships, the memory shape? If the representation is bad, the system will still produce plausible output for a while, but it will tend to drift, shortcut, or stuff new information into the wrong place. This is one reason purely top-down prompting often disappoints in more complex systems. The model can describe a good answer before it has a stable internal structure for producing one.
-
-The second is **perspective separation**. Some tasks really do require distinct viewpoints. If you compress interpretation, generation, critique, and decision into one giant context window, you often get what I think of as perspective collapse. The output may sound smooth, but the actual tensions between roles disappear. That is why staged passes, role separation, or multi-agent patterns can matter. Not because "more agents" is fashionable, but because some work benefits from preserving distinct ways of seeing the problem.
-
-The third is **orchestration**. What runs in what order? What gets reviewed? What loops back? What escalates? A lot of AI failure is really orchestration failure. The right step happened too early. Critique came too late. State was not refreshed. The system acted when it should have paused. This is where capability starts becoming operational rather than merely clever.
-
-The fourth is **evaluation and judgment**. Retrieval is useful. RAG is useful. Tool access is useful. None of those, by themselves, tell the system what counts as a good decision in your environment. That usually requires explicit criteria, business priorities, exception logic, review thresholds, and some mechanism for judging outputs against real expectations.
-
-And the fifth is **boundary and governance**. Capabilities need edges. What is in scope? What is out of scope? When can the system act? When must it escalate? What happens when it is wrong? This is the less glamorous part of the work, but it is also a major part of what turns an interesting AI demo into something a business can actually trust.
-
 <details>
 <summary>Tech note: the thin-layer failure modes I expect most</summary>
 
@@ -332,9 +364,11 @@ After that, the usual culprits are retrieval collisions, where semantically simi
 
 </details>
 
-## Three pictures that help
+For builders, I do think the implementation layers matter a lot. I keep coming back to representation, perspective separation, orchestration, evaluation, and boundary design. But those feel like supporting mechanics for the larger point, not a separate essay, so I have tucked the more technical picture below instead of letting it take over the main flow.
 
-At some point diagrams are more honest than more prose, so here are the three pictures I think help most.
+## Two more pictures that help
+
+At some point diagrams are more honest than more prose, so here are two more that help.
 
 ### Picture one: the first test people run
 
@@ -366,30 +400,7 @@ flowchart LR
 <p class="diagram-label">a first chatbot test is real, but it is still a very narrow test</p>
 </div>
 
-### Picture two: chatbot versus capability
-
-<div class="diagram-shell">
-  <div class="mermaid">
-flowchart LR
-  subgraph A["Chatbot interaction"]
-    A1["One question"]
-    A2["One answer"]
-    A1 --> A2
-  end
-
-  subgraph B["Real capability"]
-    B1["Incoming work"]
-    B2["Relevant context"]
-    B3["Business judgment"]
-    B4["Next step"]
-    B1 --> B2 --> B3 --> B4
-  end
-  </div>
-
-<p class="diagram-label">the shift is from answering a question to helping work move correctly</p>
-</div>
-
-### Picture three: a pile of information versus working context
+### Picture two: a pile of information versus working context
 
 <div class="diagram-shell">
   <div class="mermaid">

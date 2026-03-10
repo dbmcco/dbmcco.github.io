@@ -157,7 +157,7 @@ description: "What most people call AI is often just a chat interface sitting on
 
   .model-product-post .bridge-note {
     max-width: 740px;
-    margin: 2rem auto 0;
+    margin: 2rem auto 1.75rem;
     padding: 1rem 1.1rem;
     background: rgba(255, 248, 241, 0.72);
     border: 1px solid rgba(139, 74, 35, 0.12);
@@ -177,7 +177,7 @@ description: "What most people call AI is often just a chat interface sitting on
 Over the last week or so I have heard three different versions of the AI question.
 
 <div class="bridge-note" markdown="1">
-**TL;DR:** Most people are testing AI as a chatbot, a research tool, or a one-shot assistant and then drawing conclusions about the whole category from that experience. That misses where the real leverage is. The model is not the product. The useful thing is the capability you build around it: shaped context, judgment, memory, tools, and workflow turning raw intelligence into reliable work.
+**TL;DR:** The mistake most people make with AI is not that they underestimate the intelligence. It is that they mistake the first surface they touched for the thing itself. A chatbot, a research tool, and a one-shot assistant are all real and useful, but they are thin surfaces on top of a deeper capability stack. The real leverage shows up when intelligence is shaped into context, judgment, memory, tools, and workflow so a bounded piece of work can move reliably.
 </div>
 
 One of the LightForge team told me about a prospect who wanted us to connect their Google Drive, email, and meeting notes and build a virtual me.

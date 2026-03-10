@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "The Chatbot Is Not the Product"
+title: "You don't want another chatbot"
 date: 2026-03-09 15:00:00 -0400
 categories: development ai workflow
 tags: [ai, capabilities, lightforge, workflow, judgment]
 mermaid: true
-description: "Why a mediocre result from Copilot or ChatGPT usually says less about AI than about the mental model behind how it is being used."
+description: "What most people call AI is often just a chat interface sitting on top of a much bigger capability problem."
 ---
 
 <style>
@@ -208,8 +208,8 @@ description: "Why a mediocre result from Copilot or ChatGPT usually says less ab
 
 <header class="model-product-hero">
   <p class="eyebrow">Essay Draft • Means of Production</p>
-  <h1>The Chatbot Is Not the Product</h1>
-  <p class="dek">Why a mediocre result from Copilot or ChatGPT usually says less about AI than about the mental model behind how it is being used.</p>
+  <h1>You don't want another chatbot</h1>
+  <p class="dek">What most people call AI is often just a chat interface sitting on top of a much bigger capability problem.</p>
 </header>
 
 One of the LightForge team told me this week about a request they had heard from a prospect: connect my Google Drive, my email, my meeting notes, and build a virtual me.
@@ -228,9 +228,15 @@ A friend of mine recently described using Grok to do things like look up the siz
 
 But I think that example helps because it is useful without being magical. Grok, in that case, is acting like a very strong research assistant or code-checking clerk. It is not really acting like an operator embedded in a business workflow. It is not carrying a bounded job across state, judgment, handoffs, and accountability. It is helping answer a question very well.
 
-That distinction matters because I think there are at least three different layers of AI value floating around in people's heads and getting blurred together. There is AI as advanced retrieval and synthesis, which is the Grok/faucet/building-code case. There is AI as a workbench assistant, which is the Copilot/ChatGPT "help me summarize this, draft this, or think through this" case. And then there is AI as configured capability, where the system is no longer just helping with an answer but is actually helping a bounded piece of work move correctly through a real workflow. I am not dismissing the first two. I use them constantly. I just think the third is a different thing, and it is the thing most worth understanding if you are trying to build or buy something durable.
+So the taxonomy I keep coming back to is pretty simple:
 
-The mental model gap, as I see it, is this: most people are treating the model as though it is already the finished product. I do not think it is. I think the model is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes almost unsettlingly good. But not, by itself, the thing a business is actually buying.
+1. AI as advanced retrieval and synthesis.
+2. AI as a workbench assistant.
+3. AI as a configured capability.
+
+The Grok/faucet/building-code example lives mostly in the first bucket. The Copilot/ChatGPT "help me summarize this, draft this, or think through this" use case lives mostly in the second. The third is different. It is the system helping a bounded piece of work move correctly through a real workflow. I am not dismissing the first two. I use them constantly. I just think the third is the thing most worth understanding if you are trying to build or buy something durable.
+
+So here is the mental model gap as I see it: people keep treating the model as though it is already the finished product. I do not think it is. I think it is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes almost unsettlingly good. But not, by itself, the thing a business is actually buying.
 
 That distinction matters a lot.
 
@@ -240,6 +246,8 @@ Before going any further, I think it helps to see the two thought models side by
   <img src="{{ '/assets/images/the-chatbot-is-not-the-product-hero.png' | relative_url }}" alt="Editorial split illustration contrasting AI as a simple chatbot interaction with AI as a configured business capability">
   <figcaption>A Grok/Imagen sketch of the same contrast: on one side a chatbot sitting on top of a pile of work, on the other a more deliberate operating layer turning the work into decisions and next steps.</figcaption>
 </figure>
+
+_If you want the builder view, open the technical notes as you go. I tucked those throughout the post rather than turning the whole thing into a technical essay._
 
 ## The test most people are actually running
 
@@ -255,7 +263,7 @@ I should note that this is one reason the current conversation around AI can fee
 
 The easiest analogy I have found for this is still a mechanical one.
 
-Part of that is probably just how my own head works. I love cars. I named one of my repos `Speedrift` for a reason. I also have a private, curated, multi-tiered research engine that I use to stay on top of key topics and make decisions for myself. So when I reach for the word engine here, I do not mean "fast thing." I mean a system that turns raw power into directed, reliable motion. Intake matters. Tuning matters. Instrumentation matters. Transmission matters. What the engine is connected to matters.
+Part of that is probably just how my own head works. I love cars. I named one of my repos [`Speedrift`](https://github.com/dbmcco/speedrift-ecosystem) for a reason. I also have a private, curated, multi-tiered research engine that I use to stay on top of key topics and make decisions for myself. So when I reach for the word engine here, I do not mean "fast thing." I mean a system that turns raw power into directed, reliable motion. Intake matters. Tuning matters. Instrumentation matters. Transmission matters. What the engine is connected to matters.
 
 If you hand someone a powerful engine, they do not yet have a delivery van, or a forklift, or a race car, or a tractor. They have a powerful component that can become one of those things if it is put into the right frame, connected to the right controls, and aimed at a specific job. The engine matters. It matters a lot. But no one confuses the engine with the finished vehicle unless they are being careless, or unless the technology is new enough that people are still dazzled by raw power.
 

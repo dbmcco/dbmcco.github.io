@@ -20,43 +20,11 @@ description: "What most people call AI is often just a chat interface sitting on
     color: var(--mop-ink);
   }
 
-  .model-product-post .post-header {
-    display: none;
-  }
-
-  .model-product-hero {
-    max-width: 760px;
-    margin: 1.5rem auto 2.5rem;
-    text-align: center;
-  }
-
-  .model-product-hero .eyebrow,
   .model-product-post details summary,
   .model-product-post .diagram-label {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.16em;
-  }
-
-  .model-product-hero .eyebrow {
-    font-size: 0.74rem;
-    color: var(--mop-muted);
-    margin: 0 0 0.75rem;
-  }
-
-  .model-product-hero h1 {
-    margin: 0 0 1rem;
-    font-size: clamp(2.3rem, 5vw, 3.8rem);
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-  }
-
-  .model-product-hero .dek {
-    margin: 0 auto;
-    max-width: 34rem;
-    font-size: 1.18rem;
-    line-height: 1.55;
-    color: var(--mop-soft);
   }
 
   .model-product-post p,
@@ -205,12 +173,6 @@ description: "What most people call AI is often just a chat interface sitting on
 </style>
 
 <div class="model-product-post" markdown="1">
-
-<header class="model-product-hero">
-  <p class="eyebrow">Essay Draft • Means of Production</p>
-  <h1>You don't want another chatbot</h1>
-  <p class="dek">What most people call AI is often just a chat interface sitting on top of a much bigger capability problem.</p>
-</header>
 
 One of the LightForge team told me this week about a request they had heard from a prospect: connect my Google Drive, my email, my meeting notes, and build a virtual me.
 

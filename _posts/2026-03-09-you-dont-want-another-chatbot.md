@@ -176,6 +176,10 @@ description: "What most people call AI is often just a chat interface sitting on
 
 Over the last week or so I have heard three different versions of the AI question.
 
+<div class="bridge-note" markdown="1">
+**TL;DR:** Most people are testing AI as a chatbot, a research tool, or a one-shot assistant and then drawing conclusions about the whole category from that experience. That misses where the real leverage is. The model is not the product. The useful thing is the capability you build around it: shaped context, judgment, memory, tools, and workflow turning raw intelligence into reliable work.
+</div>
+
 One of the LightForge team told me about a prospect who wanted us to connect their Google Drive, email, and meeting notes and build a virtual me.
 
 I also heard the quieter, very common version: I copied and pasted the document into Copilot and it just wasn't very good.

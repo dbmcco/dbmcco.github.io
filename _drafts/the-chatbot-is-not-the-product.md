@@ -236,26 +236,10 @@ That distinction matters a lot.
 
 Before going any further, I think it helps to see the two thought models side by side.
 
-<div class="diagram-shell">
-  <div class="mermaid">
-flowchart LR
-  subgraph A["Chatbot thought model"]
-    A1["One question"]
-    A2["One answer"]
-    A1 --> A2
-  end
-
-  subgraph B["Capability thought model"]
-    B1["Incoming work"]
-    B2["Relevant context"]
-    B3["Business judgment"]
-    B4["Next step"]
-    B1 --> B2 --> B3 --> B4
-  end
-  </div>
-
-<p class="diagram-label">the real shift is from answering a question to helping work move correctly</p>
-</div>
+<figure class="post-figure concept-figure">
+  <img src="{{ '/assets/images/the-chatbot-is-not-the-product-hero.png' | relative_url }}" alt="Editorial split illustration contrasting AI as a simple chatbot interaction with AI as a configured business capability">
+  <figcaption>A Grok/Imagen sketch of the same contrast: on one side a chatbot sitting on top of a pile of work, on the other a more deliberate operating layer turning the work into decisions and next steps.</figcaption>
+</figure>
 
 ## The test most people are actually running
 
@@ -282,11 +266,6 @@ The model is the engine.
 The finished business capability is the vehicle.
 
 And I think a lot of present-day AI disappointment comes from confusing those two things. When someone says, "I tried Copilot and it wasn't very good," what I often hear is: "I put a powerful engine on the floor, sat on it, and it did not drive like a truck." That does not mean the engine is useless. It means there is more between raw power and useful work than people first assume.
-
-<figure class="post-figure concept-figure">
-  <img src="{{ '/assets/images/the-chatbot-is-not-the-product-hero.png' | relative_url }}" alt="Editorial split illustration contrasting AI as a simple chatbot interaction with AI as a configured business capability">
-  <figcaption>A Grok/Imagen sketch of the same contrast: on one side a chatbot sitting on top of a pile of work, on the other a more deliberate operating layer turning the work into decisions and next steps.</figcaption>
-</figure>
 
 <details>
 <summary>Tech note: I am not claiming foundation models do not matter</summary>

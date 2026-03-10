@@ -275,6 +275,11 @@ The finished business capability is the vehicle.
 
 And I think a lot of present-day AI disappointment comes from confusing those two things. When someone says, "I tried Copilot and it wasn't very good," what I often hear is: "I put a powerful engine on the floor, sat on it, and it did not drive like a truck." That does not mean the engine is useless. It means there is more between raw power and useful work than people first assume.
 
+<figure class="post-figure concept-figure">
+  <img src="{{ '/assets/images/the-chatbot-is-not-the-product-engine-vs-vehicle.png' | relative_url }}" alt="Editorial illustration showing a raw engine on one side and a finished drivable vehicle system on the other">
+  <figcaption>Another Grok/Imagen sketch of the same argument: raw power on its own is not yet the useful instrument.</figcaption>
+</figure>
+
 <details>
 <summary>Tech note: I am not claiming foundation models do not matter</summary>
 

@@ -174,21 +174,17 @@ description: "What most people call AI is often just a chat interface sitting on
 
 <div class="model-product-post" markdown="1">
 
-One of the LightForge team told me this week about a request they had heard from a prospect: connect my Google Drive, my email, my meeting notes, and build a virtual me.
+Over the last week or so I have heard three different versions of the AI question.
 
-That is one version of the misunderstanding.
+One of the LightForge team told me about a prospect who wanted us to connect their Google Drive, email, and meeting notes and build a virtual me.
 
-The other version is quieter and, in some ways, more important. It sounds like this:
+A friend told me he was using Grok to figure out whether a certain faucet would fit a code requirement, and whether that building code had been updated.
 
-> I copied the document into Copilot, asked a few questions, and the result wasn't very good.
+And then there is the third version, which is closer to what businesses actually need: can a system take something like an inbound RFP, compare it to our ICP, delivery capacity, pricing guardrails, redline history, and current pipeline, and help decide what should happen next?
 
-I think that is a fair reaction. In fact, it may be the most honest and sensible reaction available if the only thing you have really tried is dropping a file into a chatbot and hoping the system will somehow bridge the gap between "what is in this document?" and "what should happen in my business?"
+At first glance those sound like three different asks. I think they are actually three versions of a misunderstanding about where the power of AI really sits.
 
-There are plenty of cases where a thin chat interaction is genuinely useful. A summary, a reframing, a first draft, a decent comparison, an extraction pass, sure. I use those all the time. But I also think a lot of smart people are running a very narrow test, getting a middling result, and then drawing a much broader conclusion than the test really supports.
-
-A friend of mine recently described using Grok to do things like look up the sizing of a certain faucet, check whether it fit a building code requirement, and then see whether that code had been updated. That is real value. In fact, it is pretty great value. It is something like advanced retrieval plus synthesis plus recency checking. In many cases it is better than old-school Google because it collapses a bunch of manual searching and cross-checking into one pass.
-
-But I think that example helps because it is useful without being magical. Grok, in that case, is acting like a very strong research assistant or code-checking clerk. It is not really acting like an operator embedded in a business workflow. It is not carrying a bounded job across state, judgment, handoffs, and accountability. It is helping answer a question very well.
+The first imagines AI as a synthetic person. The second imagines it as a much better research surface. The third gets closer to the real opportunity, but even there people often underestimate how much has to exist around the model for that capability to actually work.
 
 So the taxonomy I keep coming back to is pretty simple:
 
@@ -196,7 +192,7 @@ So the taxonomy I keep coming back to is pretty simple:
 2. AI as a workbench assistant.
 3. AI as a configured capability.
 
-The Grok/faucet/building-code example lives mostly in the first bucket. The Copilot/ChatGPT "help me summarize this, draft this, or think through this" use case lives mostly in the second. The third is different. It is the system helping a bounded piece of work move correctly through a real workflow. I am not dismissing the first two. I use them constantly. I just think the third is the thing most worth understanding if you are trying to build or buy something durable.
+The Grok/faucet/building-code example lives mostly in the first bucket. The general "help me summarize this, draft this, or think through this" use case lives mostly in the second. The third is different. It is the system helping a bounded piece of work move correctly through a real workflow. I am not dismissing the first two. I use them constantly. I just think the third is the thing most worth understanding if you are trying to build or buy something durable.
 
 So here is the mental model gap as I see it: people keep treating the model as though it is already the finished product. I do not think it is. I think it is much closer to raw cognitive horsepower. Useful, yes. Impressive, yes. Sometimes almost unsettlingly good. But not, by itself, the thing a business is actually buying.
 

@@ -101,8 +101,15 @@ description: "Most people are using LLMs as question-answering machines. That's 
   }
 
   /* ── BODY TEXT ────────────────────────────────────────────── */
-  .forge-opening p, .forge-essay > p, .forge-essay > ul, .forge-essay > ol {
+  /* Descendant rule: all paragraphs get the base body size */
+  .forge-essay p {
     font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.78;
+  }
+  /* Column constraint: only direct-child flow gets max-width/margin */
+  .forge-opening p, .forge-essay > p {
+    max-width: 66ch; margin: 0 auto 1.4rem;
+  }
+  .forge-essay > ul, .forge-essay > ol {
     max-width: 66ch; margin: 0 auto 1.4rem;
   }
 
@@ -114,7 +121,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
   /* Section h2 — large, with a short amber underline that fades in */
   .forge-essay h2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.55rem, 3.5vw, 2.1rem); font-weight: 700;
+    font-size: clamp(1.55rem, 3.5vw, 2.1rem) !important; font-weight: 700;
     letter-spacing: -0.01em; line-height: 1.2; color: var(--forge-ink);
     max-width: 66ch; margin: 3.5rem auto 0.25rem;
   }
@@ -126,7 +133,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
 
   .forge-essay h3 {
     font-family: 'Instrument Sans', sans-serif;
-    font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 0.76rem !important; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--forge-muted); margin: 0 0 1rem; max-width: 740px;
   }
 
@@ -218,10 +225,10 @@ description: "Most people are using LLMs as question-answering machines. That's 
     border-top: 1px solid rgba(160, 110, 55, 0.12);
     font-size: 0.97rem; line-height: 1.68; color: var(--forge-soft);
   }
-  .forge-detail-body p { margin: 0 0 0.75rem; }
+  .forge-detail-body p { font-size: 0.97rem; margin: 0 0 0.75rem; }
   .forge-detail-body p:last-child { margin: 0; }
   .forge-detail-body ul { padding-left: 1.2rem; margin: 0 0 0.75rem; }
-  .forge-detail-body li { margin-bottom: 0.3rem; }
+  .forge-detail-body li { font-size: 0.97rem; line-height: 1.65; margin-bottom: 0.3rem; }
 
   /* Scroll reveal */
   [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -338,11 +345,12 @@ That distinction matters because otherwise you get one of two failure modes I se
 Neither works. The clean separation is what makes it work.
 
 <details class="forge-detail">
-  <summary>Deterministic vs. model-mediated orchestration</summary>
+  <summary>Technical: deterministic vs. model-mediated orchestration</summary>
   <div class="forge-detail-body">
-    <p>In a <strong>deterministic orchestration</strong> system, routing logic is hardcoded — if X then Y. Predictable, but brittle. It can only handle what the designer anticipated. Every edge case requires a code change.</p>
-    <p>In a <strong>model-mediated</strong> system, the model makes routing calls dynamically based on context, task requirements, and available options. The pipe infrastructure is identical either way. What changes is who decides what goes into it, and whether that decision can be reasoned about and audited after the fact.</p>
-    <p>This is, pretty directly, the dumb network argument applied to agents. The pipe doesn't need to understand the payload. It just needs to move it reliably and leave a trace.</p>
+    <p>In a <strong>deterministic orchestration</strong> system, routing logic is hardcoded — if X, then Y. Predictable, but brittle. It can only handle what the designer anticipated. Every edge case requires a code change.</p>
+    <p>In a <strong>model-mediated</strong> system, the model makes routing calls dynamically based on context, task requirements, and available options. Consider a concrete case: a task arrives tagged "routine" by the upstream classifier. A deterministic system routes it to the standard handler. A model-mediated system reads the full context — and notices the timestamp, the originating account, the recent activity pattern — and routes it as time-sensitive instead. The routing infrastructure is identical. What changed is who made the call.</p>
+    <p>One implementation detail worth noting: model outputs in this pattern are <em>structured</em> — a routing decision, a classification, a list of agents with reasoning. Not prose. The reasoning field in the output serves as an audit trail, not just a result. You can inspect why the model routed something the way it did, after the fact, without asking it to reconstruct its reasoning.</p>
+    <p>This is the dumb network argument applied to agents. The pipe doesn't need to understand the payload. It just needs to move it reliably and leave a trace.</p>
   </div>
 </details>
 
@@ -375,10 +383,12 @@ The data flowing between agents is structured data moving through a pipe. The pi
 It's a demonstration more than a production system. I built it partly to convince myself the pattern was real, which I realize isn't exactly a ringing endorsement.
 
 <details class="forge-detail">
-  <summary>How the pattern works under the hood</summary>
+  <summary>Technical: how the pipeline actually works</summary>
   <div class="forge-detail-body">
-    <p>Each agent receives a context object containing the task definition, the assembled panel roster, and the full message history up to that point. It adds its response and passes the updated object forward. Agents never communicate with each other directly — the pipe between them is just that context object moving sequentially.</p>
-    <p>The model's work happened earlier, when it decided who was on the panel and in what order. Everything after that is a deterministic loop: read context, generate response, append to history, pass forward. The judgment call and the execution are completely separate, which is the whole point.</p>
+    <p>Each agent receives a structured context object: the task definition, the assembled panel roster (each entry includes an area of expertise, default stance, and a few characteristic concerns), and the full message history up to that turn. It appends its response and passes the updated object forward.</p>
+    <p>Agents never communicate directly. The "conversation" is an illusion produced by that context object moving through a deterministic loop: read context, generate response, append to history, pass forward. What makes it feel like actual deliberation rather than role-play is that each agent is reading the prior responses when it generates its own — so disagreements are real disagreements grounded in what came before, not manufactured ones.</p>
+    <p>The model's substantive work happened earlier, when it assembled the panel for this specific task — deciding who belongs in the room, in what order, and why. Everything after that is mechanical execution.</p>
+    <p>Compare this to a single-prompt multi-perspective request, which is the naive version: you get personas that tend toward similar conclusions because they're generated in the same context window at the same time, without genuine prior-response pressure. The pipeline structure is what produces the tension. That's not obvious until you've seen both side by side.</p>
   </div>
 </details>
 
@@ -388,11 +398,7 @@ If I'm honest, the output is genuinely different from what a single prompt to a 
 
 **Lodestar / Meridian**, also private. This one adds something the others don't: model tiering. Different model capabilities matched to different judgment functions in the same system. It came out of [building out a more systematic AI studio](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/) and needing to think carefully about what each layer actually required.
 
-Lodestar is a situation intelligence platform for scenario planning and decision de-risking. The interesting part here is how the model assignments work:
-
-- **Haiku** runs intel classification in the background, automatically. Fast, cheap, and right-sized. It doesn't need to reason about geopolitical scenarios. It needs to classify whether a news signal is relevant and route it correctly.
-- **Sonnet and Opus** handle the actual scenario reasoning and specialist analysis, the work that requires judgment.
-- A three-tier **Factory Brain** (Haiku → Sonnet → Opus) watches the system infrastructure itself, restarts stalled processes, and escalates when something persists past what a lower tier can resolve.
+Lodestar is a situation intelligence platform for scenario planning and decision de-risking. The interesting part here is how the model assignments work — not just which model runs what, but why. Each tier is matched to the judgment complexity of its function, not just its cost. The diagram below lays out the routing. The toggle goes deeper if you want to understand how the three-tier supervision layer actually works.
 
 <div class="mermaid-container forge-diagram" data-reveal>
   <div class="mermaid">
@@ -414,11 +420,13 @@ flowchart LR
 The infrastructure carries the same data structure regardless of which model tier produced the output. The pipes don't know, and don't need to know, whether Haiku or Opus ran. They just move it.
 
 <details class="forge-detail">
-  <summary>The Factory Brain in more detail</summary>
+  <summary>Technical: model tiering and the Factory Brain</summary>
   <div class="forge-detail-body">
-    <p>The three tiers handle different levels of diagnostic complexity. Haiku runs constant heartbeat checks and handles simple restarts — fast and cheap enough to run continuously without meaningful overhead.</p>
-    <p>If a failure persists through Haiku's interventions, it escalates to Sonnet with full failure context. Sonnet can reason about patterns and identify root causes that aren't obvious from surface signals.</p>
-    <p>If Sonnet can't resolve it, Opus gets a full incident brief and decides: restructure the process, escalate to a human, or take a recovery path that requires real judgment. The result is a system where expensive reasoning only runs when cheap reasoning has already failed — which is usually not very often.</p>
+    <p><strong>Haiku</strong> runs two functions: continuous heartbeat monitoring (process-is-alive checks at high frequency, cheap enough to run constantly) and first-pass classification — is this signal relevant, which routing category does it belong to. The judgment required is deliberately narrow: yes/no, route A or B. Not scenario reasoning. Right-sizing it matters; putting Sonnet-level reasoning here would be expensive and slower for no benefit.</p>
+    <p><strong>Sonnet</strong> handles the work that requires actual reasoning: scenario analysis, specialist synthesis, anything where the output needs to hold up to domain scrutiny. This is where most of the substantive judgment in the system lives.</p>
+    <p><strong>Opus</strong> is for escalation — complex incident resolution, cases where Sonnet's analysis was insufficient, or high-stakes judgment calls that need full reasoning depth. It runs infrequently by design.</p>
+    <p>The Factory Brain's escalation logic is deliberately mechanical: if Haiku's restart attempt fails twice, pass full failure context to Sonnet. If Sonnet's diagnosis doesn't resolve it within a threshold, compile an incident brief for Opus. The escalation criteria aren't smart — they're deterministic rules. What's smart is what each tier does with the problem when it gets it.</p>
+    <p>One structural detail: the output at all three tiers hits the same data contract — process state, action taken, confidence, and a reasoning field that serves as an audit record. Haiku's output and Opus's output are the same schema. The pipes that carry them don't know, and don't need to know, which tier ran. That's the whole point in miniature.</p>
   </div>
 </details>
 

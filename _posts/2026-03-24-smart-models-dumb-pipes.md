@@ -253,7 +253,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
   <p class="forge-meta">Braydon McCormick · Means of Production</p>
   <div class="forge-rule"></div>
   <figure class="forge-hero-image" data-reveal>
-    <img src="/assets/images/gemini-generated-portrait.png" alt="A developer at a workstation, dual monitors showing AI agent graphs and code, a machine learning diagram on the whiteboard behind them." />
+    <img src="/assets/images/smart-models-gemini1-hero.jpg" alt="Overhead view of an office floor, workers at desks, amber sparks streaming through the space and narrowing to cool blue light — information under pressure." />
     <figcaption>Where human judgment creates drag and exposure — that's where the interesting work is.</figcaption>
   </figure>
 </header>

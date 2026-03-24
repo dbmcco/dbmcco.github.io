@@ -14,113 +14,189 @@ description: "Most people are using LLMs as question-answering machines. That's 
   .post-header { display: none; }
 
   .site-header {
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
     background:
       radial-gradient(circle at 50% 120%, rgba(245, 236, 223, 0.92) 0%, rgba(245, 236, 223, 0) 42%),
       linear-gradient(135deg, #5c281d 0%, #8e4523 48%, #d98d53 100%) !important;
     border-bottom: 1px solid rgba(92, 40, 29, 0.14) !important;
     box-shadow: inset 0 -1px 0 rgba(255, 247, 239, 0.18), 0 14px 34px rgba(70, 39, 25, 0.12) !important;
-    margin-bottom: 0 !important;
-    padding: 2rem 0 1.25rem !important;
+    margin-bottom: 0 !important; padding: 2rem 0 1.25rem !important;
   }
-
   .site-header .wrapper { max-width: 980px !important; gap: 1.1rem !important; }
   .site-header .site-title { color: #fff7ef !important; text-shadow: 0 1px 2px rgba(44, 21, 12, 0.24) !important; }
   .site-header .site-nav { background: rgba(255, 247, 239, 0.14) !important; border: 1px solid rgba(255, 247, 239, 0.22) !important; backdrop-filter: blur(10px); }
 
-  .page-content {
-    background:
-      radial-gradient(circle at top, rgba(193, 114, 61, 0.18), transparent 32%),
-      linear-gradient(180deg, #f5ecdf 0%, #f8f2e8 30%, #fcf8f2 100%);
-  }
+  /* Page goes dark so the hero image can breathe */
+  .page-content { background: #0c0907; }
+  .page-content .wrapper { max-width: 980px !important; padding: 0 !important; }
 
-  .page-content .wrapper { max-width: 980px !important; padding: 0 1.4rem !important; }
-
+  /* Progress bar — amber heat */
   .forge-progress {
     position: fixed; top: 0; left: 0; width: 0; height: 3px;
-    background: linear-gradient(90deg, #8e4523 0%, #d98d53 100%);
-    z-index: 9999; box-shadow: 0 0 18px rgba(217, 141, 83, 0.35);
+    background: linear-gradient(90deg, #c45a1a 0%, #e8840a 60%, #f5b040 100%);
+    z-index: 9999; box-shadow: 0 0 14px rgba(232, 132, 10, 0.6);
+    transition: width 0.1s linear;
   }
 
   .forge-essay {
-    --forge-ink: #231a14; --forge-soft: #59493e; --forge-muted: #857160;
-    --forge-rule: rgba(130, 92, 61, 0.28); --forge-accent: #8e4523; --forge-accent-soft: #d98d53;
+    --forge-ink: #1c150f; --forge-soft: #4e3c2d; --forge-muted: #8a7060;
+    --forge-rule: rgba(180, 120, 50, 0.25); --forge-accent: #c45a1a;
+    --forge-accent-soft: #e87a3a; --forge-amber: #d98810;
     font-family: 'Source Serif 4', Georgia, serif;
     color: var(--forge-ink);
-    padding: 2.5rem 0 5rem;
   }
 
-  .forge-essay a { color: var(--forge-accent); text-decoration-color: rgba(142, 69, 35, 0.35); text-underline-offset: 0.18em; }
+  /* ── HERO: dark, full-width, image as background ───────────── */
+  .forge-hero {
+    position: relative; overflow: hidden;
+    min-height: 58vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: flex-end;
+    text-align: center; padding: 0;
+    background: #0a0806 url('/assets/images/smart-models-friction-hero.jpg') center 35% / cover no-repeat;
+    animation: hero-drift 24s ease-in-out infinite alternate;
+  }
 
-  .forge-hero { text-align: center; padding: 1.5rem 0 2rem; }
+  @keyframes hero-drift {
+    from { background-position: 50% 35%; }
+    to   { background-position: 53% 40%; }
+  }
 
-  .forge-eyebrow, .forge-meta, .forge-essay h3 {
+  /* Dark gradient over the image for text legibility */
+  .forge-hero::before {
+    content: ''; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(
+      to top,
+      rgba(5, 3, 1, 0.97) 0%,
+      rgba(5, 3, 1, 0.70) 38%,
+      rgba(5, 3, 1, 0.28) 65%,
+      rgba(5, 3, 1, 0.06) 100%
+    );
+  }
+
+  /* Amber glow pooling at the base — mirrors the hero image */
+  .forge-hero::after {
+    content: ''; position: absolute; inset: 0; z-index: 1;
+    background: radial-gradient(ellipse 70% 35% at 50% 100%, rgba(220, 130, 20, 0.18) 0%, transparent 70%);
+    animation: amber-pulse 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes amber-pulse {
+    from { opacity: 0.55; }
+    to   { opacity: 1.0; }
+  }
+
+  .forge-hero-content {
+    position: relative; z-index: 2;
+    width: 100%; max-width: 760px; margin: 0 auto;
+    padding: 4rem 2rem 3.5rem;
+  }
+
+  .forge-eyebrow {
     font-family: 'Instrument Sans', sans-serif;
-    letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 0.7rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(220, 140, 20, 0.8); margin: 0 0 1.4rem;
   }
-
-  .forge-eyebrow { font-size: 0.72rem; color: var(--forge-muted); margin: 0 0 1rem; }
 
   .forge-hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 8vw, 4.85rem);
-    line-height: 0.98; font-weight: 500; letter-spacing: -0.02em;
-    color: var(--forge-ink); max-width: 12ch; margin: 0 auto 1rem;
+    font-size: clamp(3rem, 9vw, 5.6rem);
+    line-height: 0.95; font-weight: 700; letter-spacing: -0.025em;
+    color: #fff8f0;
+    text-shadow: 0 2px 40px rgba(0,0,0,0.85), 0 0 100px rgba(220,130,20,0.1);
+    max-width: 18ch; margin: 0 auto 1.2rem;
   }
 
   .forge-subtitle {
     font-family: 'Playfair Display', serif; font-style: italic;
-    font-size: clamp(1.18rem, 3vw, 1.6rem); color: var(--forge-soft);
-    max-width: 52ch; margin: 0 auto 1.2rem; line-height: 1.45;
+    font-size: clamp(1.05rem, 2.5vw, 1.32rem);
+    color: rgba(240, 218, 188, 0.72);
+    max-width: 52ch; margin: 0 auto 1.2rem; line-height: 1.52;
   }
 
-  .forge-meta { font-size: 0.72rem; color: var(--forge-muted); margin: 0; }
-  .forge-rule { width: 2.5rem; height: 1px; background: var(--forge-rule); margin: 1.4rem auto 0; }
+  .forge-meta {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(180, 140, 80, 0.6); margin: 0;
+  }
 
+  .forge-rule {
+    width: 2.5rem; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(220, 140, 20, 0.55), transparent);
+    margin: 1.4rem auto 0;
+  }
+
+  /* ── BODY: warm, light, transition from dark hero ──────────── */
+  .forge-body {
+    background: #f5ece0;
+    padding: 3.5rem 1.8rem 5.5rem;
+    position: relative;
+  }
+
+  /* Shadow bleeding down from the dark hero into the light body */
+  .forge-body::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 90px;
+    background: linear-gradient(to bottom, rgba(5,3,1,0.16), transparent);
+    pointer-events: none;
+  }
+
+  .forge-essay a { color: var(--forge-accent); text-decoration-color: rgba(196, 90, 26, 0.3); text-underline-offset: 0.18em; }
+
+  .forge-body p, .forge-body ul, .forge-body ol,
   .forge-opening p, .forge-essay > p, .forge-essay > ul, .forge-essay > ol {
-    font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.75;
-    max-width: 68ch; margin: 0 auto 1.4rem;
+    font-size: clamp(1.05rem, 2vw, 1.18rem); line-height: 1.78;
+    max-width: 66ch; margin: 0 auto 1.4rem;
   }
 
   .forge-opening p:first-child::first-letter {
-    font-family: 'Playfair Display', serif; font-size: 3.4em; font-weight: 500;
+    font-family: 'Playfair Display', serif; font-size: 3.4em; font-weight: 700;
     float: left; line-height: 0.82; margin: 0.07em 0.06em 0 0; color: var(--forge-accent);
   }
 
+  /* Section h2: bold, amber left-bar anchors it to the column */
   .forge-essay h2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 500; letter-spacing: -0.01em;
-    color: var(--forge-ink); max-width: 68ch; margin: 3rem auto 1rem; line-height: 1.2;
+    font-size: clamp(1.55rem, 3.5vw, 2.1rem); font-weight: 700;
+    letter-spacing: -0.01em; line-height: 1.18; color: var(--forge-ink);
+    max-width: 66ch; margin: 3.5rem auto 1.1rem;
+    padding-left: 1rem; border-left: 3px solid var(--forge-amber);
   }
 
-  .forge-essay h3 { max-width: 740px; font-size: 0.76rem; color: var(--forge-muted); margin: 0 0 1rem; }
+  .forge-essay h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--forge-muted); margin: 0 0 1rem; max-width: 740px;
+  }
 
+  /* Pullquote: dark pressure chamber */
   .forge-pullquote {
-    background: rgba(255, 248, 240, 0.9); border-left: 3px solid var(--forge-accent-soft);
-    padding: 1.6rem 1.8rem 1.7rem; border-radius: 0 18px 18px 0;
-    max-width: 64ch; margin: 2.2rem auto;
+    background: #1a1108; border-left: 3px solid var(--forge-amber);
+    padding: 1.8rem 2rem; border-radius: 0 12px 12px 0;
+    max-width: 62ch; margin: 2.5rem auto;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
   }
 
   .forge-pullquote p {
     font-family: 'Playfair Display', serif; font-style: italic;
-    font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.5;
-    color: var(--forge-soft); margin: 0 !important; max-width: none !important;
+    font-size: clamp(1.1rem, 2vw, 1.28rem); line-height: 1.55;
+    color: rgba(245, 225, 185, 0.9); margin: 0 !important; max-width: none !important;
   }
 
   .forge-divider {
     display: flex; align-items: center; gap: 0.75rem;
-    max-width: 68ch; margin: 2.5rem auto; color: var(--forge-muted); font-size: 0.8rem;
+    max-width: 66ch; margin: 2.8rem auto; color: var(--forge-muted); font-size: 0.8rem;
   }
 
   .forge-divider span:first-child, .forge-divider span:last-child {
-    flex: 1; height: 1px; background: var(--forge-rule);
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 140, 50, 0.4), transparent);
   }
 
   .forge-callout {
-    background: rgba(255, 255, 255, 0.72); border: 1px solid rgba(104, 71, 46, 0.16);
-    border-radius: 18px; padding: 1.4rem 1.6rem 1.5rem; max-width: 68ch; margin: 2rem auto;
-    box-shadow: 0 8px 24px rgba(86, 57, 37, 0.06);
+    background: rgba(255, 255, 255, 0.76); border: 1px solid rgba(180, 120, 50, 0.18);
+    border-radius: 12px; padding: 1.4rem 1.6rem 1.5rem; max-width: 66ch; margin: 2.5rem auto;
+    box-shadow: 0 6px 24px rgba(80, 50, 25, 0.07);
   }
 
   .forge-callout h4 {
@@ -136,14 +212,20 @@ description: "Most people are using LLMs as question-answering machines. That's 
   .forge-callout p:last-child, .forge-callout ul:last-child { margin-bottom: 0; }
 
   .forge-essay ul, .forge-essay ol { padding-left: 1.4rem; }
-
   .forge-essay li {
-    font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.7; margin-bottom: 0.4rem; max-width: 64ch;
+    font-size: clamp(1.05rem, 2vw, 1.18rem); line-height: 1.72; margin-bottom: 0.4rem; max-width: 62ch;
+  }
+
+  .mermaid-container { max-width: 66ch; margin: 2rem auto; }
+
+  p.forge-diagram-caption {
+    display: block; text-align: center; max-width: 66ch; margin: -0.5rem auto 2rem;
+    font-size: 0.85rem; color: var(--forge-muted); font-style: italic;
   }
 
   .forge-process {
     border-top: 1px solid var(--forge-rule); padding-top: 2rem; margin-top: 3.5rem;
-    max-width: 68ch; margin-left: auto; margin-right: auto;
+    max-width: 66ch; margin-left: auto; margin-right: auto;
   }
 
   .forge-process p, .forge-process ul {
@@ -151,24 +233,6 @@ description: "Most people are using LLMs as question-answering machines. That's 
   }
 
   .forge-process h3 { margin-bottom: 0.75rem !important; }
-
-  .forge-hero-image {
-    width: 100%; max-width: 980px; margin: 0 auto 2.5rem;
-    border-radius: 12px; overflow: hidden;
-    box-shadow: 0 18px 48px rgba(70, 39, 25, 0.18);
-  }
-
-  .forge-hero-image img {
-    width: 100%; height: auto; display: block;
-    object-fit: cover;
-  }
-
-  .forge-hero-image figcaption {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--forge-muted); text-align: center;
-    padding: 0.6rem 1rem; background: rgba(245, 236, 223, 0.6);
-  }
 </style>
 
 <div class="forge-progress" aria-hidden="true"></div>
@@ -176,17 +240,16 @@ description: "Most people are using LLMs as question-answering machines. That's 
 <div class="forge-essay" markdown="1">
 
 <header class="forge-hero">
-  <p class="forge-eyebrow">Essay · March 24, 2026</p>
-  <h1>Smart Models, Dumb Pipes</h1>
-  <p class="forge-subtitle">Most people are using LLMs as question-answering machines. That's not wrong, it's just not the interesting part.</p>
-  <p class="forge-meta">Braydon McCormick · Means of Production</p>
-  <div class="forge-rule"></div>
+  <div class="forge-hero-content">
+    <p class="forge-eyebrow">Essay · March 24, 2026</p>
+    <h1>Smart Models, Dumb Pipes</h1>
+    <p class="forge-subtitle">Most people are using LLMs as question-answering machines. That's not wrong, it's just not the interesting part.</p>
+    <p class="forge-meta">Braydon McCormick · Means of Production</p>
+    <div class="forge-rule"></div>
+  </div>
 </header>
 
-<figure class="forge-hero-image" data-reveal>
-  <img src="/assets/images/smart-models-friction-hero.jpg" alt="A lone knowledge worker at a desk, golden streams of information converging from all directions, pooling in amber around them, a few threads racing away as cool blue light." />
-  <figcaption>Where human judgment creates drag and exposure, that's where the interesting work is.</figcaption>
-</figure>
+<div class="forge-body" markdown="1">
 
 <div class="forge-opening" markdown="1">
 
@@ -222,7 +285,7 @@ The cost is subtle. Once you're in the Q&A frame, you start optimizing for the w
 
 The return on expense question for AI, as I think about it, isn't "are the answers better?" It's "where does judgment belong in the workflow, and what does it cost when that judgment is wrong?"
 
-Those are very different questions.
+Those are very different questions. I was asking the first one for longer than I'd like to admit.
 
 <div class="mermaid-container forge-diagram" data-reveal>
   <div class="mermaid">
@@ -295,18 +358,19 @@ This is, pretty directly, the dumb network argument applied to agents.
 
 <div class="mermaid-container forge-diagram" data-reveal>
   <div class="mermaid">
-flowchart TD
-    SM["Smart Model\n──────────────\nJudgment · Routing · Intent\nInterpretation · Persona\nWhat should happen next?"]
-    DP["Dumb Pipe\n──────────────\nCarries data faithfully\nDoesn't need to understand it\nLeaves a trace"]
-    DE["Deterministic Execution\n──────────────\nSide effects · Storage\nAudit trail · Record"]
+flowchart LR
+    SM["Smart Model\njudges · routes · decides\nwhat should happen and why"]
+    DP["Dumb Pipe\nmoves data faithfully\nno transformation, no interpretation"]
+    DE["Deterministic System\nexecutes side effects\nlogs · audits · records"]
+    ST[("Storage &\nAudit Trail")]
 
-    SM -->|"judgment call"| DP
-    DP -->|"execution instruction"| DE
-    DE -.->|"artifacts + trail"| SM
+    SM -->|"decision output"| DP
+    DP -->|"raw payload"| DE
+    DE --> ST
   </div>
 </div>
 
-<p class="forge-diagram-caption" data-reveal><em>Models own judgment. Pipes carry it. Deterministic systems execute and record. The roles stay clean.</em></p>
+<p class="forge-diagram-caption" data-reveal><em>The model decides. The pipe carries it unchanged. The deterministic system runs it and writes the record.</em></p>
 
 <div class="forge-divider" data-reveal><span></span><span>✦</span><span></span></div>
 
@@ -318,7 +382,7 @@ What it does: the model assembles the panel for the task. Economist, futurist, a
 
 The data flowing between agents is structured data moving through a pipe. The pipe doesn't know it's carrying a disagreement. That's the whole point. The model's job was deciding who's in the room. The pipe's job was moving the work between turns.
 
-It's a demonstration more than a production system, but the pattern is real.
+It's a demonstration more than a production system. I built it partly to convince myself the pattern was real, which I realize isn't exactly a ringing endorsement.
 
 **DraftForge**, private. This applies the same principle inside a production content system. The model selects the right combination of agents for a task: what diversity of perspective is needed, what kind of challenge will sharpen rather than just validate. Agents work sequentially and contradict each other by design.
 
@@ -357,7 +421,7 @@ So it's not just smart models and dumb pipes. It's the *right* model matched to 
 
 ## The question I think matters more
 
-Once you start seeing LLMs as judgment layers rather than answer machines, a lot of the "AI strategy" conversation starts to look like it's optimizing for the wrong thing.
+Once you start seeing LLMs as judgment layers rather than answer machines, a lot of the "AI strategy" conversation starts to look like it's optimizing for the wrong thing. I include my own earlier thinking in that.
 
 There's a lot of work on how to get better answers. Not enough work on where judgment belongs in a workflow, who owns the execution, and what the pipe should actually carry.
 
@@ -387,6 +451,8 @@ Written with Claude Code assistance using my own voice dossier as the style anch
 
 - [expert-panel-simulator](https://github.com/dbmcco/expert-panel-simulator), public, MIT licensed
 - DraftForge and Lodestar/Meridian (private); reach out if you want to talk architecture
+
+</div>
 
 </div>
 

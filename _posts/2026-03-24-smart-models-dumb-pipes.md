@@ -175,7 +175,9 @@ description: "Most people are using LLMs as question-answering machines. That's 
     font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.72; margin-bottom: 0.4rem; max-width: 64ch;
   }
 
-  .mermaid-container { max-width: 66ch; margin: 2rem auto; }
+  .mermaid-container { max-width: 66ch; margin: 2rem auto; text-align: center; }
+  .mermaid-container .mermaid { display: inline-block; text-align: left; }
+  .mermaid-container svg { max-width: 100%; height: auto; }
 
   p.forge-diagram-caption {
     display: block; text-align: center; max-width: 66ch; margin: -0.5rem auto 2rem;
@@ -190,6 +192,36 @@ description: "Most people are using LLMs as question-answering machines. That's 
     font-size: 0.95rem; color: var(--forge-muted); line-height: 1.65; margin-bottom: 0.75rem;
   }
   .forge-process h3 { margin-bottom: 0.75rem !important; }
+
+  /* Expandable technical details */
+  .forge-detail {
+    max-width: 66ch; margin: 2rem auto;
+    border: 1px solid rgba(160, 110, 55, 0.2);
+    border-radius: 12px; overflow: hidden;
+    background: rgba(255, 252, 247, 0.6);
+  }
+  .forge-detail summary {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--forge-accent); padding: 0.85rem 1.2rem;
+    cursor: pointer; user-select: none;
+    list-style: none; display: flex; align-items: center; gap: 0.5rem;
+  }
+  .forge-detail summary::-webkit-details-marker { display: none; }
+  .forge-detail summary::before {
+    content: '▶'; font-size: 0.55rem; opacity: 0.7;
+    transition: transform 0.2s ease; flex-shrink: 0;
+  }
+  .forge-detail[open] summary::before { transform: rotate(90deg); }
+  .forge-detail-body {
+    padding: 1.1rem 1.3rem 1.3rem;
+    border-top: 1px solid rgba(160, 110, 55, 0.12);
+    font-size: 0.97rem; line-height: 1.68; color: var(--forge-soft);
+  }
+  .forge-detail-body p { margin: 0 0 0.75rem; }
+  .forge-detail-body p:last-child { margin: 0; }
+  .forge-detail-body ul { padding-left: 1.2rem; margin: 0 0 0.75rem; }
+  .forge-detail-body li { margin-bottom: 0.3rem; }
 
   /* Scroll reveal */
   [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -236,7 +268,7 @@ I keep thinking about how directly that maps to AI. Kind of uncomfortably so.
 
 ## What most people's mental model actually is
 
-Most people's mental model of an LLM comes from the chat box. You type something in, it responds. That's how I started with these things too, and there's real value in it, I'm not arguing against it.
+Most people's mental model of an LLM comes from the chat box. You type something in, it responds. That's how [I started with these things](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/) too, and there's real value in it, I'm not arguing against it.
 
 But I think the chat box trains you toward a particular framing: LLM as question-answering machine. Ask something, get something back. Better prompt, better answer. Optimize the input, improve the output.
 
@@ -251,15 +283,15 @@ Those are very different questions. I was asking the first one for longer than I
 <div class="mermaid-container forge-diagram" data-reveal>
   <div class="mermaid">
 flowchart LR
-    subgraph qa ["The Q&A Frame"]
-        direction LR
-        q1["Prompt"] --> q2["Model"] --> q3["Answer"]
-    end
     subgraph jl ["The Judgment Layer"]
         direction TB
         j1["Context + Task"] --> j2["Model\nJudges what should happen"]
         j2 -->|routing call| j3["Dumb Pipe\ncarries it faithfully"]
         j3 -->|governed execution| j4["Side Effects\n+ Audit Trail"]
+    end
+    subgraph qa ["The Q&A Frame"]
+        direction LR
+        q1["Prompt"] --> q2["Model"] --> q3["Answer"]
     end
   </div>
 </div>
@@ -305,17 +337,14 @@ That distinction matters because otherwise you get one of two failure modes I se
 
 Neither works. The clean separation is what makes it work.
 
-<div class="forge-callout" markdown="1">
-
-#### For the more technical reader
-
-In a **deterministic orchestration** system, routing logic is hardcoded, if X then Y. Predictable, but brittle. It can only handle what the designer anticipated.
-
-In a **model-mediated** system, the model makes routing calls dynamically based on context, task requirements, and available options. The pipe infrastructure is identical either way. What changes is who decides what goes into it, and whether that decision can be reasoned about and audited afterward.
-
-This is, pretty directly, the dumb network argument applied to agents.
-
-</div>
+<details class="forge-detail">
+  <summary>Deterministic vs. model-mediated orchestration</summary>
+  <div class="forge-detail-body">
+    <p>In a <strong>deterministic orchestration</strong> system, routing logic is hardcoded — if X then Y. Predictable, but brittle. It can only handle what the designer anticipated. Every edge case requires a code change.</p>
+    <p>In a <strong>model-mediated</strong> system, the model makes routing calls dynamically based on context, task requirements, and available options. The pipe infrastructure is identical either way. What changes is who decides what goes into it, and whether that decision can be reasoned about and audited after the fact.</p>
+    <p>This is, pretty directly, the dumb network argument applied to agents. The pipe doesn't need to understand the payload. It just needs to move it reliably and leave a trace.</p>
+  </div>
+</details>
 
 <div class="mermaid-container forge-diagram" data-reveal>
   <div class="mermaid">
@@ -341,15 +370,23 @@ flowchart LR
 
 What it does: the model assembles the panel for the task. Economist, futurist, anthropologist, contrarian, others depending on what the problem needs. Each agent responds in character, reads what the previous agent said, and builds on it, qualifies it, or disagrees with it. The contrarian is always included. Not as a nice-to-have. It's structural; without it the panel tends toward false consensus.
 
-The data flowing between agents is structured data moving through a pipe. The pipe doesn't know it's carrying a disagreement. That's the whole point. The model's job was deciding who's in the room. The pipe's job was moving the work between turns.
+The data flowing between agents is structured data moving through a pipe. The pipe doesn't know it's carrying a disagreement. That's the whole point. The model's job was deciding who's in the room. The pipe's job was moving the work between turns. It's the [agentic model](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/) in its most literal form.
 
 It's a demonstration more than a production system. I built it partly to convince myself the pattern was real, which I realize isn't exactly a ringing endorsement.
 
+<details class="forge-detail">
+  <summary>How the pattern works under the hood</summary>
+  <div class="forge-detail-body">
+    <p>Each agent receives a context object containing the task definition, the assembled panel roster, and the full message history up to that point. It adds its response and passes the updated object forward. Agents never communicate with each other directly — the pipe between them is just that context object moving sequentially.</p>
+    <p>The model's work happened earlier, when it decided who was on the panel and in what order. Everything after that is a deterministic loop: read context, generate response, append to history, pass forward. The judgment call and the execution are completely separate, which is the whole point.</p>
+  </div>
+</details>
+
 **DraftForge**, private. This applies the same principle inside a production content system. The model selects the right combination of agents for a task: what diversity of perspective is needed, what kind of challenge will sharpen rather than just validate. Agents work sequentially and contradict each other by design.
 
-If I'm honest, the output is genuinely different from what a single prompt to a single model produces. You get something closer to deliberation than generation. That only works because the model owns the judgment layer. The pipes just carry the turns.
+If I'm honest, the output is genuinely different from what a single prompt to a single model produces. You get something closer to deliberation than generation. That only works because the model owns the judgment layer. The pipes just carry the turns. I wrote more about this architecture in [the AI Forge post](https://dbmcco.github.io/2026/03/06/from-ai-studio-to-ai-forge/).
 
-**Lodestar / Meridian**, also private. This one adds something the others don't: model tiering. Different model capabilities matched to different judgment functions in the same system.
+**Lodestar / Meridian**, also private. This one adds something the others don't: model tiering. Different model capabilities matched to different judgment functions in the same system. It came out of [building out a more systematic AI studio](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/) and needing to think carefully about what each layer actually required.
 
 Lodestar is a situation intelligence platform for scenario planning and decision de-risking. The interesting part here is how the model assignments work:
 
@@ -376,6 +413,15 @@ flowchart LR
 
 The infrastructure carries the same data structure regardless of which model tier produced the output. The pipes don't know, and don't need to know, whether Haiku or Opus ran. They just move it.
 
+<details class="forge-detail">
+  <summary>The Factory Brain in more detail</summary>
+  <div class="forge-detail-body">
+    <p>The three tiers handle different levels of diagnostic complexity. Haiku runs constant heartbeat checks and handles simple restarts — fast and cheap enough to run continuously without meaningful overhead.</p>
+    <p>If a failure persists through Haiku's interventions, it escalates to Sonnet with full failure context. Sonnet can reason about patterns and identify root causes that aren't obvious from surface signals.</p>
+    <p>If Sonnet can't resolve it, Opus gets a full incident brief and decides: restructure the process, escalate to a human, or take a recovery path that requires real judgment. The result is a system where expensive reasoning only runs when cheap reasoning has already failed — which is usually not very often.</p>
+  </div>
+</details>
+
 So it's not just smart models and dumb pipes. It's the *right* model matched to the *right* judgment function, all running through the same model-agnostic infrastructure. That's what the principle looks like when it's fully developed.
 
 <div class="forge-divider" data-reveal><span></span><span>✦</span><span></span></div>
@@ -390,7 +436,7 @@ The question I find more useful, and I think it's the question that leads somewh
 
 It's: *where does judgment belong in this system, and what should the infrastructure just move?*
 
-That second question is harder. It requires actually mapping the workflow, identifying the decision points, and being honest about what you want the model to own versus what should be governed by deterministic code with a proper audit trail.
+That second question is harder. It requires actually mapping the workflow, identifying the decision points, and being honest about what you want the model to own versus what should be governed by deterministic code with a proper audit trail. I've been [working through this in practice](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/) for a while, and the mapping step is where most of the value actually lives.
 
 One way I've found to get at it concretely: look for where human friction exists in a workflow, and what risk that friction carries. Slow judgment calls. Inconsistent ones. Decisions that are expensive when they're wrong, or that accumulate risk quietly over time. Those are the interesting places, not "where can AI answer questions?" but "where is human judgment creating drag or exposure?" That reframe tends to surface the actually valuable interventions. And it tends to surface them in places that aren't obvious from a high-level "let's add AI" conversation.
 
@@ -398,7 +444,7 @@ But it's the right question.
 
 The chat box is a fine interface for exploration. It is not a system design.
 
-The models happen to be the new material. The architecture is the old argument, finally applied somewhere it really fits.
+The models happen to be the new material. The architecture is the old argument, finally applied somewhere it really fits. Part of [developing the intuition](https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/) for this is learning to tell the difference — when the pattern genuinely applies versus when it just sounds like it applies.
 
 <div class="forge-process" markdown="1">
 

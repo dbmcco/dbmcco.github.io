@@ -59,7 +59,8 @@ description: "Most people are using LLMs as question-answering machines. That's 
 
   .forge-eyebrow {
     font-family: 'Instrument Sans', sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    font-size: 0.7rem !important; line-height: 1.4 !important;
+    letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--forge-amber); margin: 0 0 1.2rem;
     display: flex; align-items: center; justify-content: center; gap: 0.8rem;
   }
@@ -77,13 +78,14 @@ description: "Most people are using LLMs as question-answering machines. That's 
 
   .forge-subtitle {
     font-family: 'Playfair Display', serif; font-style: italic;
-    font-size: clamp(1.1rem, 2.8vw, 1.42rem); color: var(--forge-soft);
-    max-width: 50ch; margin: 0 auto 1rem; line-height: 1.48;
+    font-size: clamp(1.1rem, 2.8vw, 1.42rem) !important; color: var(--forge-soft);
+    max-width: 50ch; margin: 0 auto 1rem; line-height: 1.48 !important;
   }
 
   .forge-meta {
     font-family: 'Instrument Sans', sans-serif;
-    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 0.7rem !important; line-height: 1.4 !important;
+    letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--forge-muted); margin: 0;
   }
 
@@ -185,9 +187,12 @@ description: "Most people are using LLMs as question-answering machines. That's 
     font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.72; margin-bottom: 0.4rem;
   }
 
-  .mermaid-container { max-width: 100%; margin: 2rem 0; text-align: center; }
-  .mermaid-container .mermaid { display: inline-block; text-align: left; }
-  .mermaid-container svg { max-width: 100%; height: auto; }
+  .mermaid-container {
+    display: flex; justify-content: center; align-items: flex-start;
+    overflow-x: auto; margin: 2rem 0;
+  }
+  .mermaid-container .mermaid { flex-shrink: 0; max-width: 100%; }
+  .mermaid-container svg { display: block; max-width: 100%; height: auto; }
 
   p.forge-diagram-caption {
     display: block; text-align: center; max-width: 100%; margin: -0.5rem 0 2rem;
@@ -327,9 +332,9 @@ Once you start thinking about it that way, the question changes. It's no longer 
 
 <div class="forge-divider" data-reveal><span></span><span>✦</span><span></span></div>
 
-## The architecture that follows
+## The model-mediated architecture
 
-If models are judgment machines, the design principle that follows is, I think, pretty straightforward.
+If models are judgment machines, a design principle follows directly — one I'd call model-mediated architecture — and I think it's pretty straightforward once you see it.
 
 **Smart models** own the judgment work: what should happen, why, when, in what order, which agents or processes are appropriate. The model decides what something means and what to do because of it.
 

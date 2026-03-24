@@ -258,13 +258,19 @@ description: "Most people are using LLMs as question-answering machines. That's 
   </figure>
 </header>
 
+<br>
+
 <div class="forge-opening" markdown="1">
 
 I keep saying "smart models, dumb pipes" in conversations and then moving on like I've explained something. I haven't, really. So here's my actual attempt to unpack it.
 
 The phrase borrows from an old argument in network architecture, one I think got settled the right way and hasn't gotten enough credit for the lesson it contains.
 
+This post extends an argument I made in [You Don't Want Another Chatbot](https://dbmcco.github.io/2026/03/09/you-dont-want-another-chatbot/) — that one approached the same gap from the product side. This one takes it into architecture.
+
 </div>
+
+_If you want the builder view, open the "Technical" toggles as you go — I tucked the implementation detail there rather than turning the whole thing into an engineering essay._
 
 <aside class="forge-pullquote" data-reveal>
   <p>When you put the intelligence in the pipe, the pipe becomes the bottleneck. Every new use case requires changing the infrastructure.</p>
@@ -465,7 +471,7 @@ The models happen to be the new material. The architecture is the old argument, 
 
 ### Process note
 
-Part of a running series on how my thinking about AI development has evolved: [vibe coding](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/), [CLI journey](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/), [agentic model](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/), [workflow integration](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/), [AI studio](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/), [developing intuition](https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/), [AI forge](https://dbmcco.github.io/2026/03/06/from-ai-studio-to-ai-forge/).
+Part of a running series on how my thinking about AI development has evolved: [vibe coding](https://dbmcco.github.io/2025/05/28/my-vibe-coding-process-atm/), [CLI journey](https://dbmcco.github.io/2025/05/30/The-CLI-LLM-Agent-Journey-so-far/), [agentic model](https://dbmcco.github.io/2025/06/30/the-agentic-model-for-the-moment/), [workflow integration](https://dbmcco.github.io/2025/09/03/how-im-integrating-ai-into-my-workflow-for-business-acceleration/), [AI studio](https://dbmcco.github.io/2025/11/05/building-an-ai-studio/), [developing intuition](https://dbmcco.github.io/2025/12/22/developing-intuition-for-cli-based-ai-coding/), [AI forge](https://dbmcco.github.io/2026/03/06/from-ai-studio-to-ai-forge/), [you don't want another chatbot](https://dbmcco.github.io/2026/03/09/you-dont-want-another-chatbot/).
 
 Written with Claude Code assistance using my own voice dossier as the style anchor.
 

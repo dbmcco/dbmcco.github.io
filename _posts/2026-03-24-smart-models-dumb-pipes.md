@@ -47,6 +47,9 @@ description: "Most people are using LLMs as question-answering machines. That's 
     font-family: 'Source Serif 4', Georgia, serif;
     color: var(--forge-ink);
     padding: 2.5rem 0 5rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .forge-essay a { color: var(--forge-accent); text-decoration-color: rgba(184, 90, 20, 0.32); text-underline-offset: 0.18em; }
@@ -105,12 +108,12 @@ description: "Most people are using LLMs as question-answering machines. That's 
   .forge-essay p {
     font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.78;
   }
-  /* Column constraint: only direct-child flow gets max-width/margin */
+  /* Spacing: essay container handles width; just set bottom margin on flow */
   .forge-opening p, .forge-essay > p {
-    max-width: 66ch; margin: 0 auto 1.4rem;
+    margin: 0 0 1.4rem;
   }
   .forge-essay > ul, .forge-essay > ol {
-    max-width: 66ch; margin: 0 auto 1.4rem;
+    margin: 0 0 1.4rem;
   }
 
   .forge-opening p:first-child::first-letter {
@@ -123,7 +126,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.55rem, 3.5vw, 2.1rem) !important; font-weight: 700;
     letter-spacing: -0.01em; line-height: 1.2; color: var(--forge-ink);
-    max-width: 66ch; margin: 3.5rem auto 0.25rem;
+    margin: 3.5rem 0 0.25rem;
   }
   .forge-essay h2::after {
     content: ''; display: block; width: 2.2rem; height: 2px;
@@ -134,7 +137,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
   .forge-essay h3 {
     font-family: 'Instrument Sans', sans-serif;
     font-size: 0.76rem !important; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--forge-muted); margin: 0 0 1rem; max-width: 740px;
+    color: var(--forge-muted); margin: 0 0 1rem;
   }
 
   /* Pullquote — warm amber wash, feels like a highlighted margin note */
@@ -155,7 +158,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
   /* Section dividers */
   .forge-divider {
     display: flex; align-items: center; gap: 0.75rem;
-    max-width: 66ch; margin: 2.6rem auto; color: var(--forge-muted); font-size: 0.8rem;
+    max-width: 100%; margin: 2.6rem 0; color: var(--forge-muted); font-size: 0.8rem;
   }
   .forge-divider span:first-child, .forge-divider span:last-child {
     flex: 1; height: 1px; background: var(--forge-rule);
@@ -164,7 +167,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
   /* Technical callout */
   .forge-callout {
     background: rgba(255, 252, 246, 0.88); border: 1px solid rgba(160, 110, 55, 0.18);
-    border-radius: 14px; padding: 1.4rem 1.6rem 1.5rem; max-width: 66ch; margin: 2.4rem auto;
+    border-radius: 14px; padding: 1.4rem 1.6rem 1.5rem; max-width: 100%; margin: 2.4rem 0;
     box-shadow: 0 4px 18px rgba(100, 60, 25, 0.06);
   }
   .forge-callout h4 {
@@ -179,21 +182,20 @@ description: "Most people are using LLMs as question-answering machines. That's 
 
   .forge-essay ul, .forge-essay ol { padding-left: 1.4rem; }
   .forge-essay li {
-    font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.72; margin-bottom: 0.4rem; max-width: 64ch;
+    font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.72; margin-bottom: 0.4rem;
   }
 
-  .mermaid-container { max-width: 66ch; margin: 2rem auto; text-align: center; }
+  .mermaid-container { max-width: 100%; margin: 2rem 0; text-align: center; }
   .mermaid-container .mermaid { display: inline-block; text-align: left; }
   .mermaid-container svg { max-width: 100%; height: auto; }
 
   p.forge-diagram-caption {
-    display: block; text-align: center; max-width: 66ch; margin: -0.5rem auto 2rem;
+    display: block; text-align: center; max-width: 100%; margin: -0.5rem 0 2rem;
     font-size: 0.85rem; color: var(--forge-muted); font-style: italic;
   }
 
   .forge-process {
     border-top: 1px solid var(--forge-rule); padding-top: 2rem; margin-top: 3.5rem;
-    max-width: 66ch; margin-left: auto; margin-right: auto;
   }
   .forge-process p, .forge-process ul {
     font-size: 0.95rem; color: var(--forge-muted); line-height: 1.65; margin-bottom: 0.75rem;
@@ -202,7 +204,7 @@ description: "Most people are using LLMs as question-answering machines. That's 
 
   /* Expandable technical details */
   .forge-detail {
-    max-width: 66ch; margin: 2rem auto;
+    max-width: 100%; margin: 2rem 0;
     border: 1px solid rgba(160, 110, 55, 0.2);
     border-radius: 12px; overflow: hidden;
     background: rgba(255, 252, 247, 0.6);

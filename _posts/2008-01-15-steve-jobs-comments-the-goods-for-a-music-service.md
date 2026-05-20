@@ -1,11 +1,11 @@
 ---
+id: 3f27f471-3eff-437a-8ca2-1744c3a9db12
 layout: post
 title: "Steve Jobs comments - the goods for a music service"
 date: 2008-01-15 19:28:43 -0500
 categories: Competition Labels/Content rVibe
 tags: ['wordpress-import']
 ---
-
 Yes, I know, the Apple Keynote big ticket items are the Air and Video rentals. Ok - that's fine. But for me I liked the iTunes music sales part. They have sold 4 billion songs, and 20 million in one day. Despite the fact that iTunes is really all about selling iPods, here is the quote I like the best: 
 
 > _"We've never offered a rental model in music because we don't think people don't want to rent music."_

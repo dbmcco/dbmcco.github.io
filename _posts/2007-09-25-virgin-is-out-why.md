@@ -1,11 +1,11 @@
 ---
+id: 724c997f-6e23-4850-a598-5aa67bf5dcf0
 layout: post
 title: "Virgin is out - why?"
 date: 2007-09-25 15:21:43 -0500
 categories: Competition Market
 tags: ['wordpress-import']
 ---
-
 ![Virgin Digital](http://meansofproduction.wordpress.com/wp-content/uploads/2007/09/virgindigital.thumbnail.jpg)Well - [Virgin Digital is done selling music online](http://news.digitaltrends.com/news/story/14266/virgin_digital_exits_music_business). They have transferred all their customer stuff to Napster. When a customer focused, value add focused, cash flush company exits a market so quickly and quietly, it makes you wonder why. There are not that many reasons: 
 
   1. **It was hemorrhaging money:** But I think not enough of a reason in this case.

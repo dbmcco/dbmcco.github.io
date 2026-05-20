@@ -1,11 +1,11 @@
 ---
+id: b08397c2-b9c7-4bda-86eb-2e4eb923e08f
 layout: post
 title: "Startup Squad"
 date: 2007-03-16 18:18:38 -0500
 categories: rVibe
 tags: ['wordpress-import']
 ---
-
 Nice writeup - always nice to talk to bloggers and media. <http://startupsquad.com/2007/03/15/exclusive-rvibe-to-launch-legal-p2p-music-sharing-without-drm/>
 
 ---

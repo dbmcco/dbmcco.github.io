@@ -1,4 +1,5 @@
 ---
+id: e9eced69-11fb-4046-9986-db22f1790faf
 layout: post
 title: MedComm companies are about to get completely disrupted
 date: 2023-06-14
@@ -9,7 +10,6 @@ tags:
   - healthcare
   - LLMs
 ---
-
 At Intempio, I worked with medical communications companies for years, and I'm watching something pretty wild happen right now. The entire industry is about to get turned upside down by AI tools, and most of them don't see it coming.
 
 ## The current medcomm model 

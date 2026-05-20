@@ -1,11 +1,11 @@
 ---
+id: a1ff5db3-f432-4366-94d0-c33fa2bde9c2
 layout: post
 title: "The quality of digital audio"
 date: 2007-10-01 16:52:58 -0500
 categories: Labels/Content rVibe Technology
 tags: ['wordpress-import']
 ---
-
 I often remark on the poor quality of digital audio; it drives me nuts. Having been in the live music world and the digital world, I have always had a hard time with poor audio quality. There is something profound that happens with sitting inside, or directly in front of an orchestra, or any large, non-amplified band (rock bands are fine, but when you sit 5 feet from 90 musicians playing Beethoven, there is a big difference). The hush of bows on strings, the click of clarinet keys, the slight breath before a horn blast - the acoustic vibration of the intervals as they pulse around you the lushness of a fully balanced and blended sounds that engulfs you; the sense of people making the music - of sharing in that. Incredible - trans-formative - and completely engaged. Unfortunately recorded music can't beat it. Maybe one day, I don't know - but not right now. And digital music and compression of digital music just further reduces the musical experience. Wired has a [great interview](http://www.wired.com/techbiz/people/news/2007/10/bose_qa) with the founder of [Bose](http://bose.com/), Amar Bose about the quality of recorded audio and the state of digital audio reproduction. Here is the comment I like best: 
 
 > ___I bought a violin record to play [...] and said, "Oh my gosh, that is nothing like the way real music sounds."_

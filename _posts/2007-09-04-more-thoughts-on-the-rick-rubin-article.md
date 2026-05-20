@@ -1,11 +1,11 @@
 ---
+id: d57b3cd8-40f8-4394-886a-80df61d8227e
 layout: post
 title: "More thoughts on the Rick Rubin article"
 date: 2007-09-04 00:10:12 -0500
 categories: Labels/Content Market
 tags: ['wordpress-import']
 ---
-
 My last post was just a knee jerk. Now I have settled in on it and here is what I think: 
 
   1. The assertion by Rick that we need to move to a subscription model assumes the centrlization of music. This is flawed, and even his own research suggests it - people don't get their music from centralized outlets (radio, Tower Records), they get it increasingly from their friends. And to push the example, nobody would suggest the centralization of concert ticketing for all venues - it's just silly.

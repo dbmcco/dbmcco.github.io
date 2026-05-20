@@ -1,4 +1,5 @@
 ---
+id: b11e8db5-7888-4ab7-ad5e-88cba5c4df59
 layout: post
 title: "The healthcare AI training data problem (and why your old EMR data is actually gold)"
 date: 2024-01-04
@@ -9,7 +10,6 @@ tags:
   - training-data
   - EMR
 ---
-
 I've been working with healthcare organizations on AI implementation for the past year, and there's this one problem that keeps coming up in every conversation: training data.
 
 Everyone wants to build AI systems that understand their specific patient populations, clinical workflows, and organizational context. But when they look at the available training datasets, they're all generic, often outdated, and definitely not representative of their actual patient base.

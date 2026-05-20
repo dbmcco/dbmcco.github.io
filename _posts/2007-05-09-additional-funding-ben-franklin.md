@@ -1,11 +1,11 @@
 ---
+id: a95f24b2-6bd4-4a27-9a1f-7f74801fee94
 layout: post
 title: "Additional Funding - Ben Franklin "
 date: 2007-05-09 13:23:53 -0500
 categories: Funding
 tags: ['wordpress-import']
 ---
-
 Ben Franklin Technology Partners came through for us again with an investment. They continue to be great supporters and we deeply appreciate them.
 
 ---

@@ -1,4 +1,5 @@
 ---
+id: 2cb09c11-19cd-4338-a09f-1afaa22859e2
 layout: post
 title: "Mixture of Experts models and why healthcare AI is about to get way more interesting"
 date: 2023-07-18
@@ -9,7 +10,6 @@ tags:
   - MoE
   - technical
 ---
-
 I've been following the development of Mixture of Experts (MoE) language models for the past few months, and I think we're about to see some pretty significant breakthroughs in healthcare AI applications.
 
 Most people are focused on general-purpose AI getting bigger and more capable. But MoE architectures solve a different problem - they let you build AI systems that are simultaneously very large and very specialized.

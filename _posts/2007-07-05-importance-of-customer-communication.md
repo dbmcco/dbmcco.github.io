@@ -1,11 +1,11 @@
 ---
+id: 9e432cd4-8c9e-418b-9566-34ea5606ac26
 layout: post
 title: "Importance of customer communication"
 date: 2007-07-05 16:18:11 -0500
 categories: Management Market rVibe
 tags: ['wordpress-import']
 ---
-
 ![rVibe Logo](http://meansofproduction.wordpress.com/wp-content/uploads/2007/02/rvibelogo.thumbnail.jpeg)I just re-signed up for XM radio, despite thinking the audio quality is terrible. Why? For the following reasons: 
 
   1. They called me and asked to bring me back 

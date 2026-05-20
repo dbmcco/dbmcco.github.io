@@ -1,4 +1,5 @@
 ---
+id: 2d6bbfaa-4232-44d8-915d-53a740bf73a1
 layout: post
 title: "From AI Studio to AI Forge"
 date: 2026-03-06 09:00:00 -0500
@@ -7,7 +8,6 @@ tags: [ai, workflow, ai-studio, ai-forge, speedrift, lightforge-works]
 mermaid: true
 description: "Why the AI studio metaphor stopped being enough for me, and how I'm starting to think in terms of AI Forge, Speedrift, and a bounded dark factory."
 ---
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Instrument+Sans:wght@400;500;600&display=swap');
 

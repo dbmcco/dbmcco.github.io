@@ -1,11 +1,11 @@
 ---
+id: f5ab9349-540d-4176-a190-ece42301afb3
 layout: post
 title: "Overture to Candide"
 date: 2007-07-02 16:14:15 -0500
 categories: Music Recommended
 tags: ['wordpress-import']
 ---
-
 Lots of people love Leonard Bernstein and lots of people hate him. To know him (well - he's dead, but to know about him) is to have an opinion. Me - I think he was great for classical music - his charisma brought people to it in ways we have not seen recently. I also think he's a brilliant conductor - his [Brahms' Fourth Symphony with the New York Philharmonic](http://www.amazon.com/Brahms-Symphony-Academic-Festival-Bernstein/dp/B0000027M6/ref=sr_1_4/002-1187223-0447268?ie=UTF8&s=music&qid=1183392440&sr=1-4) is awesome.
 
 However, I have never been a huge fan of his music. His writing has always felt fragmented and dated - even "[West Side Story](http://www.amazon.com/Brahms-Symphony-Academic-Festival-Bernstein/dp/B0000027M6/ref=sr_1_4/002-1187223-0447268?ie=UTF8&s=music&qid=1183392440&sr=1-4)." It seemed to me he was sticking tricks into the score for the sake of intellectual achievement rather than musical necessity.

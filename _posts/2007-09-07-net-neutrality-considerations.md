@@ -1,11 +1,11 @@
 ---
+id: 0a7ec075-ed6d-4a40-8580-bb02078a765e
 layout: post
 title: "Net neutrality considerations"
 date: 2007-09-07 15:26:16 -0500
 categories: Technology
 tags: ['wordpress-import']
 ---
-
 [The DOJ just announced it opposes net-neutrality](http://online.wsj.com/article/SB118910051959919525.html?mod=googlenews_wsj). As I see it, the two sides of the fence on net-neutrality are: 1. those who believe the Internet is now commerce driven and built (infrastructure wise) on the bottom line and 2. those who believe that the equality of access inherent in today's Internet is more important than commerce. There are those that sit in between the two ends of that spectrum, but I think that captures it. Note that net-neutrality is really about inter-isp charging, not within an ISP, since they do that already (ie: $20/mo for 1.5 mb or $40/mo for 3mb). I would suggest there are two problems (and I am sure more) with either of these precepts: 
 
   1. I2 is being currently developed and rolled out in the university settings - and universities (in terms of infrastructure development) are not thinking about it from a direct revenue standpoint. This is very similar to when the original Internet rolled out (although that included military - which really isn't thinking about it from a revenue standpoint). When that begins to rollout (or some flavor of it) to the general public, integration into anything other than a net-neutral environment will be a challenge - and immediately affect any company relying on a tiered approach for reveue.

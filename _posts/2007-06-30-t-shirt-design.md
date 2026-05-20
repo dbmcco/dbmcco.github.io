@@ -1,11 +1,11 @@
 ---
+id: 521d7b9a-743d-47f5-9467-3f834adcb4bd
 layout: post
 title: "T shirt design"
 date: 2007-06-30 18:02:45 -0500
 categories: Market
 tags: ['wordpress-import']
 ---
-
 Our awesome marketing designer has put together a T shirt for us. I think it's right on for our style. We'll use it for some street marketing this summer.
 
 [](http://meansofproduction.wordpress.com/wp-content/uploads/2007/06/tshirt1frontandback.jpg "T Shirt")[ ![T Shirt](http://meansofproduction.wordpress.com/wp-content/uploads/2007/06/tshirt1frontandback.jpg) ](http://meansofproduction.wordpress.com/wp-content/uploads/2007/06/tshirt1frontandback.jpg "T Shirt")

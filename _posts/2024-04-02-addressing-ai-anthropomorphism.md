@@ -1,4 +1,5 @@
 ---
+id: d2b2b1d0-6f8d-455e-920a-f0e5c59aa762
 layout: post
 title: Addressing AI Anthropomorphism with clients
 date: 2024-04-02

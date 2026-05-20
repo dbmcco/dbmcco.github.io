@@ -1,11 +1,11 @@
 ---
+id: bcaabdfb-b350-4acd-a3c7-7fdf5cccdb18
 layout: post
 title: "Getting people to pay for things"
 date: 2007-04-27 21:22:11 -0500
 categories: Market rVibe
 tags: ['wordpress-import']
 ---
-
 ![rVibe Logo](http://meansofproduction.wordpress.com/wp-content/uploads/2007/02/rvibelogo.thumbnail.jpeg)Getting people to pay for this is the hardest part about online music; when you can "get it for free" why pay? And offering free software in our case does not seem to lend it self to getting people to pay for music. And when you offer a more limited selection than what is available "illegally", it makes it even more difficult. And when (in the case of Napster, iTunes, etc), you offer it with restrictions, it makes it even more difficult. 
 
 ![Cash Register](http://meansofproduction.wordpress.com/wp-content/uploads/2007/04/cashregister.thumbnail.jpg)However, people are paying, so what's the deal? Value add and low barrier to payment. People are willing and happy to pay for things where they perceive added value. So - in the case of online music services, it's not just about having the content, its in how you get and how well you get the content. In the case of iTunes, it's the iPod - in the case of Napster or Rhapsody it is the subscription model and perception of low priced content. 

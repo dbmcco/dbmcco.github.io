@@ -1,4 +1,5 @@
 ---
+id: a01b7007-e98c-45d5-8f1b-ed1cfd7c1d89
 layout: post
 title: Building PrivateChatGPT
 date: 2023-06-16
@@ -9,7 +10,6 @@ tags:
   - enterprise
   - product
 ---
-
 I've been having the same conversation with enterprise clients for months now: "We want to use ChatGPT, but we can't put our data into OpenAI's systems."
 
 It makes sense. If you're a law firm, you can't send client communications to OpenAI. If you're a healthcare company, you definitely can't put patient information into ChatGPT. If you're working on anything remotely sensitive, the current AI tools just aren't an option.

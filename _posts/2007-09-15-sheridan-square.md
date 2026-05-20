@@ -1,11 +1,11 @@
 ---
+id: dc8b8b75-2de1-46b1-a3e8-7fdf896b3f58
 layout: post
 title: "Sheridan Square"
 date: 2007-09-15 02:58:43 -0500
 categories: Labels/Content Management rVibe
 tags: ['wordpress-import']
 ---
-
 Exciting stuff - we're working on a great deal with Sheridan Square. With it we'll reach out to KOCH and IODA as well - but what we're doing with Sheridan extends our business model - which is great. More to come in the next week.
 
 ---

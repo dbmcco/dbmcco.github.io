@@ -1,11 +1,11 @@
 ---
+id: 3ba7200f-8487-4c26-87eb-f27aeae88ccc
 layout: post
 title: "Prepping for VC due diligence"
 date: 2008-01-14 15:56:30 -0500
 categories: Funding
 tags: ['wordpress-import']
 ---
-
 We're actively raising institutional money to come out of seed-stage and really get rolling. It's pretty exciting, but lots of work as well. In attempting to be as efficient as possible, we're prepping our due diligence materials in advance as much as possible. Our goal: on initiation of DD, to be able to turn around all materials as quickly as possible. To prep, here are some of the things we're doing: 
 
   1. Scanning to PDF all contracts, agreements (ie: ops/shares agreements), IP and pertinent financial materials (ie: Tax returns)

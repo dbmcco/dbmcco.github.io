@@ -1,11 +1,11 @@
 ---
+id: f75a0423-8280-44c9-8f3f-bfb199f390f9
 layout: post
 title: "The missing link in internet pure plays - customer intimacy"
 date: 2008-04-11 17:28:37 -0500
 categories: Life in a startup Management rVibe
 tags: ['wordpress-import']
 ---
-
 When you look at business operating models, there are generally only three from which to choose: Operational efficiency, Product innovation and Customer intimacy. To understand these, it's effective to look at three companies that exemplify these models: 
 
   1. **Operational efficiency: Wal-Mart.** Wal-Mart's goal of lower pricing is driven by operational efficiency. Down to prioritizing their long-haul trucks over vendor long-haul trucks. Or having only two cashiers on staff. Or being a leader in using RFID. They do NOT focus on making customers feel welcome, guided and supported. They do not focus on developing radical new products that change the market place.

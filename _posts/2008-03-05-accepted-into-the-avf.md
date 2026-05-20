@@ -1,11 +1,11 @@
 ---
+id: 2776fe70-a43c-41b5-a6dd-ad352993029a
 layout: post
 title: "Accepted into the AVF"
 date: 2008-03-05 16:29:44 -0500
 categories: Funding
 tags: ['wordpress-import']
 ---
-
 Well - we've been accepted into the [Angel Venture Fair](http://www.angelventurefair.com/) to present to investors. First round is March 13th, although we've been exempted since we've talked to a number of their investors already. Pitch round is in April... We're getting closer!
 
 ---

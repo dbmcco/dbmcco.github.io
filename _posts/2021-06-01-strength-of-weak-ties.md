@@ -1,4 +1,5 @@
 ---
+id: 3419c7d8-28f7-4cde-8b5c-813a962beb8b
 layout: post
 title: Strength of weak ties for understanding information diffusion
 date: 2021-06-01 10:00:00 -0500

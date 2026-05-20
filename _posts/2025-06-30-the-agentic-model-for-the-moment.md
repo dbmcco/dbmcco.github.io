@@ -1,10 +1,10 @@
 ---
+id: cc6244f7-e506-4bee-8e48-2b3a02cb20d3
 layout: post
 title: My agentic model at the end of June 2025
 date: 2025-06-30
 categories: development ai workflow
 tags:
-description: "June checkpoint on my agentic coding model—how GitHub issues, Claude agents, and SDK experiments now fit together."
 ---
 ### Some context on my agentic coding usage
 

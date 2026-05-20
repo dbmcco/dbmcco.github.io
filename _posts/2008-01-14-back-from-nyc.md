@@ -1,11 +1,11 @@
 ---
+id: 4e296eca-e8b4-4a96-8f79-8d591168ead3
 layout: post
 title: "Back from NYC"
 date: 2008-01-14 15:41:36 -0500
 categories: rVibe
 tags: ['wordpress-import']
 ---
-
 Was just in NYC last week - great trip. Met with our media counsel and some investors. [We're](http://www.rvibe.com) currently seeking strategic advisors and partners, and that's all about outreach.
 
 ---

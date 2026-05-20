@@ -1,11 +1,11 @@
 ---
+id: 9245c2f9-a7bc-4d35-8350-1c246f1d9828
 layout: post
 title: "rVibe key &amp; active features for the beta"
 date: 2007-10-03 14:31:42 -0500
 categories: Market rVibe Technology
 tags: ['wordpress-import']
 ---
-
 So - here's what you can and can't do with the beta: **Currently Available:**
 
   1. Find and add friends - create a social network 

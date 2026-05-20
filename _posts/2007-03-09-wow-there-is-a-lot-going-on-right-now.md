@@ -1,11 +1,11 @@
 ---
+id: ff86da45-5385-4299-b8f7-5426da3b05d8
 layout: post
 title: "Wow there is a lot going on right now..."
 date: 2007-03-09 21:27:21 -0500
 categories: Funding Labels/Content Market rVibe Technology
 tags: ['wordpress-import']
 ---
-
 * Renegotiated content deal with CDBaby to reduce cost of content redelivery. Now we'll be able to delivery all 550k tracks in MP3 format (320kbps)
   * Working through Streaming license details with CDBaby - going very well
   * Presented to Ben Franklin portfolio group for next investment - went very well

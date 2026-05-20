@@ -1,13 +1,12 @@
 ---
+id: 44b5aa5a-fd87-409e-beb5-d377f220d2cf
 layout: post
 title: "My 'Vibe Coding' Process ATM"
 date: 2025-05-28 10:00:00 -0500
 categories: development ai workflow
 tags: [substack-import, ai, development, claude-code, workflow]
-description: "A walkthrough of my multi-agent vibe coding setup using Claude CLI roles, status rituals, and handoffs."
 original_url: https://dbmcco.substack.com/p/my-vibe-coding-process-atm
 ---
-
 # My "Vibe Coding" Process ATM
 
 I've been experimenting with an approach I call "vibe coding" using multiple Claude Code CLI instances for complex projects. The goal is to create a more "repeatable, scalable and predictable" development process.

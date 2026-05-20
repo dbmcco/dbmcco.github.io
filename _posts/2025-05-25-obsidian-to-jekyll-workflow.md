@@ -1,12 +1,11 @@
 ---
+id: 353ebe6f-9964-4fa7-8f93-1a7fd2ed2fba
 layout: post
 title: "Building an Obsidian to Jekyll Workflow"
 date: 2025-05-25 14:30:00 -0500
 categories: productivity workflow
 tags: [obsidian, jekyll, automation, blogging]
-description: "How I wired my Obsidian vault into a repeatable Jekyll publishing pipeline with git and automation."
 ---
-
 # Building an Obsidian to Jekyll Workflow
 
 After years of trying different note-taking and blogging systems, I've finally found a setup that works: **Obsidian for writing, Jekyll for publishing**.

@@ -1,11 +1,11 @@
 ---
+id: b4c014fb-8c2d-412c-8fb9-1096dcd871a1
 layout: post
 title: "New server is in! Now can we add more cool stuff please?"
 date: 2007-10-24 01:31:34 -0500
 categories: Technology
 tags: ['wordpress-import']
 ---
-
 Phew - that's done. We're tuning it now - but performance is also better just as is. We're also moving the scanning process out of the main process to improve application responsiveness at the outset. It's a never ending struggle to balance fixes and enhancements with net new functionality. Right now net new has taken a two week backseat (kind of - we've made huge progress on the UI model classes), but we should see a WHOLE BUNCH of great stuff come on line over the next three weeks or so. Things to watch for: 
 
   1. Embeddable playlists for blogs and website (with eCommerce functionality)

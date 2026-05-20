@@ -1,11 +1,11 @@
 ---
+id: d4b9cc31-fd39-47e8-bf41-595da3b670e0
 layout: post
 title: "I think I'll blog about... starting a company."
 date: 2007-09-25 21:02:20 -0500
 categories: Life in a startup
 tags: ['wordpress-import']
 ---
-
 In addition to the musings on the digital music industry, rVibe, music and the occasional book, I'm going to start talking about something I know a little about: starting a company. What a novel idea. Now, I am not saying that I know all that much, but I look forward to the time when I look back and see what I was thinking and had to say at the time...
 
 ---

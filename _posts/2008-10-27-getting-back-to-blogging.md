@@ -1,11 +1,11 @@
 ---
+id: 569810c6-7a72-4e03-8e64-71e983aaf3ce
 layout: post
 title: "Getting back to blogging...."
 date: 2008-10-27 19:38:40 -0500
 categories: rVibe
 tags: ['wordpress-import']
 ---
-
 After an extended absence, I am back to blogging - we'll see if I have anything worthwhile to say in the days to come.
 
 ---

@@ -1,4 +1,5 @@
 ---
+id: 743a75f4-5b8c-40c3-83e4-a8a1b73a6acc
 layout: post
 title: "Actually using ChatGPT in life science work (and the compliance headaches)"
 date: 2023-06-12
@@ -8,7 +9,6 @@ tags:
   - compliance
   - healthcare
 ---
-
 I've been working with a few of life science companies over the past few months, and ChatGPT keeps coming up in every conversation. But here's the thing - everyone's asking if they can use it, and the compliance teams are basically having panic attacks.
 
 I get it. When you're dealing with regulations and patient data, "move fast and break things" isn't servicable.

@@ -1,11 +1,11 @@
 ---
+id: db49620c-8400-41c0-a5e7-b0f951f7aae0
 layout: post
 title: "iTunes and the mobile strategy"
 date: 2007-09-06 02:17:59 -0500
 categories: Market rVibe Technology
 tags: ['wordpress-import']
 ---
-
 [Apple just announced ](http://www.apple.com/ipodtouch/features.html?feature=itwfms)that you can now [download tracks to the new iPod touch ](http://www.engadget.com/2007/09/05/itunes-wifi-music-store-first-hands-on/)over wifi. I love it - for so many reasons. First, I love the idea of getting music over the air, untethered. To me that is pretty awesome. I love it that it ties into the desktop environment - which is still central to pretty much everyone's world in the US. And I love it for strategic reasons for rVibe: 
 
   1. Apple as a leader is putting wireless download into the public eye - a really good thing for the music download industry.

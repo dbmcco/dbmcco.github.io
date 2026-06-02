@@ -386,12 +386,9 @@ The internal constraint was also an excuse. "I can't because I don't have time" 
 
 And now the boulder is me.
 
-<div class="ce-footer" markdown="1">
-
-*Process note: This post was assist-written with Codex, but the thinking, the argument, and the final edits are my own.*
-
-*This is the fourth post in a series that started with [From AI Studio to AI Forge](https://dbmcco.github.io/2026/03/06/from-ai-studio-to-ai-forge/), [You don't want another chatbot](https://dbmcco.github.io/2026/03/09/you-dont-want-another-chatbot/), and [Smart Models Dumb Pipes](https://dbmcco.github.io/2026/03/24/smart-models-dumb-pipes/).*
-
+<div class="ce-footer">
+  <p><em>Process note: This post was assist-written with Codex, but the thinking, the argument, and the final edits are my own.</em></p>
+  <p><em>This is the fourth post in a series that started with <a href="https://dbmcco.github.io/2026/03/06/from-ai-studio-to-ai-forge/">From AI Studio to AI Forge</a>, <a href="https://dbmcco.github.io/2026/03/09/you-dont-want-another-chatbot/">You don't want another chatbot</a>, and <a href="https://dbmcco.github.io/2026/03/24/smart-models-dumb-pipes/">Smart Models Dumb Pipes</a>.</em></p>
 </div>
 
 </div>

@@ -386,7 +386,7 @@ The internal constraint was also an excuse. "I can't because I don't have time" 
 
 And now the boulder is me.
 
-<div class="ce-footer">
+<div class="ce-footer" markdown="1">
 
 *Process note: This post was assist-written with Codex, but the thinking, the argument, and the final edits are my own.*
 

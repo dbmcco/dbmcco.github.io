@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Constraint Flipped, Or So I Thought"
+title: "The new constraint"
 date: 2026-06-01 09:00:00 -0500
 categories: ai workflow
 tags: [ai, agents, workflow, lightforge-works, synthyra, navicyte, constraints]
@@ -266,7 +266,7 @@ image: /assets/images/constraint-flipped-hero.png
 
 <div class="ce-hero">
   <p class="ce-eyebrow">Essay &middot; June 1, 2026</p>
-  <h1>The Constraint Flipped, Or So I Thought</h1>
+  <h1>The new constraint</h1>
   <p class="ce-subtitle">I spent a year building an operating system for my work. Then I had to revise the story I was telling about what it changed.</p>
   <p class="ce-meta">Braydon McCormick &middot; Means of Production</p>
   <div class="ce-rule"></div>

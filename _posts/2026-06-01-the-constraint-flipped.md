@@ -42,7 +42,7 @@ image: /assets/images/constraint-flipped-hero.png
   .site-header .menu-icon > svg path { fill: #e8eaf2 !important; }
 
   .page-content {
-    background: linear-gradient(180deg, #f5f3ef 0%, #f8f6f1 40%, #faf8f4 100%);
+    background: linear-gradient(180deg, #ede8de 0%, #f2ede3 40%, #f5f1e8 100%) !important;
   }
 
   .page-content .wrapper {
@@ -154,9 +154,9 @@ image: /assets/images/constraint-flipped-hero.png
     font-weight: 500;
     letter-spacing: -0.02em;
     color: var(--ce-ink);
-    margin: 3.5rem 0 1.4rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--ce-rule);
+    margin: 2rem 0 1.4rem;
+    padding-top: 0;
+    border-top: none;
   }
 
   .constraint-essay h2::before {
@@ -384,7 +384,6 @@ Maybe it's managing queues of other people's pace, and managing the ceiling of y
 
 The internal constraint was also an excuse. "I can't because I don't have time" was a clean answer. The agents took it from me. What's left is the harder question. Not can I do this. The question is what's worth doing when everything can be done. That's where the real work was always hiding. I just couldn't see it over the boulder.
 
-And now the boulder is me.
 
 <div class="ce-footer">
   <p><em>Process note: This post was assist-written with Codex, but the thinking, the argument, and the final edits are my own.</em></p>

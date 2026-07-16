@@ -9,7 +9,6 @@ image: /assets/images/kittens-with-jetpacks.png
 ---
 
 ![Kittens with jet packs](/assets/images/kittens-with-jetpacks.png)
-
 *Everyone gets a jet pack. Watch the kittens fly!*
 
 At [LightForge Works](https://www.lightforgeworks.com) we are noticing a trend across clients and prospects that is interesting. When we begin assessing a workflow challenge, we are often hearing some version of “*we're giving everyone Claude so they can build it themselves. Software is cheap now.”*
@@ -25,8 +24,37 @@ An org's AI journey may start with one or two people eager to get into things; l
 That invention is a shiny, cool Rube Goldberg machine: a chain of clever steps that does a real task, and works beautifully right up until somebody bumps the table.
 
 ![A hand-drawn Rube Goldberg machine from 1966](/assets/images/teschmacher-rube-goldberg-1966.jpg)
-
 *My uncle Guy Teschmacher’s Rube Goldberg machine, drawn in 1966. He also has a clock in Moma that has it's face hidden. Too funny.*
+
+<details>
+<summary><strong>What one of these actually looks like (click to expand)</strong></summary>
+
+A clever person, one afternoon, has the model write her this:
+
+```python
+# intake_router.py — built Tuesday, works on Tuesday
+import requests
+
+FORM_ID = "1aB...cD9"
+SHEET_TOKEN = "ya29.A0..."        # her personal OAuth token, in plaintext
+SLACK_WEBHOOK = "https://hooks.slack.com/services/T0.../B0..."
+
+def main():
+    rows = requests.get(
+        f"https://sheets.googleapis.com/v4/spreadsheets/{FORM_ID}/values/A:Z",
+        headers={"Authorization": f"Bearer {SHEET_TOKEN}"},
+    ).json()["values"]
+    for r in rows:
+        requests.post(SLACK_WEBHOOK, json={"text": f"New lead: {r[1]}"})  # r[1] = Name
+```
+
+It runs petty well and she is, legitimately, a hero.
+
+The downside: in a single player environment, the token is hers; the morning she leaves the company, it dies, and nobody knows why. Or it breaks the day the form adds a "Company" field and the columns shift, because nobody told the agent to update the script or that the columns might move. The CRM has never heard of any of this. The lead exists in Slack and nowhere else. And she is the only person who knows the script exists. She is going on vacation Thursday. Etc.
+
+That is a Rube Goldberg machine. Clever, fragile, and don't mess with it.
+
+</details>
 
 Then it fans out (the proverbial hitting the fan action). The whole team gets their own jet pack, gets super excited, and each person builds their own version of the thing they always wanted but couldn't have. Marketing automates its reporting. Operations builds a scheduling widget. Finance stands up a reconciliation script. Each one, on its own, is impressive and valuable And each one has the same defect a Rube Goldberg machine has.
 

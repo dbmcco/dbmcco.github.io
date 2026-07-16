@@ -1,84 +1,87 @@
-// Import clean sans-serif font
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+// ─────────────────────────────────────────────────────────────
+// Handmade Zine / Risograph theme
+// Fraunces (display) · Crimson Text (body serif) · Inter (UI/meta)
+// Fonts are loaded in _includes/head.html
+// ─────────────────────────────────────────────────────────────
 
-// Retro color palette
 :root {
-  --primary-text: #2c2c2c;
-  --secondary-text: #666666;
-  --accent-color: #d4773d;
-  --light-gray: #f8f8f8;
-  --border-color: #e0e0e0;
-  --background: #ffffff;
+  --bg:        #faf4e8;   // warm cream paper
+  --paper:     #fffdf6;   // lighter card surface
+  --ink:       #2a2722;   // warm near-black
+  --muted:     #6b6557;   // warm gray
+  --tomato:    #c8422f;   // risograph red
+  --tomato-dk: #a8341f;
+  --mustard:   #d9a441;   // mustard accent
+  --border:    #e7ddc8;   // warm light border
+  --code-bg:   #f2e8d3;   // warm code background
+  --serif:     'Crimson Text', Georgia, 'Times New Roman', serif;
+  --display:   'Fraunces', Georgia, serif;
+  --sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-// Reset and base typography
+// ── Base ──
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.7 !important;
-  color: var(--primary-text) !important;
-  background-color: var(--background) !important;
+  font-family: var(--serif) !important;
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  color: var(--ink) !important;
+  background-color: var(--bg) !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-// Headers - clean sans-serif
+// ── Headings (Fraunces) ──
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: var(--display) !important;
   font-weight: 600 !important;
-  color: var(--primary-text) !important;
+  color: var(--ink) !important;
+  line-height: 1.2 !important;
   margin-bottom: 1rem !important;
-  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
 }
+h1 { font-size: 2.4rem !important; font-weight: 700 !important; }
+h2 { font-size: 1.7rem !important; margin-top: 2.5rem !important; }
+h3 { font-size: 1.3rem !important; margin-top: 1.8rem !important; }
 
-h1 { font-size: 2rem !important; }
-h2 { font-size: 1.5rem !important; }
-h3 { font-size: 1.25rem !important; }
+// ── Links ──
+a { color: var(--tomato) !important; text-decoration: none !important; transition: color .15s ease !important; }
+a:hover { color: var(--tomato-dk) !important; text-decoration: underline !important; }
 
-// Modern sans-serif for UI elements
-.site-header, .site-nav, .post-meta, .archive-link {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-}
+// ── UI text in Inter ──
+.site-header, .site-nav, .post-meta, .archive-link { font-family: var(--sans) !important; }
 
-// Site header styling - minimal and clean
+// ── Site header (tomato bar + mustard edge) ──
 .site-header {
-  background-color: #5a7a7a !important; // Teal background
-  border-bottom: none !important;
+  background-color: var(--tomato) !important;
+  border-bottom: 4px solid var(--mustard) !important;
   padding: 1.5rem 0 !important;
-  
+
   .wrapper {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
   }
-  
+
   .site-title-area {
     .site-title {
-      font-size: 1.5rem !important;
-      font-weight: 600 !important;
-      color: #ffffff !important;
+      font-family: var(--display) !important;
+      font-size: 1.6rem !important;
+      font-weight: 700 !important;
+      color: #fff7ec !important;
       text-decoration: none !important;
-      letter-spacing: -0.3px !important;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-      
-      &:hover {
-        opacity: 0.9 !important;
-        text-decoration: none !important;
-      }
+      letter-spacing: -0.02em !important;
+      &:hover { opacity: 0.92 !important; text-decoration: none !important; }
     }
-    
     .site-subtitle {
-      font-size: 0.85rem !important;
-      color: rgba(255, 255, 255, 0.8) !important; // Slightly transparent white
-      margin-top: 0.1rem !important;
-      font-weight: 400 !important;
-      font-style: normal !important;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+      font-family: var(--sans) !important;
+      font-size: 0.82rem !important;
+      color: rgba(255, 247, 236, 0.82) !important;
+      font-style: italic !important;
     }
   }
 }
 
-// Nuclear option: Override all possible navigation styling with maximum specificity
+// ── Nav: strip minima's button styling, keep text links ──
 .site-header .site-nav .trigger .page-link,
 .site-header .site-nav .page-link,
 .site-nav .trigger .page-link,
@@ -87,67 +90,39 @@ a.page-link,
 .trigger .page-link {
   background: none !important;
   background-color: transparent !important;
-  background-image: none !important;
   border: none !important;
   border-radius: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
-  margin-left: 0 !important;
   margin-right: 2rem !important;
   box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  
   &:hover, &:focus, &:active, &:visited, &:link {
     background: none !important;
     background-color: transparent !important;
-    background-image: none !important;
     border: none !important;
-    border-radius: 0 !important;
     box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
     transform: none !important;
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
   }
 }
 
-// Navigation - minimal text links - force override all button styling
 .site-nav {
   .trigger {
     display: flex !important;
     gap: 2rem !important;
     align-items: center !important;
   }
-  
   .page-link {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-weight: 400 !important;
-    text-decoration: none !important;
+    color: rgba(255, 247, 236, 0.92) !important;
+    font-family: var(--sans) !important;
+    font-weight: 500 !important;
     font-size: 0.9rem !important;
-    transition: all 0.2s ease !important;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    text-decoration: none !important;
     position: relative !important;
-    
-    // Force remove all button styling
+    transition: color .15s ease !important;
     background: none !important;
-    background-color: transparent !important;
     border: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
     box-shadow: none !important;
-    
-    &:hover {
-      color: #ffffff !important;
-      text-decoration: none !important;
-      background: none !important;
-      background-color: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-    
+    &:hover { color: #fff7ec !important; text-decoration: none !important; }
     &:after {
       content: '' !important;
       position: absolute !important;
@@ -155,199 +130,185 @@ a.page-link,
       height: 2px !important;
       bottom: -5px !important;
       left: 50% !important;
-      background-color: rgba(255, 255, 255, 0.8) !important;
-      transition: all 0.2s ease !important;
+      background-color: var(--mustard) !important;
+      transition: width .15s ease !important;
       transform: translateX(-50%) !important;
     }
-    
-    &:hover:after {
-      width: 100% !important;
-    }
-    
-    &:focus, &:active {
-      background: none !important;
-      background-color: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-      outline: none !important;
-    }
+    &:hover:after { width: 100% !important; }
+    &:focus, &:active { outline: none !important; }
   }
-  
-  // Hide mobile menu icon on desktop
-  .nav-trigger, .menu-icon {
-    display: none !important;
-  }
+  .nav-trigger, .menu-icon { display: none !important; }
 }
 
-// Main content area
+// ── Layout ──
 .wrapper {
-  max-width: 700px !important;
+  max-width: 720px !important;
   margin: 0 auto !important;
   padding: 0 2rem !important;
 }
 
-// Homepage intro styling
+// ── Home ──
 .home {
   .intro {
     margin-bottom: 3rem !important;
     padding: 2rem 0 !important;
-    border-bottom: 1px solid var(--border-color) !important;
-    
+    border-bottom: 1px solid var(--border) !important;
     p {
-      font-size: 1.1rem !important;
-      color: var(--secondary-text) !important;
-      margin: 0 !important;
-      font-style: normal !important;
+      font-size: 1.15rem !important;
+      color: var(--muted) !important;
+      font-style: italic !important;
       line-height: 1.6 !important;
     }
   }
-  
   h2 {
-    font-size: 1.3rem !important;
+    font-family: var(--display) !important;
+    font-size: 1.4rem !important;
     margin-top: 3rem !important;
-    margin-bottom: 2rem !important;
-    color: var(--primary-text) !important;
-    font-weight: 600 !important;
   }
 }
 
-// Post list styling
+// ── Post list ──
 .post-list {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  
   li {
     margin-bottom: 2.5rem !important;
     padding-bottom: 2rem !important;
-    border-bottom: 1px solid var(--border-color) !important;
-    
-    &:last-child {
-      border-bottom: none !important;
-    }
+    border-bottom: 1px solid var(--border) !important;
+    &:last-child { border-bottom: none !important; }
   }
 }
-
 .post-meta {
-  font-size: 0.875rem !important;
-  color: var(--secondary-text) !important;
-  font-weight: 400 !important;
+  font-family: var(--sans) !important;
+  font-size: 0.85rem !important;
+  color: var(--muted) !important;
   margin-bottom: 0.5rem !important;
   display: block !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
-
 .post-link {
-  color: var(--primary-text) !important;
+  font-family: var(--display) !important;
+  color: var(--ink) !important;
   text-decoration: none !important;
-  font-size: 1.3rem !important;
+  font-size: 1.4rem !important;
   font-weight: 600 !important;
-  line-height: 1.3 !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  
-  &:hover {
-    color: var(--accent-color) !important;
-    text-decoration: none !important;
-  }
+  line-height: 1.25 !important;
+  &:hover { color: var(--tomato) !important; text-decoration: none !important; }
 }
-
-// Post header on individual pages
-.post-header {
-  .post-title {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-weight: 700 !important;
-  }
+.post-header .post-title {
+  font-family: var(--display) !important;
+  font-weight: 700 !important;
 }
-
-// Archive link styling
 .archive-link {
   margin-top: 3rem !important;
   padding-top: 2rem !important;
-  border-top: 2px solid var(--border-color) !important;
+  border-top: 2px dashed var(--mustard) !important;
   text-align: center !important;
-  
   a {
+    font-family: var(--sans) !important;
     font-size: 1rem !important;
-    color: var(--secondary-text) !important;
-    text-decoration: none !important;
+    color: var(--muted) !important;
     font-weight: 500 !important;
-    
-    &:hover {
-      color: var(--accent-color) !important;
-      text-decoration: none !important;
-    }
+    &:hover { color: var(--tomato) !important; }
   }
 }
 
-// Post content typography - normalize font sizes
+// ── Post content ──
 .post-content {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.7 !important;
-  
-  // Fix header sizing in posts
-  h1 {
-    font-size: 1.8rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 1.5rem !important;
-    line-height: 1.2 !important;
-  }
-  
-  h2 {
-    font-size: 1.4rem !important;
-    font-weight: 600 !important;
-    margin-bottom: 1rem !important;
-    margin-top: 2rem !important;
-    line-height: 1.3 !important;
-  }
-  
-  h3 {
-    font-size: 1.2rem !important;
-    font-weight: 600 !important;
-    margin-bottom: 0.75rem !important;
-    margin-top: 1.5rem !important;
-    line-height: 1.3 !important;
-  }
-  
-  p {
-    font-size: 16px !important;
-    margin-bottom: 1.5rem !important;
-    line-height: 1.7 !important;
-  }
-  
+  font-family: var(--serif) !important;
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+
+  h1 { font-size: 1.9rem !important; font-weight: 700 !important; margin-bottom: 1.5rem !important; }
+  h2 { font-size: 1.55rem !important; font-weight: 600 !important; margin-top: 2.2rem !important; }
+  h3 { font-size: 1.25rem !important; font-weight: 600 !important; margin-top: 1.6rem !important; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--display) !important; }
+  p, li, td { font-family: var(--serif) !important; font-size: 18px !important; line-height: 1.75 !important; }
+  p { margin-bottom: 1.5rem !important; }
   ul, ol {
-    font-size: 16px !important;
     margin-bottom: 1.5rem !important;
     padding-left: 2rem !important;
-    
-    li {
-      margin-bottom: 0.5rem !important;
-      line-height: 1.6 !important;
-    }
+    li { margin-bottom: 0.5rem !important; line-height: 1.7 !important; }
   }
-  
-  // Ensure all text elements use sans-serif and proper sizing
-  * {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  }
-  
-  // Image captions - style italicized text immediately after images
-  img + em {
-    display: block !important;
-    text-align: center !important;
-    font-size: 0.9em !important;
-    color: var(--secondary-text) !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 1.5rem !important;
+
+  // blockquote
+  blockquote {
+    border-left: 4px solid var(--mustard) !important;
+    padding: 0.2rem 0 0.2rem 1.2rem !important;
+    margin: 1.6rem 0 !important;
+    color: var(--muted) !important;
     font-style: italic !important;
-    line-height: 1.4 !important;
   }
-  
-  // Also style images to ensure proper spacing
+
+  // images: rounded, centered
   img {
     max-width: 100% !important;
     height: auto !important;
     display: block !important;
-    margin: 0 auto !important;
+    margin: 2rem auto !important;
+    border-radius: 10px !important;
+  }
+  // caption: italic, centered, snugged under the image
+  img + em {
+    display: block !important;
+    text-align: center !important;
+    font-family: var(--serif) !important;
+    font-size: 0.92rem !important;
+    color: var(--muted) !important;
+    font-style: italic !important;
+    margin-top: -1rem !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.4 !important;
+  }
+
+  // playful divider
+  hr {
+    border: none !important;
+    border-top: 2px dashed var(--mustard) !important;
+    margin: 2.5rem 0 !important;
+  }
+
+  // inline code + code blocks (warm)
+  code {
+    font-family: 'SF Mono', Menlo, Consolas, monospace !important;
+    font-size: 0.86em !important;
+    background: var(--code-bg) !important;
+    color: var(--ink) !important;
+    padding: 0.12em 0.4em !important;
+    border-radius: 4px !important;
+  }
+  pre {
+    background: var(--code-bg) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    padding: 1rem 1.2rem !important;
+    overflow-x: auto !important;
+    code {
+      background: none !important;
+      padding: 0 !important;
+      font-size: 0.82rem !important;
+      line-height: 1.55 !important;
+      color: var(--ink) !important;
+    }
+  }
+
+  // foldable callout card
+  details {
+    background: var(--paper) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 4px solid var(--tomato) !important;
+    border-radius: 12px !important;
+    padding: 0.2rem 1.4rem 1.2rem !important;
+    margin: 2rem 0 !important;
+    summary {
+      cursor: pointer !important;
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      color: var(--tomato) !important;
+      padding: 0.9rem 0 !important;
+      list-style: revert !important;
+      &:hover { color: var(--tomato-dk) !important; }
+      strong { color: inherit !important; font-weight: 700 !important; }
+    }
   }
 }

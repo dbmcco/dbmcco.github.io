@@ -8,16 +8,15 @@ description: "At LightForge Works, we keep noticing a trend across clients and p
 image: /assets/images/kittens-with-jetpacks.png
 ---
 
-\<figure>
-  <img src="/assets/images/kittens-with-jetpacks.png" alt="Kittens with jet packs" />
-  <figcaption>Everyone gets a jet pack. Watch the kittens fly!</figcaption>
-</figure>
+![Kittens with jet packs](/assets/images/kittens-with-jetpacks.png)
 
-At LightForge Works we are noticing a trend across clients and prospects that is interesting. When we begin assessing a workflow challenge, we are often hearing some version of “*we're giving everyone Claude so they can build it themselves. Software is cheap now.”*
+*Everyone gets a jet pack. Watch the kittens fly!*
+
+At [LightForge Works](https://www.lightforgeworks.com) we are noticing a trend across clients and prospects that is interesting. When we begin assessing a workflow challenge, we are often hearing some version of “*we're giving everyone Claude so they can build it themselves. Software is cheap now.”*
 
 This is pretty good. Giving people Claude/ChatGPT works. Cursor works. Whatever lands on the desk next quarter will work too. The person stuck for a year in an IT queue can build the thing herself by Tuesday. I do it myself, and a motivated person with a capable model is more powerful/accelerated than the same person without one. Just try taking that new superpower away and wait for the wrath. Everyone can have a jet pack now. And it's super fun and awesome.
 
-So this isn't an argument against handing out jet packs. However... a paper out of NBER this year surveyed nearly six thousand senior executives and found that nine in ten of them say AI has had no impact on their firm's employment or productivity over the last three years. Everyone has Claude (or well, an increasing % do), but productivity levels are the same (and at an all time high - maybe an AI Hawthorne effect; I wonder). We can argue that it’s still too early in the Single-player-AI-revolution to see real gains but I think there is a different aspect of this that is important to contemplate and points to a downstream effect that the orgs we are talking to do not seem to be thinking about.
+So this isn't an argument against handing out jet packs. However... a [paper out of NBER](https://www.nber.org/papers/w34836) this year surveyed nearly six thousand senior executives and found that nine in ten of them say AI has had no impact on their firm's employment or productivity over the last three years. Everyone has Claude (or well, an increasing % do), but productivity levels are the same (and at an all time high - maybe an AI Hawthorne effect; I wonder). We can argue that it’s still too early in the Single-player-AI-revolution to see real gains but I think there is a different aspect of this that is important to contemplate and points to a downstream effect that the orgs we are talking to do not seem to be thinking about.
 
 ## Many beautiful, fragile, isolated machines
 
@@ -25,40 +24,9 @@ An org's AI journey may start with one or two people eager to get into things; l
 
 That invention is a shiny, cool Rube Goldberg machine: a chain of clever steps that does a real task, and works beautifully right up until somebody bumps the table.
 
-\<figure>
-  <img src="/assets/images/teschmacher-rube-goldberg-1966.jpg" alt="A hand-drawn Rube Goldberg machine from 1966" />
-  <figcaption>My uncle Guy Teschmacher’s Rube Goldberg machine, drawn in 1966. He also has a clock in Moma that has it's face hidden. Too funny.</figcaption>
-</figure>
+![A hand-drawn Rube Goldberg machine from 1966](/assets/images/teschmacher-rube-goldberg-1966.jpg)
 
-<details>
-<summary><strong>What one of these actually looks like (click to expand)</strong></summary>
-
-A clever person, one afternoon, has the model write her this:
-
-```python
-# intake_router.py — built Tuesday, works on Tuesday
-import requests
-
-FORM_ID = "1aB...cD9"
-SHEET_TOKEN = "ya29.A0..."        # her personal OAuth token, in plaintext
-SLACK_WEBHOOK = "https://hooks.slack.com/services/T0.../B0..."
-
-def main():
-    rows = requests.get(
-        f"https://sheets.googleapis.com/v4/spreadsheets/{FORM_ID}/values/A:Z",
-        headers={"Authorization": f"Bearer {SHEET_TOKEN}"},
-    ).json()["values"]
-    for r in rows:
-        requests.post(SLACK_WEBHOOK, json={"text": f"New lead: {r[1]}"})  # r[1] = Name
-```
-
-It runs petty well and she is, legitimately, a hero.
-
-The downside: in a single player environment, the token is hers; the morning she leaves the company, it dies, and nobody knows why. Or it breaks the day the form adds a "Company" field and the columns shift, because nobody told the agent to update the script or that the columns might move. The CRM has never heard of any of this. The lead exists in Slack and nowhere else. And she is the only person who knows the script exists. She is going on vacation Thursday. Etc.
-
-That is a Rube Goldberg machine. Clever, fragile, and don't mess with it.
-
-</details>
+*My uncle Guy Teschmacher’s Rube Goldberg machine, drawn in 1966. He also has a clock in Moma that has it's face hidden. Too funny.*
 
 Then it fans out (the proverbial hitting the fan action). The whole team gets their own jet pack, gets super excited, and each person builds their own version of the thing they always wanted but couldn't have. Marketing automates its reporting. Operations builds a scheduling widget. Finance stands up a reconciliation script. Each one, on its own, is impressive and valuable And each one has the same defect a Rube Goldberg machine has.
 
@@ -109,7 +77,3 @@ Anyway...
 You can't take the jet packs back, and you shouldn't want to. But you can stop measuring kitten motion and start managing intent. 
 
 *(Next: the structure the kittens need — what a smart kitchen is, and why your team needs one to really cook.)*
-
-***
-
-\[1] Yotzov, Barrero, Bloom, Bunn, Davis, Foster, Jalca, Meyer, Mizen, Navarrete, Smietanka, Thwaites, Wang et al., "Firm Data on AI," NBER Working Paper 34836, February 2026 (rev. March 2026). A survey of roughly 6,000 senior executives across the US, UK, Germany, and Australia.

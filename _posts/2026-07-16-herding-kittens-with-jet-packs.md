@@ -11,6 +11,9 @@ image: /assets/images/kittens-with-jetpacks.png
 ![Kittens with jet packs](/assets/images/kittens-with-jetpacks.png)
 *Everyone gets a jet pack. Watch the kittens fly!*
 
+> **TL;DR** — You gave everyone Claude and productivity didn't budge. What you actually shipped was a hundred fragile Rube Goldberg machines that don't talk to each other and die the moment their one owner takes a Thursday off. The jet packs work. The grid you forgot to build doesn't.
+{: .tldr }
+
 At [LightForge Works](https://www.lightforgeworks.com) we are noticing a trend across clients and prospects that is interesting. When we begin assessing a workflow challenge, we are often hearing some version of “*we're giving everyone Claude so they can build it themselves. Software is cheap now.”*
 
 This is pretty good. Giving people Claude/ChatGPT works. Cursor works. Whatever lands on the desk next quarter will work too. The person stuck for a year in an IT queue can build the thing herself by Tuesday. I do it myself, and a motivated person with a capable model is more powerful/accelerated than the same person without one. Just try taking that new superpower away and wait for the wrath. Everyone can have a jet pack now. And it's super fun and awesome.
@@ -26,7 +29,7 @@ That invention is a shiny, cool Rube Goldberg machine: a chain of clever steps t
 ![A hand-drawn Rube Goldberg machine from 1966](/assets/images/teschmacher-rube-goldberg-1966.jpg)
 *My uncle Guy Teschmacher’s Rube Goldberg machine, drawn in 1966. He also has a clock in Moma that has it's face hidden. Too funny.*
 
-<details>
+<details markdown="1">
 <summary><strong>What one of these actually looks like (click to expand)</strong></summary>
 
 A clever person, one afternoon, has the model write her this:

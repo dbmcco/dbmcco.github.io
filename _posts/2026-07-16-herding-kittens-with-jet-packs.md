@@ -11,7 +11,7 @@ image: /assets/images/kittens-with-jetpacks.png
 ![Kittens with jet packs](/assets/images/kittens-with-jetpacks.png)
 *Everyone gets a jet pack. Watch the kittens fly!*
 
-> **TL;DR** — You gave everyone Claude and productivity didn't budge. What you actually shipped was a hundred fragile Rube Goldberg machines that don't talk to each other and die the moment their one owner takes a Thursday off. The jet packs work. The grid you forgot to build doesn't.
+> **TL;DR** — Everyone's got a jet pack now and productivity still hasn't moved. This is about the fast, fragile little machines people are building with them — none of them connected to anything, nobody steering any of it (ours included, for a while) — and what to do about it.
 {: .tldr }
 
 At [LightForge Works](https://www.lightforgeworks.com) we are noticing a trend across clients and prospects that is interesting. When we begin assessing a workflow challenge, we are often hearing some version of “*we're giving everyone Claude so they can build it themselves. Software is cheap now.”*

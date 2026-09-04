@@ -328,4 +328,24 @@ a.page-link,
     p { margin-bottom: 0 !important; }
     strong { color: var(--tomato) !important; font-weight: 700 !important; }
   }
+
+  // spine callouts — key pull quotes boxed for scannability
+  .callout {
+    background: var(--paper) !important;
+    border: none !important;
+    border-left: 5px solid var(--mustard) !important;
+    border-radius: 0 12px 12px 0 !important;
+    padding: 1.1rem 1.4rem !important;
+    margin: 2rem 0 !important;
+    font-family: var(--display) !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    font-size: 1.08rem !important;
+    line-height: 1.45 !important;
+    p { margin: 0 0 0.7rem !important; &:last-child { margin-bottom: 0 !important; } }
+    p + p { padding-top: 0.7rem !important; border-top: 1px solid var(--border) !important; }
+    strong { color: var(--tomato) !important; font-weight: 700 !important; }
+    em { color: var(--ink) !important; font-style: italic !important; }
+  }
 }

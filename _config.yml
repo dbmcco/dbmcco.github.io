@@ -1,3 +1,16 @@
 title: Means of Production
 description: "This blog has moved to https://braydon.mcco.us/writing/"
 url: "https://dbmcco.github.io"
+repository: dbmcco/dbmcco.github.io
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .github
+  - README.md
